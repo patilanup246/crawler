@@ -31,6 +31,6 @@ with open(csvfile, "w+b") as output:
             #print i,data
             datarow.append(data)
         writer.writerow(datarow)
-        if test==True &&  i==stop:
+        if test==True and i==stop:
             break;
 browser.quit()
