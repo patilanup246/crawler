@@ -1,10 +1,13 @@
 # get_doc.py
 from selenium import webdriver
 #from selenium import selenium.common.exceptions.SessionNotCreatedException
-import time, re, csv
+import time, re, csv, string
 from lxml import html
 def cleanData(data):
 	data = data.encode('utf-8')
+	data = data.strip()
+	#data = re.sub(r'[^\x00-\x7f]',r'',data) 
+	#data = data.encode('ascii',errors='ignore').decode()
 	data = data.replace('\r', ' ').replace('\n', ' ')
 	return data
 
@@ -35,24 +38,39 @@ with open(csvfile, "w+b") as output:
 			#switch to the new tab
 			browser.switch_to.window(browser.window_handles[1])
 			#find the address
-			address=browser.find_element_by_xpath('//*[@id="directoryDetails"]/div/div/div[3]/div[1]').text
+			doc=html.fromstring(browser.page_source)
+			address=doc.xpath('//*[@id="directoryDetails"]/div/div/div[3]/div[1]')[0].text_content().strip()
+			print "address",cleanData(address)
 			datarow.append(cleanData(address))
 			#find all the information
-			text2=browser.find_element_by_xpath('//*[@id="directoryDetails"]/div/div/div[3]/div[2]').text
+			text2=doc.xpath('//*[@id="directoryDetails"]/div/div/div[3]/div[2]')[0].text_content()
 			text1=text2.split("\n")	
 			for tx in text1:
-				#print cleanData(tx)
-				datarow.append(cleanData(tx))
+				tx = cleanData(tx)
+				#tx = tx.decode('utf-8').encode('ascii', errors='ignore')
+				#tx = re.sub(r'[^\x00-\x7f]',r'',tx) 
+				if tx:
+					print tx
+					datarow.append(tx)
 			#get the executive contact
-			executive_contact=browser.find_element_by_xpath('//*[@id="directoryDetails"]/div/div/div[4]/div').text
+			executive_contact=doc.xpath('//*[@id="directoryDetails"]/div/div/div[4]/div')[0].text_content().strip()
+			print "contact", executive_contact
 			datarow.append(cleanData(executive_contact))
 
 			#get the classification
-			classification=browser.find_element_by_xpath('//*[@id="directoryDetails"]/div/div/div[5]').text
-			datarow.append(cleanData(classification))
+			#classification=browser.find_element_by_xpath('//*[@id="directoryDetails"]/div/div/div[5]').text
+			classification=doc.xpath('//*[@id="directoryDetails"]/div/div/div[5]/div[1]/p')
+			temp=""
+			for row1 in classification:
+				for row2 in row1.findall('span')[1:]:
+					temp=temp+row2.text.strip()+"\015"
+			print temp
+			#datarow.append(cleanData(temp))
+			datarow.append(temp)
 
 			#get the company profile
-			company_profile=browser.find_element_by_xpath('//*[@class="sfdc_richtext"]').text
+			#company_profile=browser.find_element_by_xpath('//*[@class="sfdc_richtext"]').text
+			company_profile=doc.xpath('//*[@class="sfdc_richtext"]')[0].text_content()
 			datarow.append(cleanData(company_profile))
 
 			#close the new tab
