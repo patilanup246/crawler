@@ -1,0 +1,2229 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html style="display:none !important;"><head><script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/static/111213/js/functions.js" type="text/javascript"></script><script src="/jslibrary/1530643972000/sfdc/main.js" type="text/javascript"></script><script src="/jslibrary/jslabels/1535654638000/en_US.js" type="text/javascript"></script><script src="/static/111213/desktop/desktopAjax.js" type="text/javascript"></script><script src="/static/111213/js/picklist4.js" type="text/javascript"></script><script src="/jslibrary/1530643972000/sfdc/VFState.js" type="text/javascript"></script><script src="/jslibrary/1530643972000/sfdc/NetworkTracking.js" type="text/javascript"></script><script>try{ NetworkTracking.init('/_ui/networks/tracking/NetworkTrackingServlet', 'network', '066280000087ORJ'); }catch(x){}try{ NetworkTracking.logPageView();}catch(x){}</script><script>(function(UITheme) {
+    UITheme.getUITheme = function() { 
+        return UserContext.uiTheme;
+    };
+}(window.UITheme = window.UITheme || {}));</script><script type="text/javascript">
+//<![CDATA[
+try{(function(){var w=self,l,p,o;if(w&&top){for(;w!==top&&(p=w.parent)&&p!==w&&(o=p.location)&&o.protocol===(l=w.location).protocol&&(o.host===l.host||(p.document&&p.document.domain===w.document.domain));w=p);if(w!==top)throw "";}({f:function(){document.documentElement?document.documentElement.style.display="":(!this.a&&(this.a=10),this.a<1E5&&(window.sfdcRetryShowWindow=this)&&setTimeout("sfdcRetryShowWindow.f()",this.a),this.a*=2)}}.f())})();}catch(e){if(top!==self)top.location=location;else throw e;}//]]></script></head><body>
+    <head>
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+        <title> 
+            Directory Detail
+        </title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+        <script src="/resource/1471202926000/bootstrap3_3_6/js/bootstrap.min.js"></script>
+        <script src="/resource/1520840825000/zoom/zoom/js/zoom.js"></script>
+        <script src="/resource/1520840825000/zoom/zoom/js/transition.js"></script>
+        <link href="/resource/1520840825000/zoom/zoom/css/zoom.css" rel="stylesheet" /><span id="pg:enrollClickRefresh"><span id="pg:j_id1">
+    <div class="clearfix" id="top-bar">
+        <div id="top-bar-background">
+            <div class="container relative">
+                <div class="top-bar-sides abs-left" id="top-bar-text"> 
+                    <a href="http://isca.org.sg/" target="_blank" title="Homepage of ISCA"><i class="ui--icon fontawesome-home topcornericon icon-inline-block" style="font-size: 14px;  width: 18px;  height: 18px;  margin-right: 5px;"></i><span class="hidden-tablet hidden-phone">Home</span></a>
+                    <div class="helper--seperator">|</div>               
+        
+                    <a href="http://isca.org.sg/the-institute/" target="_blank" title="ISCA is the national accountancy body of Singapore"><i class="ui--icon topcornericon fontawesome-building icon-inline-block" style="font-size: 14px;  width: 18px;  height: 18px;  margin-right: 5px;"></i><span class="hidden-tablet hidden-phone">The Institute</span></a>
+                    <div class="helper--seperator">|</div>
+                    
+                    <a href="http://isca.org.sg/the-institute/newsroom/" target="_blank" title="Media Releases, Speeches and the ISCA Viewpoint"><i class="ui--icon topcornericon fontawesome-bullhorn icon-inline-block" style="font-size: 14px;  width: 18px;  height: 18px;  margin-right: 5px;"></i><span class="hidden-tablet hidden-phone">Newsroom</span></a>
+                    <div class="helper--seperator">|</div>      
+        
+                    <a href="http://isca.org.sg/cpe-events/signature-events/" target="_blank" title="Learn more about ISCA’s Signature Events here"><i class="ui--icon fontawesome-flag topcornericon icon-inline-block" style="font-size: 14px;  width: 18px;  height: 18px;  margin-right: 5px;"></i><span class="hidden-tablet hidden-phone">Signature Events</span></a>
+                    <div class="helper--seperator">|</div>   
+                    
+                    
+                    <a href="/ISCADirectoryHome" target="_blank" title="ISCA Directory features Singapore's leading professional service firms in Accountancy, Finance and Business"><i class="ui--icon fontawesome-sitemap topcornericon icon-inline-block" style="font-size: 14px;  width: 18px;  height: 18px;  margin-right: 5px;"></i><span class="hidden-tablet hidden-phone">ISCA Directory</span></a>
+                </div>
+              
+                <div class="top-bar-sides abs-right" id="top-bar-widgets"><span id="pg:j_id1:j_id2:j_id4">
+                        <ul class="ui--widget ui--custom-menu opt--on-hover unstyled-all " id="widget--login-default">
+                            <li>
+                                <a class="ui--side-panel ui--gradient on--hover hover" data-target="ui--side-content-widget-1" href="/Signin" style="color:white; background-color: #EE2E2A;">eServices Login</a>
+                            </li>
+                        </ul></span>
+                                              
+                    <ul class="ui--widget ui--custom-menu opt--on-hover unstyled-all " id="widget--login-default">
+                        
+                      
+                    </ul>
+                    
+                    <ul class="ui--widget ui--custom-menu opt--on-hover unstyled-all " id="widget--shop-cart">
+                        <li>
+                            <a class="ui--gradient ui--accent-gradient ui--accent-color on--hover ui--side-panel" data-target="ui--side-cart-widget" href="#" onclick="javascript:window.location.href='\cart?retUrl=' + window.location.href;">Cart: <span class="cart-money"><span class="amount">0</span></span> <span class="helper--extract-icon"><i class="fontawesome-angle-right px14"></i></span></a>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div></span></span>
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="/resource/1471202928000/en_content/en_content/plugins/wpt-login/css/custom-login.css" id="wpt-custom-login-css" media="all" rel="stylesheet" type="text/css" />
+    
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/bootstrap.css" id="theme-bootstrap-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/style.css" id="theme-frontend-style-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/extensions.css" id="theme-frontend-extensions-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/bootstrap-responsive-1170.css" id="theme-bootstrap-responsive-1170-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/bootstrap-responsive.css" id="theme-bootstrap-responsive-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/woocommerce.css" id="theme-woocommerce-css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/includes/modules/module.fontawesome/source/css/font-awesome.min.css" id="theme-fontawesome-css" media="all" rel="stylesheet" type="text/css" /> 
+<link href="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/css/iscaTextStyles.css" media="all" rel="stylesheet" type="text/css" />
+
+<link href="/resource/1471202928000/en_content/en_content/uploads/2014/01/Dark-Blue-Skin_cf846b6937291eb00e63741d95d1ce40.css" media="all" rel="stylesheet" type="text/css" />
+
+ <script src="/resource/1459017454000/en_includes/en_includes/js/jquery/jquery-migrate.min.js" type="text/javascript"></script> 
+    
+ <script src="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
+<script src="/resource/1471202928000/en_content/en_content/plugins/wptation-demo/js/options.js" type="text/javascript"></script>
+<script src="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/js/common.js" type="text/javascript"></script>
+<script src="/resource/1471202928000/en_content/en_content/themes/isca2015/lib/js/noconflict.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+// <![CDATA[    
+var CloudFwOp = {"themeurl":"\/en-content\/themes\/isca2015","ajaxUrl":"\/iscaAdmin","device":"widescreen","RTL":"","responsive":"1","lang":"en-US","sticky_header":"1","sticky_header_offset":"0","uniform_elements":"1","disable_prettyphoto_on_mobile":"1","gallery_overlay_opacity":"0.9"};
+// ]]>
+</script>
+
+ <style type="text/css">
+html body {
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+font-size: 16px;
+}
+input, select, button, submit, textarea{
+font-family: 'Lato', sans-serif;
+}
+h1{
+font-family: 'Lato', sans-serif; 
+font-size: 36px;
+line-height: 44px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+
+h2{
+font-family: 'Lato', sans-serif; 
+font-size: 30px;
+line-height: 36px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+
+h3{
+font-family: 'Lato', sans-serif; 
+font-size: 24px;
+line-height: 30px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+
+h4{
+font-family: 'Lato', sans-serif; 
+font-size: 22px;
+line-height: 24px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+
+h5{
+font-family: 'Lato', sans-serif; 
+font-size: 19px;
+line-height: 24px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+h6{
+font-family: 'Lato', sans-serif; 
+font-size: 17px;
+line-height: 18px;
+color:#333337;
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 18px;
+margin-left: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Lato', sans-serif !important;
+font-weight: 400 !important;
+}
+p{
+font-family: 'Lato', sans-serif; 
+font-size: 16px;
+line-height: 24px;
+margin-bottom: 18px;
+}
+a:hover{
+text-decoration:underline;
+}
+ .btn-red:hover{
+
+background: #EE2E2A !important;
+background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9z…iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg==') !important;
+background-image: -moz-linear-gradient(top,#EE2E2A,#d32a3b);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#EE2E2A),to(#d32a3b)) !important;
+background-image: -webkit-linear-gradient(top,#EE2E2A,#d32a3b) !important;
+background-image: -o-linear-gradient(top,#EE2E2A,#d32a3b) !important;
+background-image: linear-gradient(to bottom,#EE2E2A,#d32a3b) !important;
+
+}
+.btn-red:focus{
+
+background: #EE2E2A !important;
+background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9z…iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg==') !important;
+background-image: -moz-linear-gradient(top,#EE2E2A,#d32a3b);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#EE2E2A),to(#d32a3b)) !important;
+background-image: -webkit-linear-gradient(top,#EE2E2A,#d32a3b) !important;
+background-image: -o-linear-gradient(top,#EE2E2A,#d32a3b) !important;
+background-image: linear-gradient(to bottom,#EE2E2A,#d32a3b) !important;
+
+}
+
+.btn-white{
+background: #FFF !important;
+background-image: -moz-linear-gradient(top,#FFF,#FFF);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#FFF),to(#FFF)) !important;
+border: 1px solid #0E416F !important;
+color:#0E416F !important;
+font-weight: bold !important;
+}
+
+.btn-white:hover{
+background: #FFF !important;
+background-image: -moz-linear-gradient(top,#FFF,#FFF);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#FFF),to(#FFF)) !important;
+border: 1px solid #0E416F;
+color:#0E416F !important;
+}
+.btn-white:focus{
+background: #FFF !important;
+background-image: -moz-linear-gradient(top,#FFF,#FFF);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#FFF),to(#FFF)) !important;
+border: 1px solid #0E416F;
+color:#0E416F !important;
+}
+.btn-gray{
+background: #f5f5f5 !important;
+background-image: -moz-linear-gradient(top,#f5f5f5,#f5f5f5);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#f5f5f5),to(#f5f5f5)) !important;
+border: 1px solid #cccccc;
+color:#7c7c7c !important;
+font-weight: bold !important;
+}
+
+.btn-gray:hover{
+background: #f5f5f5 !important;
+background-image: -moz-linear-gradient(top,#f5f5f5,#f5f5f5);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#f5f5f5),to(#f5f5f5)) !important;
+border: 1px solid #cccccc;
+color:black !important;
+}
+.btn-gray:focus{
+background: #f5f5f5 !important;
+background-image: -moz-linear-gradient(top,#f5f5f5,#f5f5f5);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#f5f5f5),to(#f5f5f5)) !important;
+border: 1px solid #cccccc;
+color:black !important;
+}
+
+.message-div{
+color : #333333 !important;
+background : #F6F6F6 !important;
+border-color :  #F6F6F6 !important;
+margin-top : 15px !important;
+}
+
+.tableheader {background-color:#0E416F; color:#FFFFFF;}
+.tableheader > th {font-size:17px;}
+ 
+#theme-options{ display:none;}
+
+#top-bar #widget--shop-cart > li > a {
+padding-right: 10px;
+}   
+#top-bar .ui--widget li .helper--extract-icon {
+display: none;
+}
+
+
+#the-content h3 a {color:#1668b2;}
+#the-content h3 a:hover {color:#1668b2;text-decoration: underline !important;}
+#the-content h6 a {color:#1668b2;}
+#the-content h6 a:hover {color:#1668b2;text-decoration: underline;}
+#the-content h5 a {color:#1668b2;}
+#the-content h5 a:hover {color:#1668b2;text-decoration: underline;}
+/*--*/
+#the-content h1 a {color:#1668b2;}
+#the-content h1 a:hover {color:#1668b2;text-decoration: underline;}
+#the-content h2 a {color:#1668b2;}
+#the-content h2 a:hover {color:#1668b2;text-decoration: underline;}
+#the-content h4 a {color:#1668b2;}
+#the-content h4 a:hover {color:#1668b2;text-decoration: underline;}
+/*--*/
+#the-content p  a {color:#1668b2 !important;text-decoration: underline;}
+#the-content p  a:hover {color:#1668b2 !important;text-decoration: underline;}
+
+#the-content .ui--blog-link {color:#1668b2;text-decoration: none !important;}
+/*#the-content .ui--twitter-timeline-content{color:#1668b2;text-decoration: none !important;}*/
+
+#the-content ul > li  a {color:#1668b2;}
+#the-content ul > li  a:hover {color:#1668b2;text-decoration: underline;}
+
+#the-content ol > li  a {color:#1668b2;}
+#the-content ol > li  a:hover {color:#1668b2;text-decoration: underline;}
+
+#the-content ul > li >p  a {color:#1668b2;}
+#the-content ul > li >p  a:hover {color:#1668b2;text-decoration: underline;}
+
+#the-content ol > li >p  a {color:#1668b2;}
+#the-content ol > li >p  a:hover {color:#1668b2;text-decoration: underline;}
+
+
+#the-content table a {color:#1668b2;}
+#the-content table a:hover {color:#1668b2;text-decoration: underline;}
+    
+.widget_recent_entries ul li a {color:#1668b2;}
+.widget_recent_entries ul li a:hover {color:#1668b2;text-decoration: underline;}
+
+#the-content  ol > li > ul {list-style-type: disc;}
+#landingPageText ul {list-style-type: disc;}
+
+sub, sup {
+position: inherit !important;
+}
+
+.iscaYoutube {width:100% !important;}
+
+@media only screen and (max-width : 768px) { 
+    .youmax-video-tnail-box {width:100% !important;}    
+    
+    .iscaYoutube {width:85% !important;}
+
+    
+
+@media only screen and (max-width : 495px) {
+    #iscatagline {display:none;}
+    
+}
+
+                
+@media (min-width: 768px) and (max-width : 1200px){
+#header-navigation li {
+    font-size:14px !important;
+ }
+}
+
+@media (min-width: 980px) and (max-width: 1199px){
+    .topcornericon {display:none !important;}
+}
+            
+            
+
+
+
+
+
+
+
+@media (max-width: 767px)
+.ui--blog-side {
+display: block !important; 
+}
+
+@media (min-width: 1025px){
+        .header-type-2.no-stuck #header-navigation {
+            /* find and cure disappearing act */
+            display:inline-block !important;
+        }
+}
+
+
+@media (min-width : 768px) and (max-width : 1024px) { 
+    
+    .header-type-2.no-stuck nav#navigation {
+        float: none !important;
+        display: block !important;
+        max-width: 724px !important;  /* ADJUST override */
+        position: relative !important;  
+        width : 80%;
+        /* width : 80%; */
+        margin: 0 auto !important;
+        
+        /*margin-top: 0 !important;
+        text-align: center !important;
+        line-height: 0;*/
+    }
+    
+    #header-navigation {
+        display: none;
+        text-align: left !important;
+        float: none !important; 
+        
+        width: 106.5%;
+        margin-top: 10px;   
+    }
+    
+    
+    
+    #header-navigation > li {
+    width:100%!important;
+    float:none!important;
+    clear:both;
+    border-color:#ebebeb;
+    margin:-2px auto auto;
+    }
+
+    #header-navigation > li,#header-navigation > li > a {
+    float:none!important;
+    display:block;
+    }
+
+    #header-navigation > li > a {
+    border-bottom:0!important;
+    margin:0!important;
+    padding:10px 20px!important;
+    }
+    
+    #header-navigation > .fallout > ul.sub-menu {
+    width:auto!important;
+    left:0!important;
+    right:0!important;
+    top:100%!important;
+    float:none!important;
+    display:none!important;
+    position:absolute!important;
+    margin:0!important;
+    }
+
+    #header-navigation > .fallout ul ul.sub-menu {
+    left:auto;
+    right:auto;
+    top:auto;
+    bottom:auto;
+    position:static!important;
+    visibility:visible!important;
+    opacity:1!important;
+    height:auto!important;
+    width:100%!important;
+    background:none!important;
+    background-color:transparent!important;
+    border:0;
+    -webkit-box-shadow:none!important;
+    -moz-box-shadow:none!important;
+    box-shadow:none!important;
+    margin:0!important;
+    }
+
+    #header-navigation > .fallout ul.sub-menu {
+    position:static!important;
+    display:none!important;
+    }
+
+    #header-navigation > .fallout li {
+    width:100%!important;
+    float:none!important;
+    clear:both;
+    }
+
+    #header-navigation > .fallout li a {
+    text-align:left!important;
+    position:relative!important;
+    }
+
+    #header-navigation > .fallout .level-1 > ul.sub-menu {
+    background:#f1f1f1!important;
+    }
+
+    #header-navigation > .fallout .level-2 ul.sub-menu {
+    margin-left:20px!important;
+    }
+
+    #header-navigation > .fallout li li a {
+    border-bottom:0!important;
+    }
+
+    #header-navigation > .fallout .level-1 ul.sub-menu li a {
+    background:none!important;
+    text-shadow:none!important;
+    color:#7c7c7c!important;
+    }
+
+    #header-navigation > .fallout .level-1 ul.sub-menu li a:hover {
+    color:#333!important;
+    }
+
+    #header-navigation > .megamenu.layout-fullwidth,#header-navigation > .megamenu {
+    position:relative!important;
+    }
+
+    #header-navigation > .megamenu ul.sub-menu ul.sub-menu {
+    position:relative!important;
+    display:block!important;
+    background:none!important;
+    background-color:transparent!important;
+    }
+
+    #header-navigation > .megamenu > ul.sub-menu {
+    position:absolute!important;
+    width:auto!important;
+    left:0!important;
+    right:0!important;
+    top:-9999px!important;
+    display:block!important;
+    overflow:hidden;
+    margin:0!important;
+    }
+
+    #header-navigation > .megamenu.hover > ul.sub-menu {
+    top:100%!important;
+    position:relative!important;
+    }
+
+    #header-navigation li > ul.sub-menu > li.hover > ul.sub-menu {
+    top:0!important;
+    }
+
+    #header-navigation > .megamenu > ul.sub-menu > li {
+    width:100%!important;
+    float:left!important;
+    -webkit-box-shadow:0 -1px 10px rgba(0,0,0,.1),0 1px 0 rgba(0,0,0,.05);
+    -moz-box-shadow:0 -1px 10px rgba(0,0,0,.1),0 1px 0 rgba(0,0,0,.05);
+    box-shadow:0 -1px 10px rgba(0,0,0,.1),0 1px 0 rgba(0,0,0,.05);
+    }
+
+    #header-navigation > .megamenu > ul.sub-menu > li:first-child {
+    margin-top:0!important;
+    }
+
+    #header-navigation > .megamenu > ul.sub-menu > li:last-child {
+    margin-bottom:0!important;
+    }
+
+    #header-navigation li a {
+    position:relative !important;
+    }
+
+    
+
+    
+    #header-navigation li a .ui--caret,#header-navigation li.to-left a .ui--caret,#header-navigation li a .ui--caret,#header-navigation li.to-left a .ui--caret {
+    position:absolute !important;
+    left:auto!important;
+    right:7px!important;
+    top:50%!important;
+    margin-top:-9px!important;
+    margin-right:8px!important;
+    }
+
+    #header-navigation .fallout a .ui--caret:before {
+    content:"\f107"!important;
+    }
+
+    
+    /* spacing ................................................. */
+    
+    #header-navigation li > ul.sub-menu:after,.tp-bullets.simplebullets,.rev_slider_wrapper .tp-leftarrow,.rev_slider_wrapper .tp-rightarrow,.flex-caption,.ui--flexslider-navigation,.flexslider .flex-control-nav,.flexslider .flex-control-thumbs,.flexslider .flex-direction-nav {
+    display:none!important;
+    }
+
+    #header-navigation > .fallout .hover > ul.sub-menu,#header-navigation > .fallout.hover > ul.sub-menu,#header-navigation > .megamenu.hover ul.sub-menu {
+    display:block!important;
+    width:100%;
+    }
+    
+    
+    
+    .header-type-2.no-stuck nav#navigation {
+    /*padding-bottom:20px !important;   */
+    }
+    .header-type-2.no-stuck #header-navigation{
+    /*  display:none;   */
+    }
+    .header-type-2.no-stuck #header-navigation {
+    display:none; /*block ; */
+    }
+    
+    .header-type-2.no-stuck nav#navigation {
+        width:40% !important;
+        max-width:800px !important;
+        padding-bottom:10px !important;
+    }
+    
+    
+    #header-navigation-toggle {
+        display: inline-block !important;
+        position:relative !important;
+    }
+    
+    #header-navigation-toggle a .ui--caret {
+    position: relative; /*absolute*/
+    left: auto !important;
+    right: -20px !important;
+    top: 50% !important;
+    margin-top: -6px !important;
+    margin-right: 0 !important;
+    font-size: 14px;
+    }
+    
+
+    #header-navigation-toggle a .ui--caret {
+    right: -100px !important; /* set/remove right to 0px;
+    }
+
+    
+    
+}
+
+
+
+
+
+/* contour QA-Corp overrides */
+      .feedbackqa  {   
+     background-color: rgb(234, 243, 255); 
+   }
+   .feedbackqa2 {   
+     background-color: rgb(234, 243, 255); 
+   }
+   .feedbacktechfaq {
+     background-color: rgb(234, 243, 255); 
+   }
+   .feedbacktechfaq  small {
+      padding-left: 0;
+        padding-top: 1em;
+        font-size: 1em;
+    }
+
+   #contour fieldset {
+     padding:1px; 
+   margin: 0 0 5px 0;
+   }
+   #contour label.fieldLabel {
+     font-weight:300;
+   /*padding: 1em;
+   padding-left:0;
+   */
+   padding:0;
+   padding-left:3px;
+   /*padding-top:5px;*/
+   }
+   #contour textarea {
+    height: 50px;
+  /*margin-left: 7px;*/
+  /*margin-top: 17px;*/
+  margin-left: 6px;
+   }
+   #contour input.text{
+  margin-left: 7px;
+   }
+  #contour span.checkboxlist, #contour span.radiobuttonlist, #contour span.checkbox {
+   padding-top:0;
+   padding-left:10px;
+   }
+   
+  .contour label.fieldLabel {
+width: 220px; margin-right:20px;
+}
+   #contour small {
+
+padding-left: 1em;
+padding-top: 2em;
+font-size: 1em;
+   }
+       #contour .feedbacktechfaq  small {
+      padding-left: 0;
+        padding-top: 1em;
+        font-size: 1em;
+    }
+   
+   #contour legend {
+    font-weight: bold;
+     font-size: 1em;
+   float:left;
+   }
+   fieldset legend span {
+    display:block;
+    width: 540px;
+  }
+   #contour span.checkboxlist, #contour span.radiobuttonlist, #contour span.checkbox {
+display: block;
+float: left;
+/*padding-top: 15px;*/
+}
+
+/*override title h4 */
+    
+.feedbackqa2 > .contourPageName {
+font-size: 16px !important; color:blue;
+line-height: 1em !important;
+}
+
+/* bootstrap contour ovrrd */
+.contourFieldSet > .radio, .contourFieldSet >  .checkbox {
+ padding-left: 0px !important;
+}   
+
+.contourFieldSet  > .checkbox input[type="checkbox"] {
+margin-left: 1px !important;
+}
+.contourFieldSet > .checkbox > small {
+margin-left:15px !important;
+}
+
+
+/* contour Consent-radiolist */
+
+.radiobuttonlist {padding-top: 0px !important;}
+
+.numalignment{ text-align: right !important;}
+</style>
+
+<style>
+    .iscaLandingFeatured{
+        /*background-color:#e1e1e1; *background-color: #ffffff;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPg0KICAgIDxkZWZzPg0KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiIHNwcmVhZE1ldGhvZD0icGFkIj4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTFlMWUxIiBzdG9wLW9wYWNpdHk9IjEiLz4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8L2RlZnM+DQogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg=='); background-image: -moz-linear-gradient(top, #ffffff, #e1e1e1); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e1e1e1)); background-image: -webkit-linear-gradient(top, #ffffff, #e1e1e1); background-image: -o-linear-gradient(top, #ffffff, #e1e1e1); background-image: linear-gradient(to bottom, #ffffff, #e1e1e1); filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#e1e1e1'); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#e1e1e1')"; background-repeat: repeat-x ;  border-style: solid;  border-width: 1px;  border-color: #ebebeb;*/
+        background-color:#F1F0F0; *background-color: #ffffff;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPg0KICAgIDxkZWZzPg0KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiIHNwcmVhZE1ldGhvZD0icGFkIj4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTFlMWUxIiBzdG9wLW9wYWNpdHk9IjEiLz4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8L2RlZnM+DQogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg=='); background-image: -moz-linear-gradient(top, #ffffff, #F1F0F0); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#F1F0F0)); background-image: -webkit-linear-gradient(top, #ffffff, #F1F0F0); background-image: -o-linear-gradient(top, #ffffff, #F1F0F0); background-image: linear-gradient(to bottom, #ffffff, #F1F0F0); filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#F1F0F0'); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#F1F0F0')"; background-repeat: repeat-x ;  border-style: solid;  border-width: 1px;  border-color: #ebebeb;
+        min-height:170px;
+    }
+    
+/* for UI changes  */
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+        display:none !important;
+        padding-right:10px;
+    }
+    .paginate_button{
+        margin-right:20px !important;
+    }    
+        
+</style>
+        
+        
+        <link href="/resource/1471202926000/bootstrap3_3_6/css/bootstrap.min.css" rel="stylesheet" />
+        
+        <link href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" /> 
+       
+        
+        <div class="header"><span id="pg:j_id13">
+
+ <div class="header-type-2 no-stuck" data-responsive="{&amp;#34;css&amp;#34;:{&amp;#34;padding-bottom&amp;#34;:{&amp;#34;phone&amp;#34;:20,&amp;#34;tablet&amp;#34;:20,&amp;#34;widescreen&amp;#34;:0}}}" id="header-container">
+                <div id="header-container-background"></div>
+                                <div class="container relative">        
+                    <div id="logo" style="text-align:left;padding-left:20px;">
+                        <a href="http://isca.org.sg/#">
+                            <img alt="p" class="visible-desktop " data-at2x="/images/iscalogofull.png" id="logo-desktop" src="/resource/1459017454000/images/images/iscalogofull.png" style="margin-top: 20px;  margin-bottom: 20px;" />
+<img class="visible-tablet " data-at2x="/images/iscalogofull.png" id="logo-tablet" src="/resource/1459017454000/images/images/iscalogofull.png" style="margin-top: 40px;  margin-bottom: 20px;" />
+<img class="visible-phone " data-at2x="/images/iscalogofull.png" id="logo-phone" src="/resource/1459017454000/images/images/iscalogofull.png" style="margin-top: 20px;  margin-bottom: 20px;" />                        </a>
+    
+        <div class="pull-right" id="iscatagline" style="margin-top: 30px;margin-right: 10px;">
+           <h6><span style="color:#EE2E2A !important;"><strong>Global Mindset, Asian Insights</strong></span></h6>
+        </div>
+        
+</div>
+<style>
+    .container {
+        padding-right: 0px;
+        padding-left: 0px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    @media (max-width: 767px){
+        #page-content{
+             padding-right: 0px;
+            padding-left: 0px; 
+        }
+        
+        body{
+            padding:0px;
+        }
+        
+        nav#navigation{
+            max-width:100% !important;
+            width:100% !important;
+        }
+        .content-header .navbar .nav{
+            width:100%
+        }
+        .content-header .nav li {
+            display: block;
+            float:none !important
+        }
+        .content-header .nav li a {
+            display: block;
+            width:100%;
+            float:none !important
+        }
+        .navbar-toggle {margin:0px}
+    }
+    
+    @media (max-width: 400px){
+    #logo{
+            text-align:center !important;
+        }
+        .nav-tabs>li>a{font-size:11px}
+    }
+
+    .table-bordered{
+        border-collapse: collapse !important
+    }
+    
+    body{
+        margin:0px !important
+    }
+    
+    .heading{ 
+        background: rgba(238, 238, 238, 0.68); 
+        padding: 10px; 
+        margin-bottom: 10px; 
+        font-weight: normal; 
+        color: #0E416F; 
+        border: 1px solid rgba(204, 204, 204, 0.52); 
+    } 
+    
+    .sf-menu li.active a {
+        color: #169fe6 !important;  
+        border-bottom: 2px solid #169fe6 !important;
+    }
+    .sf-menu a:hover {
+        text-decoration:none!important;
+    }
+    
+    /*-- //Nitin_CPE_23062016 --*/
+    /*-- Added style for header menu alignment --*/
+    #header-navigation > li.top-level-item > a {
+        padding : 18px 19.5px !important;
+    }
+
+</style>
+
+<nav class="pull-right" id="navigation" style="text-align:left;">
+                        
+    
+
+        <div class="visible-phone visible-tableXt" id="header-navigation-toggle">
+            <a href="javascript:;">Navigation <i class="fontawesome-align-justify ui--caret"></i></a>
+        </div>
+
+        
+<ul class="sf-menu clearfix unstyled-all " id="header-navigation">              
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-right  " id="menu-item-1137">
+                <a href="http://isca.org.sg/become-a-member/" target="_blank">Become a member
+                <i class="ui--caret fontawesome-angle-down px18"></i></a>  
+        <ul class="sub-menu">    
+                   
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right" id="menu-item-1158">
+                <a href="http://isca.org.sg/become-a-member/about-the-profession/" target="_blank">About the Profession
+                <i class="ui--caret fontawesome-angle-right px18"></i></a>    
+                <ul class="sub-menu"> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26858">
+                    <a href="https://isca.org.sg/become-a-member/about-the-profession/adding-value-to-businesses/" target="_blank">Adding Value to Businesses</a>   
+                    </li>    
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26858">
+                    <a href="https://isca.org.sg/become-a-member/about-the-profession/what-chartered-accountants-can-do-for-your-business/" target="_blank">What Chartered Accountants can do for Your Business</a>   
+                    </li>    
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26858">
+                    <a href="https://isca.org.sg/become-a-member/about-the-profession/chartered-accountants-a-trusted-mark-of-excellence/" target="_blank">Chartered Accountants - A Trusted Mark of Excellence</a>   
+                    </li>                                                           
+                </ul>
+        </li>     
+                
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-26857">
+            <a href="http://isca.org.sg/become-a-member/pathways/" target="_blank">Pathways to ISCA Membership
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26858">
+                    <a href="http://isca.org.sg/become-a-member/pathways/chartered-accountant-pathway/" target="_blank">Chartered Accountant Pathway</a>   
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26859">
+                    <a href="http://isca.org.sg/become-a-member/pathways/associate-pathway/" target="_blank">Associate Pathway</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26861">
+                    <a href="http://isca.org.sg/become-a-member/pathways/affiliate-pathway/" target="_blank">Affiliate Pathway</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26861">
+                    <a href="https://isca.org.sg/become-a-member/pathways/specialisation-pathway/" target="_blank"> Specialization Pathway</a> 
+                    </li>    
+                </ul>               
+        </li>     
+                
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1160">
+            <a href="http://isca.org.sg/become-a-member/qp/" target="_blank">Qualification Programmes
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">                  
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-12343">
+                    <a href="https://www.sac.gov.sg/scaq" target="_blank">Singapore Chartered Accountant Qualification</a>    
+                    </li>     
+                    
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26389">
+                    <a href="http://isca.org.sg/become-a-member/qp/aat/" target="_blank">ISCA Accredited Accounting Technician</a> 
+                    </li>
+                    
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26389">
+                    <a href="https://isca.org.sg/become-a-member/qp/isca-ffa/" target="_blank">ISCA Financial Forensic Accounting Qualification</a> 
+                    </li>           
+                           
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26389">
+                    <a href="https://isca.org.sg/become-a-member/qp/isca-suss-business-analytics-certification-programme/" target="_blank">ISCA-SUSS Business Analytics Certification Programme</a> 
+                    </li>                           
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26390">
+                    <a href="http://isca.org.sg/become-a-member/qp/international-education-standard-exposure-drafts-comments-letters/" target="_blank">International Education Standard Exposure Drafts &amp; Comments Letters</a> 
+                    </li>               
+                </ul>               
+        </li>     
+                                
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1162">
+            <a href="http://isca.org.sg/become-a-member/membership-types/" target="_blank">Membership Types
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">      
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1211">
+                    <a href="https://isca.org.sg/become-a-member/pathways/affiliate-pathway/" target="_blank">Affiliate (ISCA)</a> 
+                    </li>                            
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1211">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/associate-isca/" target="_blank">Associate (ISCA)</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1212">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/ca-singapore/" target="_blank">CA (Singapore)</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1213">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/ca-singapore-who-is-a-public-accountant/" target="_blank">CA (Singapore) who is a public accountant</a>   
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1214">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/fellow-member/" target="_blank">Fellow Member</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1215">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/member-in-retirement/" target="_blank">Member in Retirement</a>   
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1217">
+                    <a href="http://isca.org.sg/become-a-member/membership-types/life-member/" target="_blank">Life Member</a> 
+                    </li>     
+                </ul>               
+        </li>   
+                
+          
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1163">
+            <a href="http://isca.org.sg/become-a-member/membership-benefits/" target="_blank">Membership Benefits
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-17018">
+                    <a href="http://isca.org.sg/become-a-member/membership-benefits/benefits/" target="_blank">Member Benefits</a>    
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1716">
+                    <a href="http://isca.org.sg/become-a-member/membership-benefits/career-profiles/" target="_blank">Career Profiles</a>  
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1717">
+                    <a href="http://isca.org.sg/become-a-member/membership-benefits/testimonials/" target="_blank">Testimonials</a>    
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1718">
+                    <a href="http://isca.org.sg/become-a-member/membership-benefits/members-privileges/" target="_blank">Members&#8217; Privileges</a>   
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-25772">
+                    <a href="http://isca.org.sg/become-a-member/membership-benefits/brand-guidelines-for-members/" target="_blank">Brand Guidelines for Members</a>    
+                    </li>     
+                </ul>               
+        </li>     
+        
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1164">
+            <a href="http://isca.org.sg/become-a-member/members-obligations/" target="_blank">Members' Obligations
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1219">
+                    <a href="http://isca.org.sg/become-a-member/members-obligations/code-of-ethics/" target="_blank">Code of Ethics</a>    
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1220">
+                    <a href="http://isca.org.sg/become-a-member/members-obligations/cpe-compliance/" target="_blank">CPE Compliance</a>    
+                    </li>     
+                </ul>               
+        </li>     
+        
+        
+       <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1165">
+            <a href="http://isca.org.sg/become-a-member/membership-fees/" target="_blank">Membership Fees</a>  
+       </li>     
+       
+       <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1486">
+            <a href="http://isca.org.sg/become-a-member/faqs/" target="_blank">FAQs</a>    
+       </li>     
+       </ul>              
+       </li>     
+                
+                
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-right  " id="menu-item-1138">
+        <a href="http://isca.org.sg/member-services/">Member Services<i class="ui--caret fontawesome-angle-down px18">
+        </i></a>  
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1179">
+            <a href="/Signin" target="_self">Login to Members Portal</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1175">
+            <a href="http://isca.org.sg/member-services/membership-renewal/" target="_blank">Membership Renewal
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16920">
+                <a href="http://isca.org.sg/member-services/membership-renewal/payment-of-annual-subscription/" target="_blank">Payment of Annual Subscription</a> 
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16872">
+                <a href="http://isca.org.sg/member-services/membership-renewal/application-for-reduced-membership-fee/" target="_blank">Application for Reduced Membership Fee</a> 
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16873">
+                <a href="http://isca.org.sg/member-services/membership-renewal/application-for-member-in-retirement-mir/" target="_blank">Application for Member-In-Retirement (MIR)</a>   
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16874">
+                <a href="http://isca.org.sg/member-services/membership-renewal/returning-to-membership/" target="_blank">Returning to Membership</a>   
+            </li>     
+        </ul>               
+        </li>    
+    
+     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1173">
+            <a href="http://isca.org.sg/member-services/membership-reclassification/" target="_blank">Membership Reclassification</a>  
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1171">
+            <a href="http://isca.org.sg/member-services/members-obligations/" target="_blank">Members' Obligations
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16491">
+                <a href="http://isca.org.sg/member-services/members-obligations/members-handbook/" target="_blank">Members Handbook</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1720">
+                <a href="http://isca.org.sg/member-services/members-obligations/code-of-ethics/" target="_blank">Code of Ethics</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1721">
+                <a href="http://isca.org.sg/member-services/members-obligations/cpe-compliance/" target="_blank">CPE Compliance</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16884">
+                <a href="http://isca.org.sg/member-services/members-obligations/isca-constitution-and-rules/" target="_blank">ISCA Constitution and Rules</a> 
+            </li>     
+            </ul>               
+        </li>   
+          
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1172">
+            <a href="http://isca.org.sg/member-services/members-benefits-and-privileges/" target="_blank">Members Benefits and Privileges 
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16928">
+                <a href="https://isca.org.sg/become-a-member/membership-benefits/brand-guidelines-for-members/" target="_blank">Brand Guidelines For Members</a>    
+            </li>                
+            </ul>       
+        </li>   
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1272">
+            <a href="https://isca.org.sg/member-services/resignation-removal-or-suspension-of-membership/" target="_blank">Resignation, Removal or Suspension of Membership</a>     
+        </li>          
+          
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1728">
+            <a href="http://isca.org.sg/member-services/member-communications/" target="_blank">Member Communications
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16928">
+                <a href="https://isca.org.sg/member-services/member-communications/affiliate/" target="_blank">Affiliate</a>    
+            </li>                          
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16928">
+                <a href="http://isca.org.sg/member-services/member-communications/associate/" target="_blank">Associate</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16929">
+                <a href="http://isca.org.sg/member-services/member-communications/ca-singapore-including-fellow/" target="_blank">CA (Singapore) including Fellow</a>  
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-16930">
+                <a href="http://isca.org.sg/member-services/member-communications/ca-singapore-who-is-a-public-accountant/" target="_blank">CA (Singapore) who is a Public Accountant</a>  
+            </li>     
+            </ul>
+        </li>     
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-20762">
+            <a href="http://isca.org.sg/member-services/practice-monitoring-programme/" target="_blank">Practice Monitoring Programme
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20763">
+                <a href="http://isca.org.sg/member-services/practice-monitoring-programme/hot-review-panel/" target="_blank">Hot Review Panel</a>  
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20764">
+                <a href="http://isca.org.sg/member-services/practice-monitoring-programme/peer-review-panel/" target="_blank">Peer Review Panel</a>    
+            </li>     
+            </ul>               
+        </li>     
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1174">
+            <a href="http://isca.org.sg/member-services/icaew-isca-pathways-to-membership-scheme/" target="_blank">ICAEW-ISCA Pathways to Membership Scheme</a>    
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-22591">
+            <a href="http://isca.org.sg/member-services/isca-cima-pathway/" target="_blank">ISCA-CIMA Pathway</a>  
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1176">
+            <a href="http://isca.org.sg/member-services/career-support/" target="_blank">Career Support
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>    
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/job-board/" target="_blank">Job Board</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/events/" target="_blank">Events</a>    
+            </li>    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/career-assistance/" target="_blank">Career Assistance</a>    
+            </li>    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/mentoring-programme/" target="_blank">Mentoring Programme</a>    
+            </li>    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/career-coaching/" target="_blank">Career Coaching</a>    
+            </li>                                                    
+               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/career-support/career-advice/" target="_blank">Career Advice</a>    
+        </li>     
+            </ul>           
+        </li>  
+         
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1176">
+            <a href=" https://isca.org.sg/member-services/pathways-to-other-professional-qualifications/" target="_blank">Pathways to Other Professional Qualifications
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>    
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href=" https://isca.org.sg/member-services/pathways-to-other-professional-qualifications/reciprocal-membership-agreement-rma/" target="_blank">Reciprocal Membership Agreement (RMA)</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/pathways-to-other-professional-qualifications/isca-cima-pathway/" target="_blank">ISCA-CIMA Pathway</a>    
+            </li>    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href=" https://isca.org.sg/member-services/pathways-to-other-professional-qualifications/icaew-pathways-to-membership/" target="_blank">ICAEW Pathways to Membership</a>    
+            </li>    
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="https://isca.org.sg/member-services/pathways-to-other-professional-qualifications/acpa/" target="_blank">ASEAN Chartered Professional Accountant (ASEAN CPA)</a>    
+            </li>    
+            </ul>           
+        </li>  
+         
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1177">
+            <a href="http://isca.org.sg/member-services/forms/" target="_blank">Forms<i class="ui--caret fontawesome-angle-right px18">
+            </i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-3877">
+            <a href="http://isca.org.sg/member-services/forms/forms/" target="_blank">Forms</a>    
+            </li>     
+            </ul>
+        </li>   
+          
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1723">
+            <a href="http://isca.org.sg/member-services/faqs/" target="_blank">FAQs</a>    
+        </li>  
+           
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-25681">
+            <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/" target="_blank">IS Chartered Accountant Journal
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26872">
+                <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/current-issue/" target="_blank">May 2018 Issue</a>    
+            </li>     
+             
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26872">
+                <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/accounting-for-good/" target="_blank">Accounting for Good</a>    
+            </li> 
+               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-25721">
+                <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/guide-to-digital-journal/" target="_blank">Guide to Digital Journal</a>    
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-25686">
+                <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/faq/" target="_blank">FAQ</a>  
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-25685">
+                <a href="http://isca.org.sg/member-services/is-chartered-accountant-journal/archives/" target="_blank">Archives</a>    
+            </li>     
+            </ul>               
+        </li>     
+        </ul>               
+    </li>     
+    
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-right  " id="menu-item-1139">
+        <a href="/CPEHome">CPE &amp; Events<i class="ui--caret fontawesome-angle-down px18"></i></a>  
+        <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-24749">
+                <a href="http://isca.org.sg/cpe-events/how-to-start-your-cpe/" target="_blank">How to start your CPE</a>   
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-19843">
+                <a href="/CPEHome">CPE Training</a>  
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-21036">
+                <a href="/CourseCalenderView">CPE Calendar</a>  
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1181">
+                <a href="http://isca.org.sg/cpe-events/signature-events/" target="_blank">Signature Events
+                <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                         
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1233">
+                        <a href="https://isca.org.sg/the-institute/newsroom/isca-viewpoint/highlights-of-the-isca-pre-budget-roundtable/">ISCA Pre-Budget Roundtable</a>
+                    </li>                   
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1234">
+                        <a href="https://isca.org.sg/cpe-events/calendar/events-calendar/2017/september/isca-financial-forensic-conference/" target="_blank">ISCA Financial Forensic Conference</a> 
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-22191">
+                        <a href="https://isca.org.sg/cpe-events/calendar/events-calendar/2018/may/isca-run-2018/" target="_blank">ISCA Run 2018</a>  
+                    </li>     
+                </ul>               
+            </li> 
+            
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1181">
+                <a href="https://isca.org.sg/cpe-events/singapore-accountancy-and-audit-convention-series-2018/" target="_blank">Singapore Accountancy and Audit Convention Series 2018
+                <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                    
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20221">
+                        <a href="https://isca.org.sg/cpe-events/singapore-accountancy-and-audit-convention-series-2018/overview/" target="_blank">Overview</a>    
+                    </li>         
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20221">
+                        <a href="https://isca.org.sg/cpe-events/singapore-accountancy-and-audit-convention-series-2018/budget-update-seminar/" target="_blank">Budget Update Seminar</a>    
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20221">
+                        <a href="https://isca.org.sg/cpe-events/singapore-accountancy-and-audit-convention-series-2018/practitioners-conference/" target="_blank">Practitioners Conference</a>    
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20221">
+                        <a href="https://isca.org.sg/cpe-events/singapore-accountancy-and-audit-convention-series-2018/httpsiscaorgsgcpe-eventscalendarevents-calenhttpsiscaorgsgcpe-eventscalendarevents-calendar2018augusttechnology-conferencedar2018augusttechnology-conference/" target="_blank">Technology Conference</a>    
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-20221">
+                        <a href="https://isca.org.sg/cpe-events/calendar/events-calendar/2018/september/singapore-accountancy-awards-2018/" target="_blank">Singapore Accountancy Awards 2018</a>    
+                    </li>                     
+                          
+                </ul>               
+            </li>             
+              
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1182">
+                <a href="http://isca.org.sg/cpe-events/networking-social-engagement/" target="_blank">Networking &amp; Social Engagement
+                <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1235">
+                        <a href="http://isca.org.sg/cpe-events/networking-social-engagement/isca-breakfast-talk-series/" target="_blank">ISCA Breakfast Talk Series</a>    
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1236">
+                        <a href="http://isca.org.sg/cpe-events/networking-social-engagement/isca-mingles/" target="_blank">ISCA Mingles</a>    
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1236">
+                        <a href="https://isca.org.sg/cpe-events/networking-social-engagement/one-young-world-summit-2017/" target="_blank">ISCA One Young #CharteredStar Competition 2018</a>    
+                    </li>                       
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21448">
+                        <a href="http://isca.org.sg/cpe-events/networking-social-engagement/isca-social-engagement/" target="_blank">ISCA Social Engagement</a>    
+                    </li>                       
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1238">
+                        <a href="https://eservices.isca.org.sg/apex/CPELandingPage?id=a1I280000035dJzEAI" target="_blank">ISCA-CPA Australia Joint Dinner Talk</a>   
+                    </li>     
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21448">
+                        <a href="https://isca.org.sg/cpe-events/networking-social-engagement/isca-toastmasters/" target="_blank">ISCA Toastmasters</a>    
+                    </li>                       
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26132">
+                        <a href="https://isca.org.sg/cpe-events/networking-social-engagement/isca-economic-outlook/" target="_blank">ISCA Economic Outlook</a>  
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-26132">
+                        <a href="https://isca.org.sg/cpe-events/networking-social-engagement/technology-forums/" target="_blank">Technology Forums</a>  
+                    </li>                                     
+                </ul>               
+            </li>     
+            
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-20869">
+                <a href="http://isca.org.sg/cpe-events/contact-us/" target="_blank">Contact Us</a> 
+            </li>        
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-1187">
+                <a href="http://isca.org.sg/cpe-events/join-us-as-a-trainer/" target="_blank">Join Us As A Trainer</a> 
+            </li>     
+                   
+        </ul>               
+    </li>     
+    
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-right  " id="menu-item-1140">
+        <a href="http://isca.org.sg/id/">Capability Development
+        <i class="ui--caret fontawesome-angle-down px18"></i></a>    
+        <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1188">
+                <a href="http://isca.org.sg/id/technology-adoption/" target="_blank">Technology Adoption
+                <i class="ui--caret fontawesome-angle-right px18"></i></a>
+                <ul class="sub-menu">               
+                
+                <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1242">
+                    <a href="https://isca.org.sg/id/technology-adoption/isca-technology-adoption-survey-report/" target="_blank">ISCA Technology Adoption Survey Report</a>  
+                </li>     
+                <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1241">
+                    <a href="https://isca.org.sg/id/technology-adoption/local-enterprise-association-development-lead-programme/" target="_blank">Local Enterprise Association Development (LEAD) Programme</a>  
+                </li>                   
+                    
+        </ul>               
+    </li>    
+ 
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1189">
+        <a href="http://isca.org.sg/id/hcd/" target="_blank">Human Capital Development
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">  
+                
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-18031">
+            <a href="http://isca.org.sg/id/hcd/on-job-training-ojt-blueprint/" target="_blank">On-Job-Training (OJT) Blueprint</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-18029">
+            <a href="https://isca.org.sg/id/hcd/practical-audit-workshop-paw/" target="_blank">Practical Audit Workshop (PAW)</a>   
+        </li>     
+                     
+        </ul>               
+    </li>     
+                
+                
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1190">
+        <a href="http://isca.org.sg/id/bmc/" target="_blank">Business Management Capabilities
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-24814">
+            <a href="http://isca.org.sg/id/bmc/isca-sap-productivity-scorecard-benchmarking-reports/" target="_blank">ISCA-SAP Productivity Scorecard &amp; Benchmarking Reports</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1247">
+            <a href="http://isca.org.sg/id/bmc/quality-control-process-manual/" target="_blank">Quality Control Process Manual</a> 
+        </li>     
+                
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1248">
+        <a href="https://isca.org.sg/id/bmc/overseas-business-study-missions/" target="_blank">Overseas Business Study Missions</a>   
+        </li>     
+         
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1245">
+        <a href="https://isca.org.sg/id/bmc/practitioners-package/" target="_blank">Practitioner's Package</a>   
+        </li>     
+        </ul>               
+    </li>
+
+         
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-1190">
+        <a href="javascript:void(0)" target="_blank">Learning Roadmap
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-24814">
+                <a href="javascript:void(0)" target="_blank">Auditors in small-and-Medium-Sized Practices (SMP)</a>   
+            </li>
+        </ul>
+    </li>  
+                
+ 
+        </ul>               
+    </li>     
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-right  " id="menu-item-21055">
+        <a href="http://isca.org.sg/ethics/">Ethics
+        <i class="ui--caret fontawesome-angle-down px18"></i></a>    
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-21056">
+            <a href="http://isca.org.sg/ethics/ethics-headlines/" target="_blank">Ethics Headlines</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-21146">
+            <a href="http://isca.org.sg/ethics/codes-of-professional-conduct-ethics/" target="_blank">Codes of Professional Conduct &amp; Ethics</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-21147">
+            <a href="http://isca.org.sg/ethics/ethics-pronouncements-and-implementation-guidances/" target="_blank">Ethics Pronouncements and Implementation Guidances</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-21148">
+            <a href="http://isca.org.sg/ethics/anti-money-laundering-and-countering-the-financing-of-terrorism/" target="_blank">Anti-Money Laundering and Countering the Financing of Terrorism
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-24997">
+            <a href="http://isca.org.sg/ethics/anti-money-laundering-and-countering-the-financing-of-terrorism/targeted-financial-sanctions-prohibited-relationships/" target="_blank">Targeted Financial Sanctions (Prohibited Relationships)</a> 
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-24998">
+            <a href="http://isca.org.sg/ethics/anti-money-laundering-and-countering-the-financing-of-terrorism/guidance-on-submission-of-strs-related-to-panama-papers/" target="_blank">Guidance on Submission of STRs related to Panama Papers</a> 
+        </li>       
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-24998">
+            <a href="https://isca.org.sg/ethics/anti-money-laundering-and-countering-the-financing-of-terrorism/fatf-report-on-detecting-terrorist-financing-relevant-risk-indicators/" target="_blank">FATF Report On Detecting Terrorist Financing Relevant Risk Indicators</a> 
+        </li>                 
+        </ul>               
+    </li>    
+     
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-21149">
+        <a href="http://isca.org.sg/ethics/exposure-drafts-comment-letters/" target="_blank">Exposure Drafts &amp; Comment Letters
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21150">
+            <a href="http://isca.org.sg/ethics/exposure-drafts-comment-letters/exposure-drafts/" target="_blank">Exposure Drafts</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21151">
+            <a href="http://isca.org.sg/ethics/exposure-drafts-comment-letters/isca-comment-letters/" target="_blank">ISCA Comment Letters</a> 
+        </li>     
+        </ul>
+    </li>     
+                
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-right " id="menu-item-21152">
+        <a href="http://isca.org.sg/ethics/resources/" target="_blank">Resources
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21153">
+            <a href="http://isca.org.sg/ethics/resources/articles-publications/" target="_blank">Articles &amp; Publications</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21185">
+            <a href="http://isca.org.sg/ethics/resources/case-studies/" target="_blank">Case Studies</a>   
+        </li>     
+        
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-21228">
+            <a href="http://isca.org.sg/ethics/resources/videos-animations-series/" target="_blank">Videos &amp; Animations Series</a>   
+        </li>     
+             
+        </ul>               
+    </li>     
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-21306">
+        <a href="http://isca.org.sg/ethics/ethics-faqs/" target="_blank">Ethics FAQs</a>   
+    </li>     
+    
+        </ul>               
+    </li>     
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has-child level-2 top-level-item fallout to-left  to-left  " id="menu-item-1141">
+        <a href="http://isca.org.sg/tkc/">Knowledge Centre
+        <i class="ui--caret fontawesome-angle-down px18"></i></a> 
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1193">
+            <a href="http://isca.org.sg/tkc/fr/" target="_blank">Financial Reporting
+            <i class="ui--caret fontawesome-angle-right px18"></i></a>
+            <ul class="sub-menu">               
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1252">
+                <a href="http://isca.org.sg/tkc/fr/current-issues/" target="_blank">Current Issues</a> 
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1253">
+                <a href="http://isca.org.sg/tkc/fr/financial-reporting-standards/" target="_blank">Financial Reporting Standards</a>   
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1254">
+                <a href="http://isca.org.sg/tkc/fr/exposure-drafts-comment-letters/" target="_blank">Exposure Drafts &amp; Comment Letters</a> 
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1254">
+                <a href="https://isca.org.sg/tkc/fr/resources/" target="_blank">Resources</a> 
+            </li>                 
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1255">
+                <a href="https://isca.org.sg/tkc/fr/techbites/" target="_blank">Technical Bites</a>   
+            </li>     
+            <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-4152">
+                <a href="https://isca.org.sg/tkc/fr/micro-accounting-model-mam/" target="_blank">Micro Accounting Model (MAM)</a> 
+            </li>     
+        </ul>
+    </li>     
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1194">
+        <a href="http://isca.org.sg/tkc/aa/" target="_blank">Audit &amp; Assurance
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1257">
+            <a href="http://isca.org.sg/tkc/aa/current-issues/" target="_blank">Current Issues</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1258">
+            <a href="http://isca.org.sg/tkc/aa/standards/" target="_blank">Standards</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1259">
+            <a href="http://isca.org.sg/tkc/aa/exposure-drafts-comment-letters/" target="_blank">Exposure Drafts &amp; Comment Letters</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-18288">
+            <a href="http://isca.org.sg/tkc/aa/resources/" target="_blank">Resources</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-10792">
+            <a href="http://isca.org.sg/tkc/aa/faqs/" target="_blank">Audit &amp; Assurance FAQs</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1262">
+            <a href="http://isca.org.sg/tkc/aa/qa/" target="_blank">Quality Assurance</a>  
+        </li>     
+        </ul>               
+    </li>
+    
+         
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1196">
+        <a href="http://isca.org.sg/tkc/cogov/" target="_blank">Corporate Governance
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1269">
+            <a href="http://isca.org.sg/tkc/cogov/code-of-corporate-governance/" target="_blank">Code of Corporate Governance</a>  
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19729">
+            <a href="http://isca.org.sg/tkc/cogov/audit-committees/" target="_blank">Audit Committees</a>  
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19740">
+            <a href="http://isca.org.sg/tkc/cogov/risk-governance/" target="_blank">Risk Management</a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19755">
+            <a href="http://isca.org.sg/tkc/cogov/general/" target="_blank">General</a>    
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19755">
+            <a href="https://isca.org.sg/tkc/cogov/singapore-stewardship-principles/singapore-stewardship-principles/" target="_blank">Singapore Stewardship Principles</a>    
+        </li>             
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1359">
+            <a href="http://isca.org.sg/tkc/cogov/useful-links/" target="_blank">Useful Links</a>  
+        </li>     
+        </ul>               
+    </li>     
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1197">
+        <a href="http://isca.org.sg/tkc/ir/" target="_blank">Integrated Reporting
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1273">
+            <a href="http://isca.org.sg/tkc/ir/ir-steering-committee/" target="_blank">&lt;IR&gt; Steering Committee</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1274">
+            <a href="http://isca.org.sg/tkc/ir/ir-business-network/" target="_blank">&lt;IR&gt; Business Network</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19028">
+            <a href="http://isca.org.sg/tkc/ir/ir-headlines/" target="_blank">&lt;IR&gt; Headlines</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1277">
+            <a href="http://isca.org.sg/tkc/ir/ir-resources/" target="_blank">&lt;IR&gt; Resources</a> 
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19300">
+            <a href="http://isca.org.sg/tkc/ir/ir-faqs/" target="_blank">&lt;IR&gt; FAQs</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1276">
+            <a href="http://isca.org.sg/tkc/ir/ir-events/" target="_blank">&lt;IR&gt; Events</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1371">
+            <a href="http://isca.org.sg/tkc/ir/ir-quick-links/" target="_blank">&lt;IR&gt; Quick Links</a> 
+        </li>     
+        </ul>               
+    </li>    
+     
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1198">
+        <a href="http://isca.org.sg/tkc/bm/" target="_blank">Business Management
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19792">
+            <a href="http://isca.org.sg/tkc/bm/singapore-budget/" target="_blank">Singapore's Budget</a> 
+        </li>      
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19793">
+            <a href="http://isca.org.sg/tkc/bm/cfo-and-finance-professionals/" target="_blank">CFO and Finance Professionals</a>   
+        </li>      
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19814">
+            <a href="http://isca.org.sg/tkc/bm/smp/" target="_blank">Small and Medium-sized Accounting Practices (SMP)</a> 
+        </li>     
+        </ul>               
+    </li>     
+    
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1199">
+        <a href="http://isca.org.sg/tkc/bv/" target="_blank">Business Valuation
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-17827">
+            <a href="http://isca.org.sg/tkc/bv/valuation-headlines/" target="_blank">Valuation Headlines</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19109">
+            <a href="http://isca.org.sg/tkc/bv/resources/" target="_blank">Resources</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1284">
+            <a href="http://isca.org.sg/tkc/bv/useful-links/" target="_blank">Useful Links</a> 
+        </li>     
+        </ul>               
+    </li>    
+    
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 menu-item-has-children  has-child sub-level-item style--standard enot-first  to-left " id="menu-item-1199">
+        <a href="https://isca.org.sg/tkc/our-future-together/" target="_blank">Our Future Together
+        <i class="ui--caret fontawesome-angle-right px18"></i></a>
+        <ul class="sub-menu">               
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-17827">
+            <a href="https://isca.org.sg/tkc/our-future-together/publications/publications/" target="_blank">Publications</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-19109">
+            <a href="https://isca.org.sg/tkc/our-future-together/trending-news/trending-news/" target="_blank">Trending News</a>   
+        </li>     
+        <li class="menu-item menu-item-type-post_type menu-item-object-page level-4 sub-level-item to-left" id="menu-item-1284">
+            <a href="https://isca.org.sg/tkc/our-future-together/videos/" target="_blank">Videos</a> 
+        </li>     
+        </ul>               
+    </li>   
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-12186">
+        <a href="https://isca.org.sg/tkc/sustainability-reporting/" target="_blank">Sustainability Reporting</a>  
+    </li>    
+     
+    <li class="menu-item menu-item-type-post_type menu-item-object-page level-3 sub-level-item style--standard enot-first" id="menu-item-12186">
+        <a href="http://isca.org.sg/tkc/technical-enquiry-service/" target="_blank">Technical Enquiry Service</a>  
+    </li>     
+    
+    </ul>               
+    </li>    
+                         
+</ul>
+
+
+        
+                </nav>
+
+                </div>
+            </div></span>
+        </div>
+        <style>
+            @media (min-width: 1200px){
+                .span3 {
+                    width: 260px;
+                }
+            }
+            @media (max-width: 610px){
+                #scheduleFee{
+                    padding-left:25px;
+                }
+                .tab-content{
+                    padding:6px;
+                }
+            }
+            p{
+                font-size:15px !important;
+                font-family: Lato !important;
+                margin-bottom: 0px !important;            
+            }
+            
+            .custPopup{ background-color: white; border-width: 0px; border-radius:10px; z-index: 9999; left: 50%; padding:20px; position: fixed;  margin-left: -100px; top:40%;}
+            /* These are the 3 css properties you will need to change so the popup displays in the center of the screen. First set the width. Then set margin-left to negative half of what the width is. You can add the height property for a fixed size pop up if you want.*/
+            .popupBackground{ background-color:black; opacity: 0.30; filter: alpha(opacity = 30); position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 9998; }
+            .fundingStyle{
+                /*background:#eb0b6c;
+                Width:15%;
+                color:#fff9ff;
+                font-weight:bolder;*/
+                font-size: 15px; 
+                color:#ee2e2a;
+                display:inline;
+            }
+            .lightbtnCss{
+                border:1px solid #d8dde6;
+                color:#0070d2 !important;
+            }
+            .btnBlueC{
+                background:#114573;
+                Color:#ffffff !important;
+            }
+            .btnBlueC:hover,.btnBlueC:focus{
+                background:#114573;
+                Color:#ffffff !important;
+            }
+            .breadcrumb>li+li:before {
+                display:none;
+            }
+            .breadcrumb a{
+                color: #1668b2;
+            }
+            .modal-header{
+                min-height: 16.43px;
+                padding: 15px;
+                border-bottom: none;
+            }
+            h4{
+                font-family: lato !important;
+            }
+            .iscaPara{
+                color : #333333 !important;
+                font-size: 14px;
+                font-family:lato;
+            }
+            /*@media (min-width: 992px){
+                .scheduleIcon {
+                    padding-left: 35px;
+                }
+            }*/
+            .scheduleGlyphn{
+                padding-left: 15px;
+                margin-top: 5px;
+            }
+            .scheduleDiv{
+                padding-left: 0px;
+                margin-left: -5px;
+            }
+            .h6-heading{
+                background: rgba(238, 238, 238, 0.68);
+                padding: 10px;
+                margin-bottom: 10px;
+                font-weight: normal;
+                font-size: 15px;
+                color: #0E416F;
+                border: 1px solid rgba(204, 204, 204, 0.52);
+            }
+            .service-heading{
+                font-size: 15px;
+            }
+            .data-font{
+                font-size: 15px;
+            }
+            .imageHeghtWidth{
+                max-height:133px !important;
+                max-width:200px !important;
+                min-height:133px;
+                min-width:200px;
+            }
+            .sectionHeading{
+                margin-top: 20px;
+            }
+            
+            .spaceBottom{
+                padding-bottom: 3% !important;
+            }
+        </style>
+        <script>
+            var h, w;
+            function redirectOnHomePage(){
+                window.location.href = '/apex/DirectoryList';
+            }
+            
+            function zoomIn(){
+                h = $('html, body').css('height');
+                w = $('html, body').css('width');
+                
+                $('html, body').css('height', '100vh');
+                $('html, body').css('width', '100vw');
+                $('body').css('overflow', 'auto');
+                
+                $('.mainDiv').css("display", "none");
+                $('.header').css("display", "none");
+                $('.advtDiv').css("display", "block");
+            }
+            
+            function zoomOut(){            
+                $('html, body').css('height', h);
+                $('html, body').css('width', w);
+                $('body').css('overflow', 'hidden');
+                
+                $('.mainDiv').css("display", "block");
+                $('.header').css("display", "block");
+                $('.advtDiv').css("display", "none");
+            }
+        </script>
+    </head>
+    <div class="mainDiv">    
+        <body><span id="pg:j_id20">
+    <style>
+         
+        
+            @media (max-width: 767px) {
+                #titlebar-breadcrumbCustom {
+                min-width: 1% !important;
+                position: static !important;
+                margin-top: 1% !important;
+                margin-left: 1% !important;
+            }
+        }
+        .HeaderDiv{
+            margin-left: 21%;  
+            margin-top: 9%;
+            width: 60%;
+            position: relative;
+            font-size: 14px !important;
+        }  
+        .HeaderUl{
+            padding: 1px 16px;
+            font-size: 14px !important;
+            color: #7c7c7c;
+            background: white;
+            border-radius: 0px;
+            border: 1px solid #ebebeb;
+            margin-right: 3%;
+        }    
+        #titlebar-breadcrumbCustom {
+            min-width: 45%;
+            position: absolute;
+            margin-top: 10%;
+            margin-left: 34%;
+        }
+        .searchHeader{
+            background-color: rgb(249, 249, 249);
+            background-image: url(https://isca.org.sg/images/header1.jpg);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;    
+            background-size: cover;
+            border-bottom-color: rgb(235, 235, 235);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+        .breadcrumb>li+li:before {
+            display:none;
+        }
+        .breadcrumb a{
+            color: #1668b2;
+            font-size: 14px !important;
+        }
+        .shead{
+            margin-bottom:0px !important;
+            margin-top:0px !important;
+            height: 100px;
+            padding-top: 35px;
+            padding-left: 10% !important;
+            font-size:30px !important;
+        }
+    </style>
+
+    <div class="container searchHeader" style="padding:0px">
+        <div class="row">
+            <div class="col-sm-7">
+                <h4 class="shead">ISCA Directory</h4>
+            </div>
+            <div class="col-sm-5">
+                <div id="titlebar-breadcrumbCustom">                                          
+                    <div class="ui--box-alias centerVertical" id="breadcrumb" style="margin-top: -16px;">
+                        <div class="ui-bc ui-breadcrumbs breadcrumbs" itemprop="breadcrumb">
+                            <span class="ui-bc-first"><a class="ui-bc-first" href="/Home" rel="home" style="color:#7c7c7c;text-decoration:none;" title="Home">Home</a></span>
+                            <span class="ui-bc-seperator"> <i class="ui--caret fontawesome-angle-right px18"></i> </span> 
+                                <a href="/iscaDirectoryhome" style="color:#7c7c7c;text-decoration:none;" title="ISCA Directory">ISCA Directory</a>
+                        </div>
+                    </div>  
+                </div>    
+           </div> 
+           
+        </div>
+    </div></span>
+                <div class="container">
+<form id="pg:j_id31" name="pg:j_id31" method="post" action="/DirectoryDetail" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="pg:j_id31" value="pg:j_id31" />
+
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="row">
+                                    <div class="col-sm-12" style="margin-top:30px;"><span id="pg:j_id31:j_id33">
+    
+    <style>
+        .navOp{
+            color: white !important;
+            background-color : #0E416F !important;
+            height:40px;
+            cursor: pointer;
+            text-align: center;
+            line-height:40px;
+        }
+        
+        .navOp:hover{
+            background-color: #EE2E2A !important;
+            color : white !important;
+        }
+        
+        .navOpActive{
+            background-color:  #EE2E2A !important;
+            color : white !important;
+            height:40px;
+            cursor: pointer; 
+            text-align: center;
+            line-height:40px;
+           
+        }
+        
+        .navDiv{
+            margin-bottom: 10px;
+        }
+        
+        
+        @media only screen and (max-width: 767px) {
+                .customRow{
+                    margin-right: 9px;
+                }
+            }
+    </style>
+    <div>
+        <div class="row navDiv customRow" style="font-size: 15px;">
+                    <div class="col-sm-1 navOp" onclick="window.open('/apex/IscaDirectoryHome', '_self')">
+                            <i></i> &nbsp;&nbsp;Home
+                    </div>
+                    <div class="col-sm-3 navOp" onclick="window.open('/apex/CompanySpotlight', '_self')">
+                            <i></i> &nbsp;&nbsp;Company Spotlight
+                    </div>
+                    <div class="col-sm-3 navOp" onclick="window.open('/apex/DirectoryList?service=All', '_self')">
+                        <i class="glyphicon glyphicon-briefcase"></i>&nbsp;&nbsp;By Business Services
+                    </div> 
+                    <div class="col-sm-3 navOp" onclick="window.open('/apex/DirectoryList', '_self')">
+                            <i class="glyphicon glyphicon-sort-by-alphabet"></i>&nbsp;&nbsp;By Company Name
+                    </div>
+                    <div class="col-sm-2 navOp" onclick="window.open('/apex/IscaDirectoryHome?ListWithUs=true', '_self')">
+                            <i class="glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;List with Us
+                    </div>
+                
+        </div>
+    </div></span>
+                                    </div>
+                                </div>            
+                            </div>
+                            <div class="col-sm-2"> 
+                            </div>
+                        </div>
+                        
+                        <div class="row" style="padding:20px;">
+                            <div class="col-sm-8 col-sm-offset-2" style="border:1px solid #ddd;">
+                                
+                                <div class="tab-content">
+                                    <div class="tab-pane active event-desc" id="directoryDetails">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="row">                                                                       
+                                                    <div class="col-sm-12">
+                                                        <p class="control-group">
+                                                            <h1>
+                                                                    <span style="color:#003782">LL ONG &amp; CO</span> 
+                                                            </h1>                                                
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <p class="control-group">                                              
+                                                            <span class="controls ui--animation"><span id="pg:j_id31:j_id59">
+                                                                    
+                                                                    <div alt="Responsive image" class="crsLogo imageHeghtWidth" style="margin-top: 14px;"></div></span>  
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>                                    
+                                                <div class="row">                                                                       
+                                                    <div class="col-md-6">
+                                                        <p class="control-group"><span class="data-font">20</span><span id="pg:j_id31:j_id63" class="data-font">
+                                                                ,&nbsp;</span><span class="data-font">Maxwell Road</span><br /><span id="pg:j_id31:j_id67"><span class="data-font">Maxwell House</span> <br /></span><span id="pg:j_id31:j_id70"><span class="data-font">#04-02C</span><br /></span><span id="pg:j_id31:j_id73"><span class="data-font">Singapore</span>&nbsp;</span><span id="pg:j_id31:j_id76"><span class="data-font">069113</span><br /></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="fa data-font fontawesome-phone"></span> &nbsp; +65 6224 9227
+                                                        <br />
+                                                        
+                                                        <span class="fa data-font fontawesome-print"></span> &nbsp; +65 6224 9227
+                                                        <br />
+                                                        
+                                                        <span class="fa data-font fontawesome-envelope"></span> &nbsp;
+                                                        <a class="data-font" href="mailto:"> </a>N/A
+                                                        <br />
+                                                        
+                                                        <span class="fa data-font fontawesome-star"></span> &nbsp;
+                                                        <a class="data-font" href="http://" target="_blank"></a>N/A
+                                                    
+                                                    </div>
+                                                </div> 
+                                                <h4 class="sectionHeading"><b>Executive Contact</b> </h4>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <span class="data-font"><span style="white-space:pre-wrap;">VICTOR, QUEK BENG TECK</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <h4 class="sectionHeading"><b>Classifications</b> </h4>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-6 spaceBottom">
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Audit and Assurance</b> </span><br />
+                                                                     <span class="data-font">Statutory/ External Audit</span><br />
+                                                                     <span class="data-font">Charity Audit</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Business Financing</b> </span><br />
+                                                                     <span class="data-font">Loan Finance and Leasing Advice</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Business Start-Up Services</b> </span><br />
+                                                                     <span class="data-font">Business Formation/Start-Up</span><br />
+                                                                     <span class="data-font">Business Plans</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Corporate Finance</b> </span><br />
+                                                                     <span class="data-font">Business Valuation</span><br />
+                                                                     <span class="data-font">Buying and Selling Businesses</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Government Assistance Schemes Advisory</b> </span><br />
+                                                                     <span class="data-font">IE Singapore Schemes</span><br />
+                                                                     <span class="data-font">IDA Schemes</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>IT Advisory Services</b> </span><br />
+                                                                     <span class="data-font">Computerised Accounting Systems</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Outsourcing</b> </span><br />
+                                                                     <span class="data-font">Financial and Accounting Processes</span><br />
+                                                                     <span class="data-font">HR Processes</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Strategic Planning</b> </span><br />
+                                                                     <span class="data-font">Profit Improvement Programmes</span><br />
+                                                             </p>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 spaceBottom">
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Bookkeeping</b> </span><br />
+                                                                     <span class="data-font">Bookkeeping</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Business Recovery And Insolvency</b> </span><br />
+                                                                     <span class="data-font">Receivership</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Company Listing</b> </span><br />
+                                                                     <span class="data-font">Company Listing</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Corporate Secretariat Services</b> </span><br />
+                                                                     <span class="data-font">Corporate Secretariat Services</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Human Resource Services</b> </span><br />
+                                                                     <span class="data-font">Payroll &amp; HR Administration Services</span><br />
+                                                                     <span class="data-font">Others</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Management And Commercial Consultancy</b> </span><br />
+                                                                     <span class="data-font">Set up Management Information Systems, Financial Management and Control Systems, etc</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Risk Management</b> </span><br />
+                                                                     <span class="data-font">Financial Risk Management</span><br />
+                                                                     <span class="data-font">Operational Risk Management</span><br />
+                                                             </p>
+                                                             <p class="control-group spaceBottom">   
+                                                                 <span class="service-heading"><b>Tax Services</b> </span><br />
+                                                                     <span class="data-font">Filing Tax Returns</span><br />
+                                                                     <span class="data-font">GST</span><br />
+                                                             </p>
+                                                    </div>
+                                                </div>
+                                                    
+                                                <h4 class="sectionHeading"><b>Company Profile</b> </h4>
+                                                <div class="row">                                                                       
+                                                    <div class="col-md-12">                         
+                                                        <span class="controls ui--animation"><script> if(!window.sfdcPage) { window.sfdcPage = new ApexDetailPage(); }UserContext.initialize({"ampm":["AM","PM"],"isAccessibleMode":false,"salesforceURL":"https://eservices.isca.org.sg?refURL=http%3A%2F%2Feservices.isca.org.sg%2Fapex%2FDirectoryDetail","dateFormat":"dd/MM/yyyy","language":"en_US","locale":"en_SG","dateTimeFormat":"dd/MM/yyyy HH:mm","labelLastModified":"1535654638000","today":"06/09/2018 15:55","userPreferences":[{"index":112,"name":"HideInlineEditSplash","value":false},{"index":114,"name":"OverrideTaskSendNotification","value":false},{"index":115,"name":"DefaultTaskSendNotification","value":false},{"index":119,"name":"HideUserLayoutStdFieldInfo","value":false},{"index":116,"name":"HideRPPWarning","value":false},{"index":87,"name":"HideInlineSchedulingSplash","value":false},{"index":88,"name":"HideCRUCNotification","value":false},{"index":89,"name":"HideNewPLESplash","value":false},{"index":90,"name":"HideNewPLEWarnIE6","value":false},{"index":122,"name":"HideOverrideSharingMessage","value":false},{"index":91,"name":"HideProfileILEWarn","value":false},{"index":93,"name":"HideProfileElvVideo","value":false},{"index":97,"name":"ShowPicklistEditSplash","value":false},{"index":92,"name":"HideDataCategorySplash","value":false},{"index":128,"name":"ShowDealView","value":false},{"index":129,"name":"HideDealViewGuidedTour","value":false},{"index":132,"name":"HideKnowledgeFirstTimeSetupMsg","value":false},{"index":104,"name":"DefaultOffEntityPermsMsg","value":false},{"index":135,"name":"HideNewCsnSplash","value":false},{"index":101,"name":"HideBrowserWarning","value":false},{"index":139,"name":"HideDashboardBuilderGuidedTour","value":false},{"index":140,"name":"HideSchedulingGuidedTour","value":false},{"index":180,"name":"HideReportBuilderGuidedTour","value":false},{"index":183,"name":"HideAssociationQueueCallout","value":false},{"index":194,"name":"HideQTEBanner","value":false},{"index":270,"name":"HideIDEGuidedTour","value":false},{"index":282,"name":"HideQueryToolGuidedTour","value":false},{"index":196,"name":"HideCSIGuidedTour","value":false},{"index":271,"name":"HideFewmetGuidedTour","value":false},{"index":272,"name":"HideEditorGuidedTour","value":false},{"index":205,"name":"HideApexTestGuidedTour","value":false},{"index":206,"name":"HideSetupProfileHeaderTour","value":false},{"index":207,"name":"HideSetupProfileObjectsAndTabsTour","value":false},{"index":213,"name":"DefaultOffArticleTypeEntityPermMsg","value":false},{"index":214,"name":"HideSelfInfluenceGetStarted","value":false},{"index":215,"name":"HideOtherInfluenceGetStarted","value":false},{"index":216,"name":"HideFeedToggleGuidedTour","value":false},{"index":268,"name":"ShowChatterTab178GuidedTour","value":false},{"index":275,"name":"HidePeopleTabDeprecationMsg","value":false},{"index":276,"name":"HideGroupTabDeprecationMsg","value":false},{"index":224,"name":"HideUnifiedSearchGuidedTour","value":false},{"index":226,"name":"ShowDevContextMenu","value":true},{"index":227,"name":"HideWhatRecommenderForActivityQueues","value":false},{"index":228,"name":"HideLiveAgentFirstTimeSetupMsg","value":false},{"index":232,"name":"HideGroupAllowsGuestsMsgOnMemberWidget","value":false},{"index":233,"name":"HideGroupAllowsGuestsMsg","value":false},{"index":234,"name":"HideWhatAreGuestsMsg","value":false},{"index":235,"name":"HideNowAllowGuestsMsg","value":false},{"index":236,"name":"HideSocialAccountsAndContactsGuidedTour","value":false},{"index":237,"name":"HideAnalyticsHomeGuidedTour","value":false},{"index":238,"name":"ShowQuickCreateGuidedTour","value":false},{"index":245,"name":"HideFilePageGuidedTour","value":false},{"index":250,"name":"HideForecastingGuidedTour","value":false},{"index":251,"name":"HideBucketFieldGuide","value":false},{"index":263,"name":"HideSmartSearchCallOut","value":false},{"index":265,"name":"HideSocialProfilesKloutSplashScreen","value":false},{"index":273,"name":"ShowForecastingQuotaAttainment","value":false},{"index":280,"name":"HideForecastingQuotaColumn","value":false},{"index":301,"name":"HideManyWhoGuidedTour","value":false},{"index":298,"name":"HideFileSyncBannerMsg","value":false},{"index":299,"name":"HideTestConsoleGuidedTour","value":false},{"index":302,"name":"HideManyWhoInlineEditTip","value":false},{"index":303,"name":"HideSetupV2WelcomeMessage","value":false},{"index":312,"name":"ForecastingShowQuantity","value":false},{"index":313,"name":"HideDataImporterIntroMsg","value":false},{"index":314,"name":"HideEnvironmentHubLightbox","value":false},{"index":316,"name":"HideSetupV2GuidedTour","value":false},{"index":317,"name":"HideFileSyncMobileDownloadDialog","value":false},{"index":322,"name":"HideEnhancedProfileHelpBubble","value":false},{"index":328,"name":"ForecastingHideZeroRows","value":false},{"index":330,"name":"HideEmbeddedComponentsFeatureCallout","value":false},{"index":341,"name":"HideDedupeMatchResultCallout","value":false},{"index":340,"name":"HideS1BrowserUI","value":false},{"index":346,"name":"HideS1Banner","value":false},{"index":358,"name":"HideEmailVerificationAlert","value":false},{"index":354,"name":"HideLearningPathModal","value":false},{"index":359,"name":"HideAtMentionsHelpBubble","value":false},{"index":368,"name":"LightningExperiencePreferred","value":false},{"index":373,"name":"PreviewLightning","value":false}],"networkId":"0DB28000000MN24","uiTheme":"Theme3","uiSkin":"Theme3","userName":"isca@isca.force.com","userId":"00528000002hjrX","isCurrentlySysAdminSU":false,"renderMode":"RETRO","startOfWeek":"1","vfDomainPattern":"(?:[^.]+).ap6.visual.force.com","auraDomain":"ap6.lightning.force.com","orgPreferences":[{"index":257,"name":"TabOrganizer","value":true},{"index":113,"name":"GroupTasks","value":true}],"isDefaultNetwork":false,"timeFormat":"h:mm a"});
+</script><span id="pg:j_id31:j_id112"><table  class="htmlDetailElementTable" border="0" cellpadding="0" cellspacing="0"><tr><td><div class="sfdc_richtext" id="pg:j_id31:j_id112pg:j_id31:j_id112_00N2800000IMCn0_div"></div></td></tr>
+</table><script>pg__j_id31__j_id112 = window.onload; window.onload=function() { if (pg__j_id31__j_id112!= null) pg__j_id31__j_id112();};</script></span>                                                     
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                    </div>
+                                                </div>                                     
+                                            </div>        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                        </div><div id="pg:j_id31:j_id131"></div>
+</form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden"  id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="i: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" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="201808301820230332" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AGV5SnViMjVqWlNJNkluZzBNV2RWTmxCWVNuUmhURlJIYUdSSlNVRTBabGx1VjBWalpXMDNPUzFrT0ZWeE1tMWZjamR1YmtsY2RUQXdNMlFpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUlzSW10cFpDSTZJbnRjSW5SY0lqcGNJakF3UkRJNE1EQXdNREF4TkVZM1Rsd2lMRndpZGx3aU9sd2lNREpITUVzd01EQXdNREJRZW14blhDSXNYQ0poWENJNlhDSjJabk5wWjI1cGJtZHJaWGxjSWl4Y0luVmNJanBjSWpBd05USTRNREF3TURBeWFHcHlXRndpZlNJc0ltTnlhWFFpT2xzaWFXRjBJbDBzSW1saGRDSTZNVFV6TmpJeU1EVTFPVFF6TVN3aVpYaHdJam93ZlE9PS4uSXNlWnNZeXI1ZnVFTU5ESjFwaDhqYWxZNDNlR0ZBNV9wanlOVF93R240UT0=" /></span></span>
+                </div><span id="pg:j_id118"><span id="pg:j_id118:j_id119:j_id120">
+    <html>
+        <head>
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+            <script src="https://www.googletagmanager.com/gtag/js?id=UA-102050701-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-102050701-1');
+            </script>
+        </head>
+    </html></span>
+<div>
+
+<footer class="ui-dark" style="background-image: url(/resource/1459017454000/images/images/footer-arc.png);background-repeat: no-repeat;         background-position:center center;background-size: 40% 100%;background-color: #0E416F;">
+            
+                <div id="footer-widgets">
+            <div class="container"> 
+                
+                <div id="footer-widgets-row2">
+                    <div class="ui-row row">
+                        
+                    <aside class="widget-area span3">
+                       <div class="widget widget-footer widget_text" id="text-2">
+    
+    <div class="textwidget" style="color:#FFFFFF;">
+      
+      <p>
+        The Institute of Singapore Chartered Accountants (ISCA) is the national accountancy body of Singapore. ISCA&#8217;s vision is to be a globally recognised professional accountancy body, bringing value to our members, the profession and wider community.
+      </p>
+            
+    <p>ISCA is an Associate of Chartered Accountants Worldwide</p>
+    <p><img alt="CAW" src="/resource/1459017454000/images/images/CAW-logo-transparent-270px-90px-left.png" /></p>
+          
+    
+    </div>
+  </div>
+ 
+  
+
+                    </aside>
+                        
+                                <aside class="widget-area span3">
+                                
+
+<div class="widget widget-footer widget_nav_menu" id="nav_menu-4a">
+<h4 class="footer-widget-title ui--widget-title">Other Links</h4>
+
+<div class="menu-pages-menu-container">
+<ul class="menu" id="menu-pages-menu1">
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151" id="menu-item-fa1134"><a href="http://isca.org.sg/the-institute/our-subsidiaries-associate/" target="_blank">Our Subsidiaries &amp; Associate</a></li>   
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1152" id="menu-item-fa1135"><a href="http://isca.org.sg/the-institute/invitation-to-quote/" target="_blank">Invitation To Quote</a></li>
+   
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1150" id="menu-item-fa1136"><a href="http://isca.org.sg/the-institute/careers/" target="_blank">Careers @ ISCA</a></li> 
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1714" id="menu-item-fa1137"><a href="http://isca.org.sg//the-institute/contact-us/" target="_blank">Contact Us</a></li>
+</ul>
+    </div>
+    
+       <p style="color:#FFFFFF;">
+        
+          <i class="ui--icon fontawesome-phone" style="margin-right: 5px;">
+          </i>
+          (65) 6749 8060
+        <br />
+       
+          <i class="ui--icon fontawesome-print" style="margin-right: 5px;">
+          </i>
+          (65) 6749 8061
+        <br />
+        
+          <i class="ui--icon fontawesome-envelope-alt" style="margin-right: 5px;">
+          </i>
+          isca@isca.org.sg
+      </p>
+    
+</div>
+     <div class="widget widget-footer widget_cloudfw_socialbar" id="widget_cloudfw_socialbar-2">
+    <ul class="ui-socialbar unstyled ssm white_p50-gradient with-bg effect--fade borderless" id="socialbar-1">
+      <li class="facebook radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        
+        </div><a class="ui-socialbar-image radius-circle" href="https://www.facebook.com/ISCA.Official/" target="_blank" title="Facebook">
+        
+        </a>
+      </li>
+      <li class="twitter radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        
+        </div>
+        <a class="ui-socialbar-image radius-circle" href="https://twitter.com/ISCA_Official/" target="_blank" title="Twitter">
+        </a>
+      </li>
+      <li class="linkedin radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        </div>
+        <a class="ui-socialbar-image radius-circle" href="http://www.linkedin.com/company/institute-of-singapore-chartered-accountants-isca-/" target="_blank" title="Linkedin">
+        </a>
+      </li>
+      <li class="googleplus radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        </div>
+        <a class="ui-socialbar-image radius-circle" href="https://plus.google.com/u/0/b/106147338414458888494/106147338414458888494/posts" target="_blank" title="Google Plus">
+        </a>
+      </li>
+      <li class="flickr radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        </div>
+        <a class="ui-socialbar-image radius-circle" href="https://www.flickr.com/photos/isca_official/" target="_blank" title="Flickr">
+        </a>
+      </li>
+      <li class="youtube radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        </div>
+        <a class="ui-socialbar-image radius-circle" href="http://www.youtube.com/ISCAofficial" target="_blank" title="Youtube">
+        </a>
+      </li>
+
+      <li class="rss radius-circle ui-socialbar-item ui--animation">
+        <div class="ui-socialbar-image ui-socialbar-background radius-circle">
+        </div>
+        
+        <a class="ui-socialbar-image radius-circle" href="http://isca.org.sg/the-institute/newsroom/isca-viewpoint/" target="_blank" title="Blog">
+        </a>
+      </li>
+    </ul>
+  </div>          
+              
+                                </aside>
+                        
+                                <aside class="widget-area span3">
+                                <div class="widget widget-footer widget_nav_menu" id="nav_menu-4b">
+<h4 class="footer-widget-title ui--widget-title">Other Programmes</h4>
+<div class="menu-pages-menu-container">
+<ul class="menu" id="menu-pages-menu2">
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12381" id="menu-item-fb1034"><a href="http://isca.org.sg/student-membership/isca-student-membership-isca-plus-route/" target="_blank">ISCA Student Membership (ISCA Plus Route)</a></li> 
+  
+  
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12391" id="menu-item-fb1035"><a href="http://isca.org.sg/student-membership/atts/" target="_blank">Association of Taxation Technicians Singapore  (ATTS) Full Membership</a></li> 
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12448" id="menu-item-fb1036"><a href="http://isca.org.sg/atts/" target="_blank">Association of Taxation Technicians Singapore  (ATTS) Specialist Certificate in Taxation</a></li>  
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12400" id="menu-item-fb1037"><a href="http://isca.org.sg/student-membership/cat/" target="_blank">Certified Accounting Technicians  (CAT) Full Membership</a></li>   
+
+</ul></div></div>
+                                </aside>
+                        
+                        
+                                <aside class="widget-area span3">
+                                
+                                <h4 class="footer-widget-title ui--widget-title">Our Subsidiary</h4>  
+                                
+                               
+                                <a href="http://www.siatp.org.sg/" target="_blank"><img class="ui--image img-rounded" height="90px" src="/resource/1459017454000/images/images/siatp-logo-transparent-270px-90px.png?width=270&amp;#38;height=90&amp;#38;mode=max" style="height:90px !important;" width="270px" /></a>
+                                 
+                                </aside>
+                        
+                                            </div>
+                </div>
+
+            
+            </div>
+        </div>
+                                    <div id="footer-bottom">
+                <div class="container">
+                                            <div class="pull-left" id="footer-texts">Last Updated on <strong>18 February 2016 </strong>
+                                                <br /><span>&copy; 2016 Institute of Singapore Chartered Accountants | All Rights Reserved</span>
+                                            </div>
+                    
+                    <div class="pull-right" id="footer-navigation">
+                        <ul class="clearfix unstyled-all" id="menu-footer-bottom-menu" style="text-align: center;">
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1558" id="menu-item-1558">
+        <a href="http://isca.org.sg/privacy-and-data-protection-policy/" target="_blank">
+        <i class="ui--icon fontawesome-XYZ" style="margin-right: 5px;"></i> Privacy and Data Protection Policy</a>
+     </li>
+    <li class="ui--separator"> / </li>                  
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1559" id="menu-item-1559">
+        <a href="http://isca.org.sg/advertising/" target="_blank">
+        <i class="ui--icon fontawesome-XYZ" style="margin-right: 5px;"></i> Advertising</a>
+     </li>
+    <li class="ui--separator"> / </li>                  
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1560" id="menu-item-1560">
+        <a href="http://isca.org.sg/terms-of-use/" target="_blank">
+        <i class="ui--icon fontawesome-XYZ" style="margin-right: 5px;"></i> Terms of Use</a>
+     </li>
+    <li class="ui--separator"> / </li>                  
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18995" id="menu-item-18995">
+        <a href="http://isca.org.sg/sitemap/" target="_blank">
+        <i class="ui--icon fontawesome-XYZ" style="margin-right: 5px;"></i> Sitemap</a>
+     </li>
+    <li class="ui--separator"> / </li>                  
+
+</ul>   
+        </div>              </div>
+            </div>
+        
+    </footer>
+
+</div></span><span id="pg:j_id127">
+<script src="/resource/1471202928000/en_content/en_content/menu.js" type="text/javascript"></script></span>
+            </body>
+        </div> 
+  
+    <div class="advtDiv" id="advt" style="display:none;">
+        <a onclick="zoomOut();">
+            <img alt="Responsive image" src="/servlet/servlet.FileDownload?file=" style="max-width:200% !important;" />
+        </a>
+    </div><script type="text/javascript">Sfdc.onReady(function(){
+	SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["pg:j_id31"]);
+
+});</script></body></html>
