@@ -98,8 +98,12 @@ try:
 		#driver.save_screenshot("screenshot_page_"+str(page)+".png")
 		#print("Done with page ", page)
 		page+=1
-		wait.until(EC.presence_of_element_located((By.CLASS_NAME,"pagination__navigation")))
-		driver.find_elements_by_xpath('//button[@class="pagination__navigation"][i/@class="icon mdi mdi-arrow-right"]')[0].click()
+		wait.until(EC.presence_of_element_located((By.CLASS_NAME,"icon mdi mdi-arrow-right")))
+		buttons = driver.find_elements_by_xpath('//button[@class="pagination__navigation"][i/@class="icon mdi mdi-arrow-right"]')
+		if len(buttons)==0:
+			break
+		else:
+			buttons[0].click()
 except Exception as e:
 	print(str(e))
 	exc_type, exc_obj, exc_tb = sys.exc_info()
