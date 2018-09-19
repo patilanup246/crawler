@@ -9,8 +9,8 @@ target_url = sys.argv[1]
 
 driver.get(target_url)
 
-print session_id
-print executor_url
+print(session_id)
+print(executor_url)
 with open(pidfile, 'wb') as the_file:
     the_file.write(executor_url + '\n')
     the_file.write(session_id)
@@ -40,4 +40,4 @@ def create_driver_session(session_id, executor_url):
     return new_driver
 
 driver2 = create_driver_session(session_id, executor_url)
-print driver2.current_url
+print(driver2.current_url)
