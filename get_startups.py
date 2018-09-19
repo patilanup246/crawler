@@ -41,6 +41,11 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 				list1.append(text1.encode("utf-8").strip())
 			for text1 in list1:
 				print(text1)
+			body=general.find_all("div",{"class":"flex entity__details xs12"})[0]
+			details=body.find_all("div",{"class":"flex section__legend xs12 md3"})
+			for text1 in details:
+				print(text1.text)
+	
 			#print(",".join(list1))
 			#print(heading.text.encode("utf-8").strip())
 			team=sections[0].find_all("section", {"id":"team"})[0].find_all("h4")
