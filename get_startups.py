@@ -116,12 +116,3 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 		if TEST and i==stop:
 			break
 
-#with open(TEMP_FILENAME,'r') as infile, open(OUT_FILENAME, 'w+b') as outfile:
-#	new_header=["Name","Job Title", "Registration Type", "Date of Admission","Key Practice",
-#	"Name of Law Practice", "Type of Law Practice", "Email",
-#	"Tel", "Address"]
-#	writer = csv.DictWriter(outfile, fieldnames=new_header, extrasaction='ignore', delimiter = DELIM)
-#	writer.writeheader()
-#	for row in csv.DictReader(infile):
-#		writer.writerow(row)
-
