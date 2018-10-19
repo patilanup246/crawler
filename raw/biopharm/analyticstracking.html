@@ -1,0 +1,65 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4091497-1', 'auto');
+  ga('send', 'pageview');
+  </script><script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+  ga('send', 'event', 'outbound', 'click', url, {
+    'transport': 'beacon',
+    'hitCallback': function(){document.location = href;}
+ });
+}
+</script><script>
+var trackOutboundPremium = function(url) {
+  ga('send', 'event', 'outbound', 'premium', url, {
+    'transport': 'beacon',
+    'hitCallback': function(){document.location = href;}
+ });
+}
+</script><script>
+var trackOutboundCompanyPage = function(url) {
+  ga('send', 'event', 'outbound', 'companyPage', url, {
+    'transport': 'beacon',
+    'hitCallback': function(){document.location = href;}
+ });
+}
+</script>
+<!-- Global site tag (gtag.js) - Google AdWords: 1009400855 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1009400855"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-1009400855');
+</script>
+
+
+
+<!-- Event snippet for contact_result.php conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1009400855/xuOjCJiM1oMBEJf4qOED',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
