@@ -4,28 +4,57 @@ import os, glob, csv
 from bs4 import BeautifulSoup
 import re,  codecs, sys
 
+##########################
+def cleanData(data):
+	result=""
+	list1 = data.split('\n')
+	list2=[]
+	for text1 in list1:
+		list2.append(text1.strip())
+	result = ";".join(filter(None,list2))
+	return result
+
+def cleanHtmlTags(data):
+	result = ""
+	sep= ','
+	#remove all tags
+	list1=[]
+	for a in data:
+		b = re.sub(r'<.+?>',r' ',str(a).strip())
+		b = re.sub(r'\n',sep,b)
+		b = re.sub(r' +',' ',b)
+		list1.append(b)
+	#list1 = [re.sub(r',+',r',',str(a)) for a in list1]
+	#list1 = [re.sub(r' +',r' ',str(a)) for a in list1]
+	list1 = list(filter(None,list1))
+	result = "".join(list1)	
+	result = result.strip()
+	return result
+
+###########################
 FOLDER="./raw/startups/"
 IN_FILENAME="record"
 TEMP_FILENAME="temp.csv"
 OUT_FILENAME="results/startups.csv"
 FILE_EXTENSION=".html"
-TEST=True
+TEST=False
 DELIM=","
 NEWLINE="\n"
-EXCELNEWLINE="\r\n"
-stop=180
+EXCELNEWLINE=";"
+stop=2740
 start_no=1
 max_no=len(glob.glob(FOLDER+"*"+FILE_EXTENSION))
 
 ##print max_no if TEST else None
-#print(max_no)
+print(max_no,flush=True)
 filename=""
 header=["No","Name","UEN","Short Intro","Date incorporated","Sector","Funding Stage","Employee range","Tags","Description","Address","Website","Emails","Phone","Team","Funding Stage","Total Funding","Funding Rounds","Rounding Raised"]
 with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 	writer = csv.writer(out_file, delimiter=DELIM, lineterminator="\n") 
 	writer.writerow(header)
-	for i in range(start_no,max_no):
+	for i in range(start_no,max_no+1):
 		filename=FOLDER+IN_FILENAME+str(i)+FILE_EXTENSION
+		print(filename,flush=True)
 		datarow=[]
 		datarow.append(str(i))
 		try:
@@ -48,9 +77,13 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 				#print("=============body details information")
 				body=general.find_all("div",{"class":"flex entity__details xs12"})[0]
 				#for text1 in body.select('div[class*="xs12 md9"]'):
-				#	#print(text1.get_text().strip().encode("utf-8"))
-				for text1 in body.select('div[class*="layout wrap"]')[:5]:
+				#print(text1.get_text().strip().encode("utf-8"))
+				for text1 in body.select('div[class*="layout wrap"]')[:4]:
 					datarow.append(text1.find_all('div')[1].text.encode("utf-8").strip())
+				list1=[]
+				for text1 in body.select('span[class*="entity__tag"]'):
+					list1.append(text1.text)
+				datarow.append(EXCELNEWLINE.join(list1))
 					#print(text1.find_all('div')[1].text.encode("utf-8").strip())
 				#datarow = datarow + body.select('div[class*="layout wrap"]')[:-1]
 				#print(body.select('div[class*="read-more__content"]')[0].get_text().encode("utf-8"))
@@ -63,17 +96,24 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 				#print("=============contact details information")
 				contact=general.find_all("div",{"class":"contact card"})[0]
 				try:
-					#print(contact.select('li[class*="address"]')[0].select('div'))
-					datarow.append(contact.select('li[class*="address"]')[0].get_text().replace('\n',' ').replace('\r\n',' '))
+					text1 = cleanHtmlTags((contact.select('li[class*="address"]')[0]))
+					datarow.append(text1)
+					#datarow.append(contact.select('li[class*="address"]')[0].get_text().replace('\n',' ').replace('\r\n',' '))
 				except:
 					datarow.append(" ")
 				try:
-					datarow.append(contact.select('li[class*="website"]')[0].get_text().strip())
-				except:
+					datarow.append(contact.select('li[class*="website"]')[0].select('a')[0].get('href'))
+					#datarow.append(contact.select('li[class*="website"]')[0].get_attribute('href').strip())
+				except Exception as e:
+					#print(str(e),flush=True)
 					datarow.append(" ")
 				try:
-					datarow.append(contact.select('li[class*="email"]')[0].get_text().strip())
-				except:
+					#datarow.append(contact.select('li[class*="email"]')[0].get_text().strip())
+					#print(contact.select('li[class*="email"]')[0].get_text().strip())
+					text1 = contact.select('li[class*="email"]')[0].get_text()
+					datarow.append(cleanData(text1))	
+				except Exception as e:
+					#print(str(e))
 					datarow.append(" ")
 				try:
 					datarow.append(contact.select('li[class*="phone"]')[0].get_text().strip())
@@ -83,13 +123,17 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 				#print("=============team information")
 				try:
 					team=sections[0].find_all("section", {"id":"team"})[0].select('h4[class*="team"]')
-					team1=sections[0].find_all("section", {"id":"team"})[0]
+					list1=[]
 					team_text=""
 					for text1 in team:
-						team_text += text1.text.strip() + ","
-						team_text += text1.next_sibling.text.strip() + "-"
-					datarow.append(team_text)
-				except:
+						list2=[]
+						list2.append(text1.text.strip())
+						list2.append(text1.next_sibling.text.strip())
+						list1.append(",".join(filter(None,list2)))
+						#list1.append(text1.text.strip() + ", " + text1.next_sibling.text.strip())
+					datarow.append(EXCELNEWLINE.join(list1))
+				except Exception as e:
+					#print(str(e))
 					datarow.append(" ")	
 				##print(general.encode("utf-8"))
 				#funding information
@@ -111,7 +155,7 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 						for text2 in text1.find_all("div")[:-1]:
 							list2.append(text2.text.strip())
 						list1.append(",".join(list2))
-					datarow.append("-".join(list1))
+					datarow.append(EXCELNEWLINE.join(list1))
 				except Exception as e:
 					datarow.append(" ")
 				
@@ -121,7 +165,7 @@ with open(OUT_FILENAME,'w',encoding="utf-8" ) as out_file:
 				if type(text1)!=type(str()):
 					datarow[index1]=str(text1,"utf-8")
 				datarow[index1]=datarow[index1].replace('\n',' ')
-				#print(datarow[index1])
+				#print(datarow[index1],flush=True)
 			#print(datarow)
 			writer.writerow(datarow)
 			if TEST and i==stop:

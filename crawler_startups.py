@@ -13,7 +13,7 @@ from io import open
 url='https://www.startupsg.net/directory/startups'
 
 test=False
-stop=4
+stop=50
 time_out=1
 folder="./raw/startups/"
 ######################################################
@@ -41,7 +41,11 @@ driver.get(url)
 #driver.implicitly_wait(IMPLICIT_WAIT)
 time.sleep(time_out)
 page=1
-count=1
+start_page=230
+stop_time=1000
+count=0
+count=(start_page-1)*10
+records_in_current_page=0
 try:
 	#login into the app
 	#driver.save_screenshot("output.png")
@@ -72,33 +76,43 @@ try:
 	time.sleep(time_out)
 	#raise Exception("testing")
 	while True:
+		count=(page-1)*10
+		print("current page is ", page, " and current time_out is ",time_out)
 		wait = WebDriverWait(driver, EXPLICIT_WAIT)
 		wait.until(EC.presence_of_element_located((By.XPATH,'//div[@class="flex xs12"]/a')))
 		records = driver.find_elements_by_xpath('//div[@class="flex xs12"]/a')
 		#print(len(records))
-		for record in records:
-			#print(record.get_attribute('href'))
-			wait.until(EC.presence_of_element_located((By.XPATH,'//div[@class="flex xs12"]/a')))
-			sys.stdout.flush()
-			record.click()
-			time.sleep(time_out)
-			driver.switch_to.window(driver.window_handles[-1])
-			r = driver.page_source
-			datafile=folder+csvfile+str(count)+".html"
-			#print(datafile)
-			count+=1
-			with open(datafile, "w", encoding="utf-8") as output:
-				output.write(r)
-				output.close()
-			#time.sleep(time_out)
-			driver.close()
-			driver.switch_to.window(driver.window_handles[0])
-		if test and page==stop:
-			break	
-		#driver.save_screenshot("screenshot_page_"+str(page)+".png")
-		#print("Done with page ", page)
+		records_in_current_page=len(records)
+		if page >= start_page:
+				  for record in records:
+					  #print(record.get_attribute('href'))
+					  wait.until(EC.presence_of_element_located((By.XPATH,'//div[@class="flex xs12"]/a')))
+					  sys.stdout.flush()
+					  record.click()
+					  time.sleep(time_out)
+					  driver.switch_to.window(driver.window_handles[-1])
+					  wait.until(EC.presence_of_element_located((By.XPATH,'//section')))
+					  r = driver.page_source
+					  count+=1
+					  datafile=folder+csvfile+str(count)+".html"
+					  #print(datafile)
+					  with open(datafile, "w", encoding="utf-8") as output:
+						  output.write(r)
+						  output.flush()
+						  output.close()
+					  #time.sleep(time_out)
+					  driver.close()
+					  driver.switch_to.window(driver.window_handles[0])
+				  if test and page==stop:
+					  break	
+				  if records_in_current_page==0:
+					  driver.save_screenshot("screenshot_page_"+str(page)+".png")
+					  print("cannot find any record in page ", page)
+					  time_out += 10
+					  continue
+		#print("Done with page ", page, " with no of records ", records_in_current_page)
 		page+=1
-		wait.until(EC.presence_of_element_located((By.CLASS_NAME,"icon mdi mdi-arrow-right")))
+		wait.until(EC.presence_of_element_located((By.CLASS_NAME,"pagination__navigation")))
 		buttons = driver.find_elements_by_xpath('//button[@class="pagination__navigation"][i/@class="icon mdi mdi-arrow-right"]')
 		if len(buttons)==0:
 			break
