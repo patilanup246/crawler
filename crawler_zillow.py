@@ -2,7 +2,7 @@
 from lxml import html
 import requests, csv
 #import unicodecsv as csv
-import argparse
+import argparse, re
 import time, glob
 from bs4 import BeautifulSoup
 
@@ -33,28 +33,44 @@ def download(zipcode, run=1):
 				  data_file = output_folder + csv_file
 				  with open(data_file, "a", encoding="utf-8") as output:
 					  output.write(response.text)
-				  #time.sleep(5)
+				  time.sleep(1)
 
 def parse():
 	file_list= glob.glob(output_folder+"*.html")
 	file_list.sort()
+	print(file_list)
 	header=["zipcode" , "name", "phone" ]
 	with open(result_file, 'w', encoding = 'utf-8') as output:
 		  writer = csv.writer(output, delimiter=",", lineterminator="\n")
 		  writer.writerow(header)
 		  for file1 in file_list:
 					 filename1 = file1.split("/")[-1]
+					 print(filename1)
 					 zipcode = filename1.split("_")[0]
 					 with open(file1, 'r', encoding = 'utf-8') as html_file:
 						 soup = BeautifulSoup(html_file, 'html.parser')
-						 agents = soup.select('div[class="ldb-contact-inner"]')
-						 for agent in agents:
-							 name = agent.select('p[class*="ldb-contact-name"]')[0].get_text()
-							 phone = agent.select('p[class*="ldb-phone-number"]')[0].get_text()
+						 blocks = soup.select('div[data-test-id="ldb-boards-results"]')
+						 rows = blocks[0].select('div[data-test-id*="ldb-board"]') 
+						 for row in rows:
+							 #agent = row.select('div[class="ldb-board-inner"]')[0]
+							 try:
+								 agent = row.select('div[class="ldb-col-a"]')[0].select('div[class="ldb-board-inner"]')[0]
+								 name = agent.select('p[class*="ldb-contact-name"]')[0].get_text()
+								 phone = agent.select('p[class*="ldb-phone-number"]')[0].get_text()
+								 rating = agent.select('span[class*="zsg-rating"]')[0]['title']
+								 reviews= agent.select('a[class*="zsg-link zsg-fineprint"]')[0].get_text()
+								 office = row.select('div[class="ldb-col-b"]')[0].select('div[class="ldb-board-inner"]')[0].select('p[class="ldb-business-name"]')[0].get_text()
+								 office =re.sub(r'[\ \n]{2,}', '', office)
+							 except:
+						     	next		
 							 datarow = []
 							 datarow.append(zipcode)
 							 datarow.append(name)
 							 datarow.append(phone)
+							 datarow.append(rating)
+							 datarow.append(reviews)
+							 datarow.append(office)
+							 print(datarow)
 							 writer.writerow(datarow)
 def crawler(zipcode, run=1):
 	if run is None:
