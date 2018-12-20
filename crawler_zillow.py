@@ -151,13 +151,13 @@ def crawler(zipcode):
             datarow.append(reviews)
             datarow.append(office)
             appendToFile(datarow)
-        time.sleep(random.randint(3,5))
+        time.sleep(random.randint(1,2))
 
 if __name__=="__main__":
     argparser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
-    argparser.add_argument('action',help= 'download or parse')
-    argparser.add_argument('--zipcode',nargs= '?', help = 'zip code')
-    argparser.add_argument('--file',nargs= '?', help = 'a file contains list of zip codes')
+    argparser.add_argument('action',help= 'download, parse, crawl')
+    argparser.add_argument('--zipcode',nargs= '?', help = 'crawl --zipcode <zipcode>')
+    argparser.add_argument('--file',nargs= '?', help = 'crawl --file <filename>')
     args = argparser.parse_args()
     action = args.action
     zipcode= args.zipcode
