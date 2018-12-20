@@ -151,7 +151,7 @@ def crawler(zipcode):
             datarow.append(reviews)
             datarow.append(office)
             appendToFile(datarow)
-        time.sleep(random.randint(1,3))
+        time.sleep(random.randint(3,5))
 
 if __name__=="__main__":
     argparser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
