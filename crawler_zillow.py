@@ -158,14 +158,19 @@ if __name__=="__main__":
     argparser.add_argument('action',help= 'download, parse, crawl')
     argparser.add_argument('--zipcode',nargs= '?', help = 'crawl --zipcode <zipcode>')
     argparser.add_argument('--file',nargs= '?', help = 'crawl --file <filename>')
+    argparser.add_argument('--output',nargs= '?', help = 'crawl --output <filename>')
     args = argparser.parse_args()
     action = args.action
     zipcode= args.zipcode
     file= args.file
+    output= args.output
     print ("action: %s"%(action))
     print ("zipcode:",zipcode)
     print ("file:",file)
+    print ("output:",output)
     sys.stdout.flush()
+    if not output is None:
+        result_file = output
     if "download" == action:
         if not zipcode is None:
             for zip1 in zipcode:
@@ -179,8 +184,7 @@ if __name__=="__main__":
         parse()
     if "crawl" == action:
         if not zipcode is None:
-            for zip1 in zipcode:
-                crawler(zip1)
+                crawler(zipcode)
         if not file is None:
             with open(file, 'r') as input:
                 for line in input:
