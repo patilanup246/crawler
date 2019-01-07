@@ -1,21 +1,764 @@
 code,name,address,voting number,management company,board of directors,management invidivuals
-80,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 80, 2339 Ogilvie Road OTTAWA K1J9M7,52,Paul Daniels,Cathy McCrank;Lucille Smyth;Oscar Lepine;Peter Smyth;Cathy McCrank;Lucille Smyth;Oscar Lepine;Peter Smyth,Paul Daniels
+80,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 80, 2339 Ogilvie Road OTTAWA K1J9M7,52,Paul Daniels,Cathy McCrank,Lucille Smyth,Oscar Lepine,Peter Smyth,Cathy McCrank,Lucille Smyth,Oscar Lepine,Peter Smyth,Paul Daniels
 81,,,,,,
-82,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 82, 1131 Newmarket St Ottawa K1B 4N4,205,PMA Realty Consulting Ltd.,Alexandra Bunting;Don Banks;Eric David;Heinrich Teworte;Alexandra Bunting;Don Banks;Eric David;Heinrich Teworte,Monica Murad
-83,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 83, c/o Axia Property Management  Ottawa K1R 5T4,80,Axia Property Management Inc.,Andrew McCallion;Darrin Best;David Mattinson;George Lavigne;Andrew McCallion;Darrin Best;David Mattinson;George Lavigne,Axia Compliance Department
+82,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 82, 1131 Newmarket St Ottawa K1B 4N4,205,PMA Realty Consulting Ltd.,Alexandra Bunting,Don Banks,Eric David,Heinrich Teworte,Alexandra Bunting,Don Banks,Eric David,Heinrich Teworte,Monica Murad
+83,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 83, c/o Axia Property Management  Ottawa K1R 5T4,80,Axia Property Management Inc.,Andrew McCallion,Darrin Best,David Mattinson,George Lavigne,Andrew McCallion,Darrin Best,David Mattinson,George Lavigne,Axia Compliance Department
 84,,,,,,
-85,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 85, 360 Stewart St Ottawa K1N 6L1,204,A.L. Reid Property Management & Consulting Services Ltd.,Damian Dauksza;Danielle Sincennes;Linda Mott;Marc Masson;Damian Dauksza;Danielle Sincennes;Linda Mott;Marc Masson,Dane Orieux
-86,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 86, CCC No. 86 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,112,Premiere Property Management Associates,Candace Beaupre;Danielle Lightford;Eileen Tipping;Mona Obagi;Candace Beaupre;Danielle Lightford;Eileen Tipping;Mona Obagi,Randy Wilson
-87,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 87, CCC No. 87 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,106,Premiere Property Management Associates,Andre Dumont;Gayle Roxroy;Kevin Stinson;Paul Beaudoin;Andre Dumont;Gayle Roxroy;Kevin Stinson;Paul Beaudoin,
+85,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 85, 360 Stewart St Ottawa K1N 6L1,204,A.L. Reid Property Management & Consulting Services Ltd.,Damian Dauksza,Danielle Sincennes,Linda Mott,Marc Masson,Damian Dauksza,Danielle Sincennes,Linda Mott,Marc Masson,Dane Orieux
+86,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 86, CCC No. 86 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,112,Premiere Property Management Associates,Candace Beaupre,Danielle Lightford,Eileen Tipping,Mona Obagi,Candace Beaupre,Danielle Lightford,Eileen Tipping,Mona Obagi,Randy Wilson
+87,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 87, CCC No. 87 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,106,Premiere Property Management Associates,Andre Dumont,Gayle Roxroy,Kevin Stinson,Paul Beaudoin,Andre Dumont,Gayle Roxroy,Kevin Stinson,Paul Beaudoin,
 88,,,,,,
-89,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 89, 335 Catherine St. OTTAWA K1R 5T4,147,Condominium Management Group,Chris Irwin;Colleen Henderson;Donna Caverley;Jean Gauthier;Chris Irwin;Colleen Henderson;Donna Caverley;Jean Gauthier,CMG Compliance Department
-90,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 90, 360 Stewart Street OTTAWA K1N6L1,136,A.L. Reid Property Management & Consulting Services Inc.,Joan Taylor;Jordon Kinnear;Veronique Laverdure;Wayne Bissett,Fran Graf;Shauna Grant
-91,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 91, 335 Catherine St. OTTAWA K1R 5T4,182,Condominium Management Group,Andre Frommer;Dan Weiler;Dorothy Olszewski-WILLIAMS;Susan Hockley,CMG Compliance Department
+89,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 89, 335 Catherine St. OTTAWA K1R 5T4,147,Condominium Management Group,Chris Irwin,Colleen Henderson,Donna Caverley,Jean Gauthier,Chris Irwin,Colleen Henderson,Donna Caverley,Jean Gauthier,CMG Compliance Department
+90,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 90, 360 Stewart Street OTTAWA K1N6L1,136,A.L. Reid Property Management & Consulting Services Inc.,Joan Taylor,Jordon Kinnear,Veronique Laverdure,Wayne Bissett,Fran Graf,Shauna Grant
+91,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 91, 335 Catherine St. OTTAWA K1R 5T4,182,Condominium Management Group,Andre Frommer,Dan Weiler,Dorothy Olszewski-WILLIAMS,Susan Hockley,CMG Compliance Department
 92,,,,,,
 93,,,,,,
-94,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 94, 335 Catherine St Ottawa K1R 5T4,94,Condominium Management Group,Andre Craan;Callie Amo;David Rybak;John Clow;Andre Craan;Callie Amo;David Rybak;John Clow,Axia Compliance Department
+94,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 94, 335 Catherine St Ottawa K1R 5T4,94,Condominium Management Group,Andre Craan,Callie Amo,David Rybak,John Clow,Andre Craan,Callie Amo,David Rybak,John Clow,Axia Compliance Department
 95,,,,,,
-96,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 96, 735 SPRINGLAND DR OTTAWA K1V6L9,72,Deerpark Management Inc.,Deana Sherif;Lynne Sylvestre;Phil Girard;Tyler Walls;Deana Sherif;Lynne Sylvestre;Phil Girard;Tyler Walls,David Duncan
-97,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 97, CCC No. 97 c/o Premiere Property Management Assoc. OTTAWA K1b4w7,87,Premiere Property Management Associates,Dave Cote;Eric Chartrand;Janet Kennedy;Johanne Falardeau;Dave Cote;Eric Chartrand;Janet Kennedy;Johanne Falardeau,Randy Wilson
-98,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 98, 740 MORIN ST. OTTAWA K1K3G9,10,Paul Daniels,Michelle Bowerman;Ron Bedard;Yvel Girodier,Paul Daniels
-99,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 99, 1131 Newmarket St Ottawa K1B 4N4,49,PMA Realty Consulting Ltd.,Andrew Campbell;Georgina Drinkwater;Louis Genest;Patty Fraser;Andrew Campbell;Georgina Drinkwater;Louis Genest;Patty Fraser,Monica Murad
+96,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 96, 735 SPRINGLAND DR OTTAWA K1V6L9,72,Deerpark Management Inc.,Deana Sherif,Lynne Sylvestre,Phil Girard,Tyler Walls,Deana Sherif,Lynne Sylvestre,Phil Girard,Tyler Walls,David Duncan
+97,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 97, CCC No. 97 c/o Premiere Property Management Assoc. OTTAWA K1b4w7,87,Premiere Property Management Associates,Dave Cote,Eric Chartrand,Janet Kennedy,Johanne Falardeau,Dave Cote,Eric Chartrand,Janet Kennedy,Johanne Falardeau,Randy Wilson
+98,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 98, 740 MORIN ST. OTTAWA K1K3G9,10,Paul Daniels,Michelle Bowerman,Ron Bedard,Yvel Girodier,Paul Daniels
+99,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 99, 1131 Newmarket St Ottawa K1B 4N4,49,PMA Realty Consulting Ltd.,Andrew Campbell,Georgina Drinkwater,Louis Genest,Patty Fraser,Andrew Campbell,Georgina Drinkwater,Louis Genest,Patty Fraser,Monica Murad
+1,,,,,,
+2,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 2, 1468G Heatherington Rd Ottawa K1V 6S1,135,,Cindy Carroll;David McCrossan;David Sullivan;Jean-Robert Beaudoin;Cindy Carroll;David McCrossan;David Sullivan;Jean-Robert Beaudoin,
+3,,,,,,
+4,,,,,,
+5,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 5, 20 CHESTERTON DR OTTAWA K2E6Z7,250,AMG Property Management Inc.,Andre Cloutier;Gilles Lauzon;Lynne Kerr;Shirley Bradley;Andre Cloutier;Gilles Lauzon;Lynne Kerr;Shirley Bradley,Reid McLaughlin
+6,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 6, 55 Sumac St Gloucester K1J 7T7,191,Deerpark Management Inc.,Anix Mathieu;Christine Demers;Kathy Girouard;Richard Boulianne;Anix Mathieu;Christine Demers;Kathy Girouard;Richard Boulianne,David Duncan;Trish Doran
+7,,,,,,
+8,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 8, 3100 CARLING AVE OTTAWA K2B6J6,229,,Brodie Mousseau;Gale Hunt;Harry Furst;Leonel Navas Sanchez;Brodie Mousseau;Gale Hunt;Harry Furst;Leonel Navas Sanchez,
+9,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 9, 335 CATHERINE ST. OTTAWA K1R 5T4,70,,Andy Gerstner;Beate Myhill;Joe Anderson;John Davis;Andy Gerstner;Beate Myhill;Joe Anderson;John Davis,
+10,,,,,,
+11,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 11, 2041 ARROWSMITH DR OTTAWA K1J7V7,228,Berkley Property Management Inc.,Barbara Boucher;Cameron Dennee;Carol Cruise;Francis Faucher;Barbara Boucher;Cameron Dennee;Carol Cruise;Francis Faucher,David Virtue
+12,,,,,,
+13,,,,,,
+14,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 14, 1200 Pebble Rd Ottawa K1V 8V4,63,,Anwer Omar;Eric Lasch;Ken Trudel;Larry Dufay;Anwer Omar;Eric Lasch;Ken Trudel;Larry Dufay,
+15,,,,,,
+16,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 16, 205  505 ST LAURENT BLVD OTTAWA K1K 3X4,378,,Helene Tremblay;James Mabbutt;Jeanne-Mance Duguay-Parent;Lise Anne James;Helene Tremblay;James Mabbutt;Jeanne-Mance Duguay-Parent;Lise Anne James,Paul Pearson;Paul Pearson
+17,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 17, 915 ELMSMERE RD OTTAWA K1J8H8,288,,Diane Doxtater;Gilles Ouimet;Jean Pierre Roy;Jo-Anne Zahab;Diane Doxtater;Gilles Ouimet;Jean Pierre Roy;Jo-Anne Zahab,Monika Deegan
+18,,,,,,
+19,,,,,,
+20,,,,,,
+21,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 21, 360 Stewart St Ottawa K1N 6L1,64,A.L. Reid Property Management & Consulting Services Ltd.,Bob Walsh;Daniele Ayotte;Irina Smith;JoAnn Myer;Bob Walsh;Daniele Ayotte;Irina Smith;JoAnn Myer,Fran Graf
+22,,,,,,
+23,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 23, 1131 Newmarket Street OTTAWA K1B 4N4,63,PMA Realty Consulting Ltd.,Doug de Hart;Kuldip Obhan;Michael Jackson;Niladri Roy;Doug de Hart;Kuldip Obhan;Michael Jackson;Niladri Roy,Donna MacEachern
+24,,,,,,
+25,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 25, 360 Stewart St Ottawa K1N 6L1,496,A.L. Reid Property Management & Consulting Services Ltd.,Andre Givogue;Chris Gervais;Francis Poupart;Gary Schofield;Andre Givogue;Chris Gervais;Francis Poupart;Gary Schofield,Valerie Williams
+26,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 26, 5 Ramsgate Pvt Ottawa K1V 8M4,66,,Catherine Hyde;Elva Winters;Ernie Walker;Fred Winters;Catherine Hyde;Elva Winters;Ernie Walker;Fred Winters,
+27,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 27, 335 CATHERINE ST. OTTAWA K1R 5T4,71,Condominium Management Group,John Cockrem;Lorette Dupuis;Mark Strike;Shirley Chatelaine,CMG Compliance Department
+28,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 28, 360 Stewart St Ottawa K1N 6L1,314,A.L. Reid Property Management & Consulting Services Ltd.,James Levert;Jane Anderson;Jerry Lapierre;Joanne Wilson;James Levert;Jane Anderson;Jerry Lapierre;Joanne Wilson,Fran Graf
+29,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 29, 78 GLEN PARK DR OTTAWA K1B3Z2,45,,ERIN MONTGOMERY;LAURA SHAW;NATALIE CRANDALL;SEAN EDWARDS,
+30,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 30, 18 KEMPSTER AVE OTTAWA K2B8B2,7,,Christina Palma;Claudia Rank;Deborah Hine;Dennis Ryan;Christina Palma;Claudia Rank;Deborah Hine;Dennis Ryan,
+31,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 31, 88 Alison Korn Pvt Nepean K2H 8M6,43,Deerpark Management Inc.,Craig Gerlitz;Margot Doey-Vick;Michael Ponnuthurai;Shannon Paquin;Craig Gerlitz;Margot Doey-Vick;Michael Ponnuthurai;Shannon Paquin,David Duncan
+32,,,,,,
+33,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 33, 8E Arnold Dr Nepean K2H 6V9,72,,Andrea Strahman;Cathy Adair;Harold Fisher;Jeremy Bayuga;Andrea Strahman;Cathy Adair;Harold Fisher;Jeremy Bayuga,
+34,,,,,,
+35,,,,,,
+36,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 36, 335 CATHERINE ST. OTTAWA K1R 5T4,23,Condominium Management Group,Brian Hebert;Mary Ellen Doody;Penny Gotzaman,CMG Compliance Department
+37,,,,,,
+38,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 38, 1131 Newmarket St Ottawa K1B 4N4,247,PMA REALTY CONSULTING LTD.,Catherine MacPherson;Garth-Matthew Symonds;Julie Friedy;Lori Moore;Catherine MacPherson;Garth-Matthew Symonds;Julie Friedy;Lori Moore, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 38;Norean Harris
+39,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 39, 335 Catherine St Ottawa K1R 5T4,110,Axia Property Management Inc.,Don Vachon;Elias Abou Hamad;Jacques Grenier;Kristin Miller;Don Vachon;Elias Abou Hamad;Jacques Grenier;Kristin Miller,Axia Compliance Department
+40,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 40, 335 Catherine St Ottawa K1R 5T4,177,Condominium Management Group,Adrian Lang;Jean-Francois de Blois;Mike Mullowney;Patricia Elliot;Adrian Lang;Jean-Francois de Blois;Mike Mullowney;Patricia Elliot,
+41,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 41, CCC No. 41 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,95,Premiere Property Management Associates,David Caron;Earl Fisher;Luc Sigman;Mary Allan;David Caron;Earl Fisher;Luc Sigman;Mary Allan,Randy Wilson
+42,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 42, 52-5450 CANOTEK ROAD Ottawa K1J 9G3,123,Deerpark Management,Christopher Askwith;David Clement;Robert Stewart;Roxanne Brisson;Christopher Askwith;David Clement;Robert Stewart;Roxanne Brisson,Cedric Powell
+43,,,,,,
+44,,,,,,
+45,,,,,,
+46,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 46, 190 Menten Place OTTAWA K2H 9G3,28,R. Dixon Management Inc,Donna-Lee Shaw;Greg Howes;Lorna Kingq;Nairn Taylor,Karen Taylor
+47,,,,,,
+48,,,,,,
+49,,,,,,
+50,,,,,,
+51,,,,,,
+52,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 52, CCC No. 52 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,126,Premiere Property Management Associates,Donald Reed;Laura Boyaner;Marilyn Schimek;Mark Farmer;Donald Reed;Laura Boyaner;Marilyn Schimek;Mark Farmer,Randy Wilson
+53,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 53, 300 Queen Elizabeth Dr Ottawa K1S 3M6,62,,DIANA RIVINGTON;FERD ROELOFS;IRENA STREIBL;JILL BURTON;DIANA RIVINGTON;FERD ROELOFS;IRENA STREIBL;JILL BURTON;DIANA RIVINGTON;FERD ROELOFS;IRENA STREIBL;JILL BURTON,
+54,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 54, 335 Catherine St. OTTAWA K1R 5T4,64,,Benjaman Lysohirka;Judi Luciani;Ron Hyslop;Teresa Fortin,
+55,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 55, 335 CATHERINE ST. OTTAWA K1R 5T4,234,Condominium Management Group,Donna Shackleton;George Corte;Gwyn Chapman;Janet Gleeson;Donna Shackleton;George Corte;Gwyn Chapman;Janet Gleeson,CMG Compliance Department
+56,,,,,,
+57,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 57, 335 CATHERINE ST. OTTAWA K1R 5T4,35,Condominium Management Group,Dennis Croucher;Holly Blair;Nina De Giovanni,CMG Compliance Department
+58,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 58, 360 Stewart St Ottawa K1N 6L1,200,A.L. Reid Property Management & Consulting Services Ltd.,Chris Baker;Colin Pennie;Craig Dow;Gary Yates;Chris Baker;Colin Pennie;Craig Dow;Gary Yates,Franziska Graf
+59,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 59, 160 WOODFIELD DR OTTAWA K2G3W9,121,Deerpark Management Inc.,Debra Burke-Lachaine;Isabel Trudeau;Jillian Roloff;Pamela Craig;Debra Burke-Lachaine;Isabel Trudeau;Jillian Roloff;Pamela Craig,David Duncan
+60,,,,,,
+61,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 61, 121A Buell Street Ottawa K1Z 7E7,59,AMG Property Management Inc.,Diane Carroll;Grace Veenema;Heidi Ruppert;Mary Lou Davies;Diane Carroll;Grace Veenema;Heidi Ruppert;Mary Lou Davies,Axia Compliance Department;Robert McLaughlin
+62,,,,,,
+63,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 63, 3691 ALBION RD OTTAWA K1T1P2,135,,Jo-Anne Tobin;Jon Fotheringham;Katrina Eldridge;Kirsten Hassen-Trip;Jo-Anne Tobin;Jon Fotheringham;Katrina Eldridge;Kirsten Hassen-Trip,
+64,,,,,,
+65,,,,,,
+66,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 66, 335 Catherine St. OTTAWA K1R 5T4,148,Condominium Management Group,Claire Wallace;Jill Gauthier;Jim King;Leslie Shiell;Claire Wallace;Jill Gauthier;Jim King;Leslie Shiell,
+67,,,,,,
+68,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 68, 415 GREENVIEW AVE OTTAWA K2B8G5,210,AMG Property Management Inc.,Brenda Davies;Don McNeil;Geoff Wilson;Luc Dumouchel,Reid McLaughlin
+69,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 69, 335 CATHERINE ST. OTTAWA K1R 5T4,60,Condominium Management Group,David Cooke;Denis Robert;Kathy Clark;Lise Bishop,CMG Compliance Department
+70,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 70, 1449 Ridgebrook Dr Gloucester K1B 4T1,89,,Bernie Parent;Bruce Knight;Chris Kent;Erik Larsen;Bernie Parent;Bruce Knight;Chris Kent;Erik Larsen,Donald Gordon
+71,,,,,,
+72,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 72, 20 DRIVEWAY OTTAWA K2P1C8,100,,Bruce Pappin;Gilbert Caron;Margaret Mitchell;Margaret Clement;Bruce Pappin;Gilbert Caron;Margaret Mitchell;Margaret Clement,Bill Fitzsimmons
+73,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 73, 335 Catherine St. OTTAWA K1R 5T4,76,Condominium Management Group,Jeff Black;Lisa Bedard;Marilyn Kevern;Pat Gosson;Jeff Black;Lisa Bedard;Marilyn Kevern;Pat Gosson,CMG Compliance Department
+74,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 74, 335 CATHERINE ST. OTTAWA K1R 5T4,109,Condominium Management Group,Diane Stortini;Elizabeth Williams;Fabien Avaron;James Richardson;Diane Stortini;Elizabeth Williams;Fabien Avaron;James Richardson,CMG Compliance Department
+75,,,,,,
+76,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 76, 2669 SOUTHVALE CRES OTTAWA K1B4V2,58,Deerpark Management Inc.,Benjamin Theoret;Estelle Allen;Nancy Bow;Paul Patenaude;Benjamin Theoret;Estelle Allen;Nancy Bow;Paul Patenaude,Marilyn Thibault
+77,,,,,,
+78,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 78, 2400 VIRGINIA DR OTTAWA K1H8L3,107,,Lillian Laham;Stephen Brown;Stephen Harris;Tim Eshleman;Lillian Laham;Stephen Brown;Stephen Harris;Tim Eshleman,Bill Fitzsimmons
+79,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 79, 335 CATHERINE ST. OTTAWA K1R 5T4,109,Condominium Management Group,Beatrice Belanger;Cathy Chase;Joaquin Alvarez;Marilyn Henschel;Beatrice Belanger;Cathy Chase;Joaquin Alvarez;Marilyn Henschel,CMG Compliance Department
+100,,,,,,
+101,,,,,,
+102,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 102, 3512  - 3526 PAUL ANKA DR OTTAWA K1V9K6,7,The Regional Group,Carol Racine;Chanel Boucher;Garry Guzzo;James Wiley;Carol Racine;Chanel Boucher;Garry Guzzo;James Wiley,
+103,,,,,,
+104,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 104, 156 Huntridge Pvt Ottawa K1V 9J2,66,,Chris Walkinshaw;Douglas O'Brien;Jesper Lind;Joan Ferdinand;Chris Walkinshaw;Douglas O'Brien;Jesper Lind;Joan Ferdinand,
+105,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 105, 555 BRITTANY DR OTTAWA K1K4C5,205,Berkley Property Management Inc.,Audrey Couzens;Kay Matthews;Marcel Dube,
+106,,,,,,
+107,,,,,,
+108,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 108, 1131 Newmarket St Ottawa K1B 4N4,117,PMA Realty Consulting Ltd.,Alex Syedin;Desiree Labelle;Edgar Toro;Mike Clark;Alex Syedin;Desiree Labelle;Edgar Toro;Mike Clark,Monica Murad
+109,,,,,,
+110,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 110, 335 Catherine Street Ottawa K1R 5T4,60,CMG Condominium Management Group,Curtis LaPlante,CMG Compliance Department
+111,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 111, CCC NO. 111 Box 111 1380 PRINCE OF WALES DR OTTAWA K2C 3N5,242,,,
+112,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 112, CCC No. 112 c/o Premiere Property Management Assoc. Ottawa K1B 4W7,73,Premiere Property Management Associates,Jean Fauteux;Joanne Casey;Larry Richardson;Normajean Barry;Jean Fauteux;Joanne Casey;Larry Richardson;Normajean Barry,Randy Wilson
+113,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 113, 360 Stewart St Ottawa K1N 6L1,135,A.L. Reid Property Management & Consulting Services Ltd.,Andrea Pixley;Angela Crawford;Laura Roberge;Tony Belok;Andrea Pixley;Angela Crawford;Laura Roberge;Tony Belok,Mike Fraser
+114,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 114,  P.O. Box 8612  OTTAWA K1G3H9,30,, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 114;Lise Thériault;Lucie Goyette;Mance Farrell; Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 114;Lise Thériault;Lucie Goyette;Mance Farrell,
+115,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 115, 335 CATHERINE ST. OTTAWA K1R 5T4,88,Condominium Management Group,Barbara Mason;Connor Savage;Delney Pollock;Elizabeth Smith;Barbara Mason;Connor Savage;Delney Pollock;Elizabeth Smith,CMG Compliance Department
+116,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 116, 360 Stewart Street OTTAWA K1N 6L1,213,A.L. Reid Property Management & Consulting Services Ltd.,Darlene Tier;Leslie Brown;Mark Wortelboer;Nicholas Filion;Darlene Tier;Leslie Brown;Mark Wortelboer;Nicholas Filion,Reid Management
+117,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 117, 335 Catherine Street Ottawa  K1R5T4,56,,Janet Davey;Magda Clavijo;Mariam Abou-Dib;Ruben Marini;Janet Davey;Magda Clavijo;Mariam Abou-Dib;Ruben Marini,
+118,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 118, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,85,,,
+119,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 119, CCC No. 119 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,58,Premiere Property Management Associates,Gail Brennan;Judy Burns;Linda Lafromboise,Randy Wilson
+120,,,,,,
+121,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 121, 335 Catherine St. OTTAWA K1R 5T4,125,,,
+122,,,,,,
+123,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 123, 1131 Newmarket St Ottawa K1B 4N4,79,,,
+124,,,,,,
+125,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 125, 360 Stewart St Ottawa K1N 6L1,148,A.L. Reid Property Management & Consulting Services Ltd.,Brendon Bulger;Donna Lowes;Ginette St-Onge;Normand Levesque;Brendon Bulger;Donna Lowes;Ginette St-Onge;Normand Levesque,Mike Fraser
+126,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 126, 10 A FIELDGATE DR OTTAWA K2J1L7,74,Deerpark Management Inc.,Clare Doxtater;Donna Blackburn;Erica- Lynne Smith;Katherine Hotton,David Duncan
+127,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 127, 11 A BANNER RD OTTAWA K2H8T3,84,Deerpark Management Inc.,Carol O'Rourke-Elliott;Donna Roy;Mathew Dickson;Maxim Ralchenko;Carol O'Rourke-Elliott;Donna Roy;Mathew Dickson;Maxim Ralchenko,David Duncan
+128,,,,,,
+129,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 129, CCC No. 129 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,88,,David Inglis;Pat Boileau;Phil Huard;Richard Brugger;David Inglis;Pat Boileau;Phil Huard;Richard Brugger,
+130,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 130, 1131 Newmarket Street OTTAWA K1B 4N4,72,PMA Realty Consulting Ltd.,Amanda Wright;Bruce Coutu;Florence Champuka;Florence Champuka;Amanda Wright;Bruce Coutu;Florence Champuka;Florence Champuka,Donna MacEachern
+131,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 131, 1131 Newmarket St Ottawa K1B 4N4,76,,,
+132,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 132," 335 Catherine Street, Ottawa, suite 100 Ottawa K1R 5T4",78,Condominium Management Group,Andrea Larabie;Anne Kremer;Brent Moore;Carol Ann Armstrong;Andrea Larabie;Anne Kremer;Brent Moore;Carol Ann Armstrong,CMG Compliance Department;Stefan Novak
+133,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 133, 360 Stewart St Ottawa K1N 6L1,155,,,Franziska Graf;Shauna Grant
+134,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 134, 1280 CAHILL DR OTTAWA K1V9P9,61,Deerpark Management Inc.,Gordon Frith;Lorraine Walton;Sheryl Kerr,Marilyn Thibault
+135,,,,,,
+136,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 136, 335 CATHERINE ST. OTTAWA K1R 5T4,53,Condominium Management Group,Anne Bennett;Duane Kennedy;EDWARD Lane;Helen Waisman;Anne Bennett;Duane Kennedy;EDWARD Lane;Helen Waisman,CMG Compliance Department
+137,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 137, #41 - 200 Owl Dr. OTTAWA KIV 9P7,63,W. F. MARTIN PROPERTY MANAGEMENT,COLLIN WILLARD;KEVIN JONES;MARIO GRATTON;STEFFANIE RATHWELL;COLLIN WILLARD;KEVIN JONES;MARIO GRATTON;STEFFANIE RATHWELL,
+138,,,,,,
+139,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 139, 190 Menten Place Nepean K2H 9G3,30,,,
+140,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 140, 335 Catherine St Ottawa K1R 5T4,44,Axia Property Management,Carmen Vincent;Fran Smyth;Ian Hunter;Sue Domina;Carmen Vincent;Fran Smyth;Ian Hunter;Sue Domina,Axia Compliance Department
+141,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 141, 335 Catherine St Ottawa K1R 5T4,95,Condominium Management Group,,
+142,,,,,,
+143,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 143, 1131 Newmarket St Ottawa K1B 4N4,150,PMA Realty Consulting Ltd.,Brian Wade;Don Godmaire;James Belford;Mark Cook;Brian Wade;Don Godmaire;James Belford;Mark Cook,Monica Murad
+144,,,,,,
+145,,,,,,
+146,,,,,,
+147,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 147, c/o Axia Property Management Ottawa K1R 5T4,65,Axia Property Management Inc.,Barb Miggins;Colin Fraser;Karen Smith;Paul LeVere,Axia Compliance Department
+148,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 148, 1131 Newmarket St OTTAWA K1B 4N4,86,PMA REALTY CONSULTING LTD.,Donald Downer;John Barnhardt;Joseph Morin;Ken Bonell;Donald Downer;John Barnhardt;Joseph Morin;Ken Bonell,Norean Harris
+149,,,,,,
+150,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 150, 1960 KELDEN CRES OTTAWA K1B4X9,64,Deerpark Management Inc.,Conrad LaPlante;Fred(eric) Birt;Ian Kirton;Jo-Ann Theriault;Conrad LaPlante;Fred(eric) Birt;Ian Kirton;Jo-Ann Theriault,David Duncan
+151,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 151, 1801 Woodward Drive Ottawa K2C 0R3,84,475 Laurier Services Group Ltd.,Brett Martensen ;Jean Pierre Soubliere;Jean-Pierre Kingsley;Katherine McDonald;Brett Martensen ;Jean Pierre Soubliere;Jean-Pierre Kingsley;Katherine McDonald,Luc De Celles
+152,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 152, 691 RICHMOND RD OTTAWA K2A0G6,13,,Ken Anderson;Monique Ng;Patricia Blackstaffe;Peter Berkeley;Ken Anderson;Monique Ng;Patricia Blackstaffe;Peter Berkeley,
+153,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 153, 1131 Newmarket Street OTTAWA K1B 4N4,65,PMA Realty Consulting Ltd.,Ashley Darling;Fern Jackson;Heather McKenzie;Jim Platias;Ashley Darling;Fern Jackson;Heather McKenzie;Jim Platias, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 153;Christine Power
+154,,,,,,
+155,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 155, 335 CATHERINE ST. OTTAWA K1R 5T4,95,Condominium Management Group,Carole Brault;Helene Asselin;Lee Douglas;Marc Seguin;Carole Brault;Helene Asselin;Lee Douglas;Marc Seguin,
+156,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 156, 190 Menten Place Nepean K2H 9G3,150,R. Dixon Management Inc,Frank Schilder,
+157,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 157, CCC No. 157 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,95,Premiere Property Management Associates,Brenda Larche;Luc Charest;Marc Jacob;Ronald Kelly;Brenda Larche;Luc Charest;Marc Jacob;Ronald Kelly,Randy Wilson
+158,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 158, CCC No. 158 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,64,Premiere Property Management Associates,Arshad Hassam;Dan Seguin;Diane Campbell;Jonathan Lorch;Arshad Hassam;Dan Seguin;Diane Campbell;Jonathan Lorch,Randy Wilson
+159,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 159, 335 Catherine St. OTTAWA K1R 5T4,58,Condominium Management Group,Gerard Albert;Lynn Courdin;Robert Chadwick;Vince Zito,
+160,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 160, 1960 FALKIRK CRES OTTAWA K1B4Y7,65,Deerpark Management Inc.,Barbara Gligoric;Louise Theoret;Louise Bourgeau;Mike Bissonnette;Barbara Gligoric;Louise Theoret;Louise Bourgeau;Mike Bissonnette,David Duncan
+161,,,,,,
+162,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 162, 1131 Newmarket Street OTTAWA K1B 4N4,123,PMA Realty Consulting Ltd.,Allan Mertick;Cory Simpson;Deborah Whitfield;Marwan Mneimneh;Allan Mertick;Cory Simpson;Deborah Whitfield;Marwan Mneimneh, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 162;Christine Power
+163,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 163, 335 Catherine St Ottawa K1R 5T4,16,Axia Property Management Inc.,Bridget Barber;Johannes Roth;Kelly Beaton;Martin Simard;Bridget Barber;Johannes Roth;Kelly Beaton;Martin Simard,Axia Compliance Department
+164,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 164, 335 Catherine St Ottawa K1R 5T4,98,Condominium Management Group,Ashley Lanoureux;Kevin Leonard;Konstantinos Kioulos;Marc Paquette;Ashley Lanoureux;Kevin Leonard;Konstantinos Kioulos;Marc Paquette,
+165,,,,,,
+166,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 166, 1445 BALLARD CRT OTTAWA K1B4Y9,69,Paul Daniels,David ONeill;Jacqueline Stewart Olouna;Julie Briand ;Marc G. Falardeau;David ONeill;Jacqueline Stewart Olouna;Julie Briand ;Marc G. Falardeau,Paul Daniels
+167,,,,,,
+168,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 168, 1190 RICHMOND RD OTTAWA K2B8J3,31,,,
+169,,,,,,
+170,,,,,,
+171,,,,,,
+172,,,,,,
+173,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 173, CCC No. 173 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,123,Premiere Property Management Associates,Dianne Duffy;Karen Alford;Louise Thibodeau;Mark Henderson;Dianne Duffy;Karen Alford;Louise Thibodeau;Mark Henderson,Randy Wilson
+174,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 174, 92 RALPH ST OTTAWA K1S5J4,9,,Ashwin Shingadia;David Walden;Joe Cunningham;Wendy Daigle Zinn,
+175,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 175, CCC 175 c/o Premiere Property Management Associates OTTAWA K1B 4W7,90,Premiere Property Management Associates,Fred Hudson;Leslie Albert;Randy Swanson,Randy Wilson
+176,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 176, 335 Catherine St Ottawa K1R 5T4,68,Axia Property Management,Karla Laplante,Axia Compliance Department
+177,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 177, 403 MONTFORT ST OTTAWA K1L8G8,86,Deerpark Management Inc.,Joel Allarie;Louise E. Leroux;Melanie Perron;Michel Desjardins;Joel Allarie;Louise E. Leroux;Melanie Perron;Michel Desjardins,David Duncan
+178,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 178, 23 Confederation Private Ottawa K1V 9W6,40,,Eugene McNamer;Ian Smart;Konstantin Huytan;Rita Li;Eugene McNamer;Ian Smart;Konstantin Huytan;Rita Li,
+179,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 179, CCC No. 179 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,91,,,
+180,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 180, 190 Menten Place Nepean K2H 9G3,214,R. Dixon Management Inc,Frank Schilder,
+181,,,,,,
+182,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 182, 1 TRAFFORD LANE OTTAWA K2J1X6,53,Deerpark Management Inc.,Bradley Trott;Julie Murray;Kevin McCarthy,David Duncan
+183,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 183, 1011 PRINCE OF WALES DR OTTAWA K2C3K1,5,,Judy Banning;Peter Lyman,
+184,,,,,,
+185,,,,,,
+186,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 186, 310 Cathcart St Ottawa K1N 5C4,8,,Alison Hobbs;Chris Hobbs;Susan Roberts,
+187,,,,,,
+188,,,,,,
+189,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 189, CCC No. 189 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,150,Premiere Property Management Associates,Chantal Boucher ;Lillian Hibbert;Sylvie Marcoux;Wendy Cummings;Chantal Boucher ;Lillian Hibbert;Sylvie Marcoux;Wendy Cummings,Randy Wilson
+190,,,,,,
+191,,,,,,
+192,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 192, 1131 Newmarket St Ottawa K1B 4N4,75,,,
+193,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 193, 335 CATHERINE ST. OTTAWA K1R 5T4,79,,,
+194,,,,,,
+195,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 195, 335 Catherine St. OTTAWA K1R 5T4,108,,Anna Baranovskaia;Brad Snoulten;Cindy Chapman;Ian Gorman;Anna Baranovskaia;Brad Snoulten;Cindy Chapman;Ian Gorman,
+196,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 196, 1904 Russell Rd Ottawa K1G 1L6,5,,Allan Topp;Ishwarjit Bajwa;Mohamad Mahdi;Paula Tchen;Allan Topp;Ishwarjit Bajwa;Mohamad Mahdi;Paula Tchen,
+197,,,,,,
+198,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 198, 1131 Newmarket St Ottawa K1B 4N4,50,,,
+199,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 199, 335 CATHERINE ST. OTTAWA K1R 5T4,67,,,
+200,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 200, 1318 CEDARCROFT CRES OTTAWA K1B5E5,86,,Brennan Eggleton;Catherine Martin;Geoffroy Lafleche;Marianne Reil;Brennan Eggleton;Catherine Martin;Geoffroy Lafleche;Marianne Reil,
+201,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 201, 1390 CEDARCROFT CRES OTTAWA K1B5E2,56,Berkley Property Management Inc.,Alejandro Sandoval Grand;Barry Smith;Beverly Ricardo;Nicole Joly;Alejandro Sandoval Grand;Barry Smith;Beverly Ricardo;Nicole Joly,
+202,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 202, 14 Camelback Crt Stittsville K2S 1B9,18,,,
+203,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 203, 1131 Newmarket St OTTAWA K1B 4N4,106,PMA REALTY CONSULTING LTD.,Don Raymond;Laura Maillie;Maureen Zetzsche;Murray Manley;Don Raymond;Laura Maillie;Maureen Zetzsche;Murray Manley,Norean Harris
+204,,,,,,
+205,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 205, 190 Menten Place Nepean K2H 9G3,16,R. Dixon Management Inc,Gail Johnston;Michael Clarke;Pamela Tallon;Wendy Knox,
+206,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 206, 1131 Newmarket Street OTTAWA K1B 4N4,26,PMA Realty Consulting Ltd.,Anne Lauzon;Craig Warmington;Laura Gosset;Lew Dicks;Anne Lauzon;Craig Warmington;Laura Gosset;Lew Dicks, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 206;Christine Power
+207,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 207, 335 Catherine St Ottawa K1R 5T4,112,,Bridget Cooksey;Myfanwy Davies;Peter Bernier;Stacey Lee-Jenkins,
+208,,,,,,
+209,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 209, 50 BURNSIDE AVE OTTAWA K1Y2M2,17,Astro Property Management,Mistrale Goudreau;Rick Thompson;Suzanne Belanger;Viktor Toth,
+210,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 210, 1131 Newmarket St OTTAWA K1B 4N4,10,,,
+211,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 211, CCC No. 211 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,88,Premiere Property Management Associates,,
+212,,,,,,
+213,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 213, 360 MONTFORT ST OTTAWA K1L5N2,6,,,
+214,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 214, 1131 Newmarket Street OTTAWA K1B 4N4,126,PMA Realty Consulting Ltd.,Andree Paige;Justin Ileka Priouzeau;Michele Murphy;Suzanne Tousignant,
+215,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 215, 335 Catherine St Ottawa K1R 5T4,37,Axia Property Management,Jacqueline James;Kenneth Reeves;Marlene Lavoie;Stephen Norkett;Jacqueline James;Kenneth Reeves;Marlene Lavoie;Stephen Norkett,Axia Compliance Department
+216,,,,,,
+217,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 217, MANAGEMENT OFFICE OTTAWA K2B5W8,198,,,
+218,,,,,,
+219,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 219, 335 CATHERINE ST. OTTAWA K1R 5T4,37,,,
+220,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 220, 10 SUNRIDGE LANE OTTAWA K2J2N9,52,Deerpark Management Inc.,David Burchell;Jason Simard;Ron Poulin;Stephanie Wagar;David Burchell;Jason Simard;Ron Poulin;Stephanie Wagar,David Duncan
+221,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 221, 39 PUTMAN AVE Ottawa K1M 1Z1,14,,Ann Croll;Douglas Millson;Meribeth Morris,
+222,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 222, CCC No. 222 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,94,,Jocelyn Roussel;Linda Bryant;Marlene LeBlanc;Pat Hirrel-Cyr;Jocelyn Roussel;Linda Bryant;Marlene LeBlanc;Pat Hirrel-Cyr,Randy Wilson
+223,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 223, 190 Menten Place Nepean K2H 9G3,20,R. Dixon Management Inc,Anthony Bowen;Frank Campbell;Linda Norton;Steve Luckett;Anthony Bowen;Frank Campbell;Linda Norton;Steve Luckett,
+224,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 224, 335 Catherine St Ottawa K1R 5T4,22,Axia Property Management,,Axia Compliance Department
+225,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 225, 1131 Newmarket St Ottawa K1B 4N4,33,PMA Realty Consulting Ltd.,Louise Allard;Marc Levesque;Shamiso Scoggan,Monica Murad
+226,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 226, 52-5450 CANOTEK ROAD Ottawa K1J 9G3,78,,Dean Goldsmith;Gerry London;Howard Delaney;Robert Jackson,
+227,,,,,,
+228,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 228, 160 Bruyere Street Ottawa K1N 5E1,12,,Ashley Heideman;Diana Graham;Jill Wigle;Rosemarie McMillan,
+229,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 229, 65 WHITEMARL DR OTTAWA K1L8J9,15,,,
+230,,,,,,
+231,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 231, AMG Property Management Inc.  1775 Courtwood Crescent Suite 204 OTTAWA K2C 3J2,20,AMG Property Management Inc.,Greg Roger;Victoria McTaggart;Wayne Lecuyer,Mike Sargent
+232,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 232, 50 BURNSIDE AVE OTTAWA K1Y2M2,45,,,
+233,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 233, 6459 COLONY SQ OTTAWA K1C3E3,56,,Brenda Barber;Gaetan Roussel;Karl Kofmel,
+234,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 234, 6422 TIMOTHY CRT OTTAWA K1C3E7,51,Deerpark Management Inc.,Adrienne Milc;Debbie Callaghan;Jean Claude Friquin;Richard Kowalski,David Duncan
+235,,,,,,
+236,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 236, 1131 Newmarket Street OTTAWA K1B 4N4,24,PMA Realty Consulting Ltd.,Danny Nicol;Emily-Brynn Rozitis;Hugh MacNeil Sherman,Donna MacEachern
+237,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 237, 190 Menten Place Nepean K2H 9G3,90,R. Dixon Management Inc,Crystal Hill;Flora Alexis;Gayl McKinley;Patricia Rogers,
+238,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 238, 39 PUTMAN AVE OTTAWA K1M1Z1,18,,Cary Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 238;Ralf Massar;WENDY PLYLER,
+239,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 239, 4000 EADY CRT OTTAWA K1J8X6,22,Deerpark Management Inc.,Colette Orr;Emmanuelle Briere;Monique Charron,David Duncan
+240,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 240, 889 BERMUDA AVE unit 12 Ottawa K1K0V8,6,Astro Property Management,Mark O'Neil,
+241,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 241, CCC No. 241 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,20,Premiere Property Management Associates,Diane Beauchamp;Moe Ackerman,
+242,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 242, 274 DALY AVE OTTAWA K1N6G5,6,,,
+243,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 243, 190 Menten Place Nepean K2H 9G3,29,R. Dixon Management Inc,Don Brosseau;John Swift;Lise Pingitore;Margaret Burnett;Don Brosseau;John Swift;Lise Pingitore;Margaret Burnett,
+244,,,,,,
+245,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 245, 11 BARBARA ANN PVT OTTAWA K2C3V2,7,,Adrien Roy;Kathleen Wright;Mitch Gauzas,
+246,,,,,,
+247,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 247, 335 Catherine St Ottawa K1R 5T4,39,,,
+248,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 248, 317 METCALFE ST OTTAWA K2P1S3,20,MJM Management,Elspeth McKay;Glen Borbely;Guy Desjardins, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 248
+249,,,,,,
+250,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 250, 405 LAURIER AVE E OTTAWA K1N6R4,14,,Ester Ritchie;Gilbert Litalien;Harold von Riekhoff;Peter Hanes;Ester Ritchie;Gilbert Litalien;Harold von Riekhoff;Peter Hanes,Bill Fitzsimmons
+251,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 251, 335 Catherine St. OTTAWA K1R 5T4,27,Condominium Management Group,Brian Sutherland;Daniel landry;David Jordan;Rebeccah Bornemann;Brian Sutherland;Daniel landry;David Jordan;Rebeccah Bornemann,CMG Compliance Department
+252,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 252, 335 Catherine St. OTTAWA K1R 5T4,105,Condominium Management Group,Byrne Currie;Jacques Bellefeuille;Lynda Baldry;Phil Yereck;Byrne Currie;Jacques Bellefeuille;Lynda Baldry;Phil Yereck,CMG Compliance Department
+253,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 253, 14 CONCOURSE GATE NEPEAN K2E7S6,152,Colonnade BridgePort ,Andy Shelp;Cal Kirkpatrick;Ed Herweyer;Greg Johnston;Andy Shelp;Cal Kirkpatrick;Ed Herweyer;Greg Johnston,
+254,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 254, 1131 Newmarket St Ottawa K1B 4N4,144,,,
+255,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 255, 335 CATHERINE ST. OTTAWA K1R 5T4,46,,,
+256,,,,,,
+257,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 257, 535 Hilson Ave Ottawa K1Z 6C9,6,,Hal Hamilton;Lucia Lilia Ortega Pacheco;Luis Manuel Guaida;Mario Pontiroli;Hal Hamilton;Lucia Lilia Ortega Pacheco;Luis Manuel Guaida;Mario Pontiroli,
+258,,,,,,
+259,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 259, 335 CATHERINE ST. OTTAWA K1R 5T4,115,Condominium Management Group,Barbara Reid;Isabel Cosme;Jason O'Dale;Norman Vincent;Barbara Reid;Isabel Cosme;Jason O'Dale;Norman Vincent,CMG Compliance Department
+260,,,,,,
+261,,,,,,
+262,,,,,,
+263,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 263, 335 Catherine St Ottawa K1R 5T4,58,,Darlene Baxter;Denise Shearer;james Schedler;Patricia Healey;Darlene Baxter;Denise Shearer;james Schedler;Patricia Healey,Axia Compliance Department
+264,,,,,,
+265,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 265, 55 WHITEMARL DR OTTAWA K1L8J9,12,The Regional Group,Blair Johnston;Debbie Leadbetter;Don Murphy;Gerri McManus-Wilkes;Blair Johnston;Debbie Leadbetter;Don Murphy;Gerri McManus-Wilkes,Nadia Freeman
+266,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 266, 190 Menten Place Nepean K2H 9G3,43,R. Dixon Management Inc,Alan Hamblin;Brian Dennison;Karen Gee;Laurinda Ala;Alan Hamblin;Brian Dennison;Karen Gee;Laurinda Ala,
+267,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 267, 470 LAURIER AVE W OTTAWA K1R 7W9,195,Michael V. LaFontaine,Barry Deeprose;Edward Nagy;Judy Tulloch;Mark Bracko;Barry Deeprose;Edward Nagy;Judy Tulloch;Mark Bracko,Glenn Lafontaine;Michael LaFontaine
+268,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 268, 2871 RICHMOND RD OTTAWA K2B8M5,227,20/20 Property Management Ltd.,Angela Wylie;Darrel Kent;Ronald Miller;Sabine Gibson;Angela Wylie;Darrel Kent;Ronald Miller;Sabine Gibson,
+269,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 269, 190 Menten Place Nepean K2H 9G3,9,R. Dixon Management Inc,Alison Steinberg;Gay MacQuarrie;Patricia Keough,
+270,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 270, 50 BURNSIDE AVE OTTAWA K1Y2M2,7,Astro Property Management,Angela De Wilton;Susanne Reid,
+271,,,,,,
+272,,,,,,
+273,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 273, CCC No. 273 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,17,Premiere Property Management Associates,Allan Torbitt;Evan Blake;Peter Armstrong;Shauna Taylor-Urquhart,
+274,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 274, 10 A SHEHYN LANE OTTAWA K2G4P2,69,,,David Duncan
+275,,,,,,
+276,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 276," 335 CATHERINE STREET, SUITE 100 OTTAWA K1R 5T4",79,Condominium Management Group,Chris Dunn;Michael Bailey;Pallavi Swaranjali,CMG Compliance Department;Stefan Novak
+277,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 277, 335 CATHERINE ST. OTTAWA K1R 5T4,59,,,
+278,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 278, 19 Montcalm St Ottawa K1S 0A2,6,,,
+279,,,,,,
+280,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 280, 522 RIVERDALE AVE OTTAWA K1S1S5,10,,Roxanna Bulsara;Suzanne Agius,
+281,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 281, 335 CATHERINE ST. OTTAWA K1R 5T4,40,,Alec Norrie;Doug Waterson;Kristina Zetchus;Lei Zhoue;Alec Norrie;Doug Waterson;Kristina Zetchus;Lei Zhoue,
+282,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 282, 50 EMMERSON AVE. c/o AMG Property Management Inc.  1775 Courtwood Crescent Suite 204 OTTAWA K2C 3J2,55,AMG Property Management Inc.,Beth Whitehead;Connie Brook;John Meissner;Larry Surrette,Michael Sargent;Mike Sargent
+283,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 283, 2019 Carling Ave Ottawa K2A 4A2,65,Berkley Property Management,Andre St-Jacques;Asmaa Bouayad;Carol-Anne Hoard;Kathleen Stephenson;Andre St-Jacques;Asmaa Bouayad;Carol-Anne Hoard;Kathleen Stephenson,
+284,,,,,,
+285,,,,,,
+286,,,,,,
+287,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 287, 245 ECHO DR OTTAWA K1S1N3,7,,Carol Hunter;Greg Smith;Marie Gibson,
+288,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 288, c/o Axia Property Management Ottawa K1R 5T4,90,Axia Property Management Inc.,Bibiane Reitveld;Blaine Steele;Catherine Pink;Peter Lessard;Bibiane Reitveld;Blaine Steele;Catherine Pink;Peter Lessard,Axia Compliance Department
+289,,,,,,
+290,,,,,,
+291,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 291, CCC 291 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,124,Premiere Property Management Associates,Aline MacDougall;Linda Ott;Rene Veilleux;Stephanie Clairoux;Aline MacDougall;Linda Ott;Rene Veilleux;Stephanie Clairoux,
+292,,,,,,
+293,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 293, 335 Catherine St Ottawa K1R 5T4,11,Axia Property Management,Gordon Betcherman;Kevin Colbourne;Sharron Leeder,Axia Compliance Department
+294,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 294, 2276 ORIENT PARK DR OTTAWA K1B4Z8,53,Deerpark Management Inc.,Chris Burkhardt;Gwen O'Brien;Judy Matchem;Mike Harrison;Chris Burkhardt;Gwen O'Brien;Judy Matchem;Mike Harrison,David Duncan
+295,,,,,,
+296,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 296, 72 GREENFIELD AVE OTTAWA K1S0X7,18,Deerpark Management Inc.,Bruce MacGregor;Gerry Drisdelle;Kristin Plater;Michel Savoie;Bruce MacGregor;Gerry Drisdelle;Kristin Plater;Michel Savoie,Marilyn Thibault;Trish Doran
+297,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 297, 5350 CANOTEK RD OTTAWA K1J9C9,49,,Brad Rusmussan;Luc Guibord;Rick Wilson,David Duncan
+298,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 298, 190 Menten Place Nepean K2H 9G3,50,R. Dixon Management Inc,Alex Aubrey;Andrew Macartney;Danilo Orozco;Johanne Diotte;Alex Aubrey;Andrew Macartney;Danilo Orozco;Johanne Diotte,
+299,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 299, 335 Catherine St Ottawa K1R 5T4,19,,,
+300,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 300, c/o Axia Property Management Ottawa K1R 5T4,101,Axia Property Management Inc.,,Axia Compliance Department
+301,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 301, 335 Catherine St Ottawa K1R 5T4,59,,Charmaine Ralph;Gabriel Naijar;Shane Clark;Stephen Griffin,Axia Compliance Department
+302,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 302, #41 - 200 Owl Dr. OTTAWA K1V 9P7,28,W.F. Martin Property Management,Jason Moodie;Linda Labreque;Marie-Helene Aubin;Susan Pringle;Jason Moodie;Linda Labreque;Marie-Helene Aubin;Susan Pringle,William Martin
+303,,,,,,
+304,,,,,,
+305,,,,,,
+306,,,,,,
+307,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 307, 200 BAY ST OTTAWA K1R7W8,63,,Eva Mohan;Kim Seshagiri Chabot;Kris Kyritzopoulos;Sheriff Abdou;Eva Mohan;Kim Seshagiri Chabot;Kris Kyritzopoulos;Sheriff Abdou,
+308,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 308, 1131 Newmarket St Ottawa K1B 4N4,31,,,
+309,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 309, 108 GARDENVIEW PVT OTTAWA K1V0M9,3,,Moyra Fincham;Wojo Zielonka,
+310,,,,,,
+311,,,,,,
+312,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 312, 335 Catherine St. OTTAWA K1R 5T4,87,Condominium Management Group,Anita Hebert;Christopher Dean;Pamela Ferreira;Vivian Ho;Anita Hebert;Christopher Dean;Pamela Ferreira;Vivian Ho,CMG Compliance Department
+313,,,,,,
+314,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 314, 335 Catherine St. OTTAWA K1R 5T4,107,Condominium Management Group,Aaron Wilcox;Eric Osborne;Ian Halman;Keri-Lyn Dudgeon;Aaron Wilcox;Eric Osborne;Ian Halman;Keri-Lyn Dudgeon,
+315,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 315, 50 BURNSIDE AVE OTTAWA K1Y 2M2,10,Astro Property Management,Jane Fitzpatrick;Larry Slaney;Sydney Cameron,
+316,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 316, 1131 Newmarket St Ottawa K1B 4N4,168,PMA Realty Consulting Ltd.,,Monica Murad
+317,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 317," 190 O'Connor Street, 11th Floor OTTAWA K2P 2R3",163,Glenview Management Limited,Carlo Dalla Lana;Dave Casimiro;Greg Handley;Mark Shabinsky;Carlo Dalla Lana;Dave Casimiro;Greg Handley;Mark Shabinsky,
+318,,,,,,
+319,,,,,,
+320,,,,,,
+321,,,,,,
+322,,,,,,
+323,,,,,,
+324,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 324, 104-222 RUSSELL AVE OTTAWA K1N 7X5,9,,Elena Baranova;Lise Labelle;Milly Morton;Pierrick Le Monnier,Neil Thornton
+325,,,,,,
+326,,,,,,
+327,,,,,,
+328,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 328, 292 LAURIER AVE E OTTAWA K1N6P5,10,,,
+329,,,,,,
+330,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 330, 1131 Newmarket St Ottawa K1B 4N4,109,PMA Realty Consulting Ltd.,Anna Misak;Ashley Mascarenhas;Rachel Savard;Stephane Bisson;Anna Misak;Ashley Mascarenhas;Rachel Savard;Stephane Bisson,Gerry Bourdeau
+331,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 331, 335 Catherine St. OTTAWA K1R 5T4,101,Condominium Management Group,Cathy Basso;Dianne Soutif;Doreen Doré;Michael Adams,CMG Compliance Department;Kate McMullen
+332,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 332, 1029 CARLING AVE OTTAWA K1Y4E8,5,,Daniel Robinson;David Templin;Sara Brunetti,
+333,,,,,,
+334,,,,,,
+335,,,,,,
+336,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 336, 80 SANDCASTLE DR OTTAWA K2H9E7,207,The PPM Professional Property Management Corporation,Alfred Ten Oever;James Ritchie;Ken Rush;Pearl Synek,Richard Parry
+337,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 337, 800 MCKELLAR AVE OTTAWA K2A2X5,20,AMG Property Management Inc. ,Ann-Marie Vezina;David Burton;Marlene Mathon,Mike Sargent
+338,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 338, 2976 RICHMOND RD OTTAWA K2B6S7,7,,,
+339,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 339, 205 SOMERSET ST W OTTAWA K2P0J1,45,,Evan Travers;Gordon Vachon;Marilyn Dow;Rose-Gabrielle Birba;Evan Travers;Gordon Vachon;Marilyn Dow;Rose-Gabrielle Birba,Bill Fitzsimmons
+340,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 340, 2760 CAROUSEL CRES OTTAWA K1T2N4,196,,,
+341,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 341, 5340 CANOTEK RD OTTAWA K1J9C6,26,Deerpark Management Inc.,Denis Cadieux;Randy Sabean;Rick Wilson,David Duncan
+342,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 342, 1801 Woodward Drive OTTAWA K2C 0R3,155,475 Laurier Services Group Ltd.,Andre Martin;Gillie Vered;Janet Bennett;Mary Campbell;Andre Martin;Gillie Vered;Janet Bennett;Mary Campbell,Luc De Celles
+343,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 343, c/o Axia Property Management Inc. Ottawa K1R 5T4,40,Axia Property Management,Greg Cwintal;Jennifer Paton;Suzanne Noel,Axia Compliance Department
+344,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 344, 1131 Newmarket St Ottawa K1B 4N4,41,PMA Realty Consulting Ltd.,Amanda Asquini;Christine Kirkland-Klerks;Lana Kilrea;Michael Pollk;Amanda Asquini;Christine Kirkland-Klerks;Lana Kilrea;Michael Pollk,Gerry Bourdeau
+345,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 345, 1010 POLYTEK ST OTTAWA K1J9J1,45,Deerpark Management Inc,Andre LaCroix;Guy Whissel;Milan Petrovic,Cedric Powell;Trish Doran
+346,,,,,,
+347,,,,,,
+348,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 348, 268 PRESLAND RD OTTAWA K1K2B8,24,,,Brenda Drynan
+349,,,,,,
+350,,,,,,
+351,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 351, c/o Astro Property Management OTTAWA K1Y 2M2,36,Astro Property Management,Bryan Gallimore;Imran Chaudhari;Karen Peddle;Mary Stanton;Bryan Gallimore;Imran Chaudhari;Karen Peddle;Mary Stanton,
+352,,,,,,
+353,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 353, 52-5450 Canotek Rd Gloucester K1J 9G3,45,Deerpark Management Inc.,Bob Hurter;Dave Duncan;Ian Casey;Jacques Saumure;Bob Hurter;Dave Duncan;Ian Casey;Jacques Saumure,Marilyn Thibault;Trish Doran
+354,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 354, 100 RIDEAU TERR OTTAWA K1M0Z2,13,,Adrian de Hoog;Brian Heaney;Christine Blain,
+355,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 355, 335 CATHERINE ST. OTTAWA K1R 5T4,80,Condominium Management Group,Brandi Blair;Daniel Huot;Karen Martin;Michelle Brazil,CMG Compliance Department
+356,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 356, 1947 GREENVALE LANE OTTAWA K1C6E6,50,,,
+357,,,,,,
+358,,,,,,
+359,,,,,,
+360,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 360, 335 Catherine St Ottawa K1R 5T4,40,,,
+361,,,,,,
+362,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 362, 108-2019 BANK ST OTTAWA K1V0N1,78,,Ahmed Al-Hakak;Claudette Levac;Garry Hoy;Le Ly;Ahmed Al-Hakak;Claudette Levac;Garry Hoy;Le Ly,Darrin Murch
+363,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 363, 30 Concourse Gate Nepean K2E 7V7,57,,Desarae Davidson;James A. Millar;Jason Burggraaf;Nancy Ramadan;Desarae Davidson;James A. Millar;Jason Burggraaf;Nancy Ramadan,Rick Walsworth
+364,,,,,,
+365,,,,,,
+366,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 366, 5 - 23 BITTERN CRT OTTAWA K1L8K9,9,,Harry Freedman;Joy Saul;Robert Billington,
+367,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 367, 1972 ST LAURENT BLVD OTTAWA K1G4L5,22,Deerpark Management Inc.,Mohamad Mustapha;Phil Graziadei;Steve Hodge,David Duncan
+368,,,,,,
+369,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 369, 335 CATHERINE ST. OTTAWA K1R 5T4,80,,,CMG Compliance Department
+370,,,,,,
+371,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 371, 200 LAFONTAINE AVE OTTAWA K1L8K8,141,,Andre Levesque;Drew Dobson;Suzan Proulx;Wendy Rogers,Axia Compliance Department
+372,,,,,,
+373,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 373, 320 CYR AVE OTTAWA K1L7N7,9,MJM Management,Chris Keddy;K Tetlock;Melanie Leroux, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 373
+374,,,,,,
+375,,,,,,
+376,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 376, 200-30 Colonnade Road Nepean K2E7J6,40,GOLPRO HOLDINGS INC,BESSIE GIOVANOPOULOS;BRIAN FRANCIS;DANIEL COATES;SCOTT SMITH;BESSIE GIOVANOPOULOS;BRIAN FRANCIS;DANIEL COATES;SCOTT SMITH,Vasilios Sioulas
+377,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 377, 335 Catherine St Ottawa K1R 5T4,48,,,Axia Compliance Department
+378,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 378, 1131 Newmarket St Ottawa K1B 4N4,20,PMA Realty Consulting Ltd.,Christina McGuigan;Guy Pilon;Sian Griffiths,Gerry Bourdeau
+379,,,,,,
+380,,,,,,
+381,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 381, 360 Stewart St Ottawa K1N 6L1,165,,,
+382,,,,,,
+383,,,,,,
+384,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 384, AMG Property Management Inc. 1775 Courtwood Crescent Suite 204 OTTAWA K2C3J2,37,AMG Property Management Inc.,Dan Potterton;John Olsthoorn;Margaret Simpson;Peter Brown;Dan Potterton;John Olsthoorn;Margaret Simpson;Peter Brown,Mike Sargent
+385,,,,,,
+386,,,,,,
+387,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 387, 112A-15 CAPELLA CRT OTTAWA K2E7X1,32,Hiscoe School of Jiu-Jitsu Ltd.,Bob Bowins;James Beaton;Lyle Sugrue;Mike Michaud;Bob Bowins;James Beaton;Lyle Sugrue;Mike Michaud,Ed Hiscoe
+388,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 388, 335 Catherine St. OTTAWA K1R 5T4,93,Condominium Management Group,Barbara Ravanelli;Ed Sponchia;Jacob Heilik;Larry Peckford;Barbara Ravanelli;Ed Sponchia;Jacob Heilik;Larry Peckford,
+389,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 389, 5450 CANOTEK RD OTTAWA K1J9G4,112,Deerpark Management Inc.,Dan Potvin;Gabrielle Bourdeau;Gary Blain;Rick Wilson;Dan Potvin;Gabrielle Bourdeau;Gary Blain;Rick Wilson,David Duncan
+390,,,,,,
+391,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 391, 335 CATHERINE ST. OTTAWA K1R 5T4,40,Condominium Management Group,Helen Gabyrs;Jean-Claude Caprara;Patricia Rutledge,CMG Compliance Department
+392,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 392, P.O. Box 40026 OTTAWA K1V 0W8,40,,,
+393,,,,,,
+394,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 394, 335 CATHERINE ST. OTTAWA K1R 5T4,196,,,
+395,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 395, 2450 LANCASTER RD OTTAWA K1B5N3,44,,,
+396,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 396, 335 Catherine St Ottawa K1R 5T4,18,,Ian Davidson,
+397,,,,,,
+398,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 398, 335 Catherine St Ottawa K1R 5T4,42,Axia Property Management,Donna Comerford;Jean-Pierre Mattard;Tom Haddock,Axia Compliance Department
+399,,,,,,
+400,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 400, 52-5450 CANOTEK ROAD Ottawa K1J 9G3,60,Deerpark Management,Alain Labelle;Martin Lachapelle;Nancy Laflamme;Yvan Lachapelle,Cedric Powell
+401,,,,,,
+402,,,,,,
+403,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 403, c/o Axia Property Management Ottawa K1R 5T4,48,,,
+404,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 404, 174 COLONNADE RD OTTAWA K2E7J5,36,,Brent Lewis;Doug Gervais;Gary Singh;Healy Francis;Brent Lewis;Doug Gervais;Gary Singh;Healy Francis,Bill Fitzsimmons
+405,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 405," 45 ALEXANDER ST, unit C OTTAWA K1M1N1",5,,David Devine;Ian Bernard;John Booth,
+406,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 406, 110 RIDEAU TERR OTTAWA K1M0Z2,18,,Alexei Zarakhani;George Sotirovg;Janet McLaine;Martin Low;Alexei Zarakhani;George Sotirovg;Janet McLaine;Martin Low,
+407,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 407, 189A Cumberland St Ottawa K1N 7H2,9,,,
+408,,,,,,
+409,,,,,,
+410,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 410, CCC No. 410 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,24,,,
+411,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 411, 11 Rosemount Ave Ottawa K1Y 4R8,16,Look Property Management Inc.,Andrew Emmans;Gordon Hannaford;Ralph Leibe,
+412,,,,,,
+413,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 413, 1415 Gaultois Ave OTTAWA K1C 3G7,9,jr sylvain corporation,denis poitras;ray delcojo;ray delcojo;Renald Sylvain,
+414,,,,,,
+415,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 415," c/o 2nd Floor, 1737 Woodward Drive OTTAWA K2C 0P9",80,The Regional Group of Companies Inc.,Christine Rochefort;Dan Soubliere;Lucinda Hobbs;Rhonda Acres,Rhonda Goodfellow
+416,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 416, 10 MCDERMOT CRT OTTAWA K2L3V1,67,,,
+417,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 417, 610-50 O'Connor Street OTTAWA K1P6L2,29,Bentall Kennedy (Canada) LP,David Tanner;Marc Gaudette;Ross Strowger,Sean O'Sullivan
+418,,,,,,
+419,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 419, 1131 Newmarket St Ottawa K1B 4N4,83,PMA Realty Consulting Ltd.,Catherine Morrison;Lara Gonzalez;Philippe Bussy;Rae Raymond;Catherine Morrison;Lara Gonzalez;Philippe Bussy;Rae Raymond,Monica Murad
+420,,,,,,
+421,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 421, 5 Frank Street Ottawa K2P 0W8,8,,Howard Schwartz;John Kung;Judy Lascelles;Sandy Foote,
+422,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 422, 335 CATHERINE ST. OTTAWA K1R 5T4,67,Condominium Management Group,Ed Pagliaro;Kurt Ott;Sandra McLaren;Steffani MacDonald;Ed Pagliaro;Kurt Ott;Sandra McLaren;Steffani MacDonald,CMG Compliance Department
+423,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 423, PO Box 79062 Ottawa K1L 1A1,54,Charland Management,Bruce Miller;Catherine Duff;Katherine Stiles;Patricia Skinner;Bruce Miller;Catherine Duff;Katherine Stiles;Patricia Skinner,Danielle Charland
+424,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 424, 25  45 BITTERN CRT OTTAWA K1L8K9,11,,Ken Johnston;Peter Eddison;Robert Buchan,
+425,,,,,,
+426,,,,,,
+427,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 427, 11 Church Street Toronto M5E 1W1,92,,Corinne Pruzanski;Scott Cryer,
+428,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 428, 58 ANTARES DR OTTAWA K2E7W6,11,,Joe Cama;Jordan Kennedy;Pierluigi Bortot,
+429,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 429, 200-30 Colonnade Road Nepean K2E7J6,17,GOLPRO HOLDINGS INC,BRUCE GANNON;FRANK GUALTIERI;JULIAN COBISA;PHIL GOODALL;BRUCE GANNON;FRANK GUALTIERI;JULIAN COBISA;PHIL GOODALL,VASILIOS SIOULAS
+430,,,,,,
+431,,,,,,
+432,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 432, 335 Catherine St Ottawa K1R 5T4,16,,,
+433,,,,,,
+434,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 434, 335 CATHERINE ST. OTTAWA K1R 5T4,67,Condominium Management Group,Dean McLaren;Ed Pagliaro;Kurt Ott;Sandra McLaren;Dean McLaren;Ed Pagliaro;Kurt Ott;Sandra McLaren,CMG Compliance Department
+435,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 435, 335 Catherine St Ottawa K1R 5T4,22,Condominium Management Group,Andre Champoux;Michael Bay;Natalie Chenier;Roger Cahill,
+436,,,,,,
+437,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 437, 2129 Carp Road OTTAWA K0A 1L0,15,20/20 Property Management Limited,Alberto Palacios-Hardy;Claudia Waters;Jacques Deneault;Morna Paterson;Alberto Palacios-Hardy;Claudia Waters;Jacques Deneault;Morna Paterson,
+438,,,,,,
+439,,,,,,
+440,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 440, 251 CATHCART ST OTTAWA K1N5C2,6,,,David Duncan
+441,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 441, 335 Catherine St Ottawa K1R 5T4,221,Axia Property Management Inc.,Clark Norris;Gerald Bisson;Gilles St-Jean;Lee Belliveau;Clark Norris;Gerald Bisson;Gilles St-Jean;Lee Belliveau,Axia Compliance Department
+442,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 442, 1131 Newmarket St OTTAWA K1B 4N4,112,PMA REALTY CONSULTING LTD.,Gerald Dolan;greg penner;John Chamberlin;Pat McCaughan;Gerald Dolan;greg penner;John Chamberlin;Pat McCaughan,Norean Harris
+443,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 443, 1734 WINTER ROSE LANE OTTAWA K1C7A3,71,Deerpark Management Inc.,Gilles Latour;Guy Paquet;Jason Ladouceur,Marilyn Thibault;Trish Doran
+444,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 444, 11 Church Street Toronto M5E 1W1,94,,,
+445,,,,,,
+446,,,,,,
+447,,,,,,
+448,,,,,,
+449,,,,,,
+450,,,,,,
+451,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 451, 335 CATHERINE ST. OTTAWA K1R 5T4,67,,,
+452,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 452, CCC No. 452 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,18,Premiere Property Management Associates,Bassem Sayegh;Frederic Nadon;Toufic El-Hoss,
+453,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 453, 100 HILLSIDE DR OTTAWA K1K4J2,32,,Donna Quiggin;Paul Brunet;Scott Stilborn;Thomas Townsend;Donna Quiggin;Paul Brunet;Scott Stilborn;Thomas Townsend,
+454,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 454, 1131 Newmarket Street OTTAWA K1B 4N4,28,PMA Realty Consulting Ltd.,John Henderson;Michael Charbonneau,Donna MacEachern
+455,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 455, 335 Catherine St Ottawa K1R 5T4,43,,,
+456,,,,,,
+457,,,,,,
+458,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 458, c/o  W. F. Martin Property Management  Ottawa K1V 9P7,16,W. F. Martin Property Management ,Angela Lovric;Carter Brown;Katie Horton;Pamela Jill Moore;Angela Lovric;Carter Brown;Katie Horton;Pamela Jill Moore,William Martin
+459,,,,,,
+460,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 460, 4338 Innes Road OTTAWA K4A 3W3,27,Strata Management Inc.,Christopher Hesse;Micaela Newell;Saman Sohrevardi,Christine Jade
+461,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 461, 335 Catherine St Ottawa K1R 5T4,12,Axia Property Management Inc.,Brian Coburn;Mary Frances Taylor;Peter Watson,Axia Compliance Department
+462,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 462, 1131 Newmarket St OTTAWA K1B 4N4,138,,,
+463,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 463, 190 Menten Place Nepean K2H 9G3,56,R. Dixon Management Inc,Barry Pilon;Bruce Milligan;Denmis Morley;Harvey Gencher;Barry Pilon;Bruce Milligan;Denmis Morley;Harvey Gencher,
+464,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 464, 335 Catherine St Ottawa K1R 5T4,60,,Carole Cozette;Dave Lo;Elise Ward;Hector Marquez,Axia Compliance Department
+465,,,,,,
+466,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 466, 11 Rosemount Ave Ottawa K1Y 4R8,16,Look Property Management Inc.,Arbnor Krasniqi;Fareed Dean;Frank Diaz,Scott Wilson
+467,,,,,,
+468,,,,,,
+469,,,,,,
+470,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 470, 335 CATHERINE ST. OTTAWA K1R 5T4,71,Condominium Management Group,Annie Joannette;Cheryl Jaffee;Howie Miller;Janet Hill-Tobali;Annie Joannette;Cheryl Jaffee;Howie Miller;Janet Hill-Tobali,CMG Compliance Department
+471,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 471, 11 Rosemount Ave Ottawa K1Y 4R8,8,,,
+472,,,,,,
+473,,,,,,
+474,,,,,,
+475,,,,,,
+476,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 476, c/o Axia Property Management Inc. Ottawa K1R 5T4,273,Axia Property Management,Bill Cody;Bonnie Preece;Carmel Boosamra;Pauline Damphousse;Bill Cody;Bonnie Preece;Carmel Boosamra;Pauline Damphousse,Axia Compliance Department
+477,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 477, AMG Property Management Inc. 1775 Courtwood Crescent Suiote 204 OTTAWA K2C 3J2,23,AMG Property Management Inc.,Bruce Holden;Christine Nestruck;Phil Browne,Mike Sargent
+478,,,,,,
+479,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 479, 1131 Newmarket Street OTTAWA K1B 4N4,36,,,
+480,,,,,,
+481,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 481, 11 Rosemount Ave Ottawa K1Y 4R8,18,,,
+482,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 482, 130 RIDEAU TERR OTTAWA K1M0Z2,12,20/20 Property Management Ltd.,Monique Coupal;Nancy Clark;Susan Feldman,
+483,,,,,,
+484,,,,,,
+485,,,,,,
+486,,,,,,
+487,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 487, 51 SPADINA AVE OTTAWA K1Y2B8,4,,Allison Jaquish;Jim Campiti;Judy-Lynne Rhoades;Katie Rutledge-Taylor,
+488,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 488, 200-30 COLONNADE RD NEPEAN K2E7J6,28,GOLPRO HOLDINGS INC,,Vasilios Sioulas
+489,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 489, 335 Catherine St. OTTAWA K1R 5T4,19,,,
+490,,,,,,
+491,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 491, 360 Stewart Street OTTAWA K1N 6L1,322,A.L. Reid Property Management & Consulting Services Ltd.,Bernard Latour;David Cole;Diane Colquitt;Gregory Woods;Bernard Latour;David Cole;Diane Colquitt;Gregory Woods,Mike Fraser
+492,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 492, 190 Menten Place Nepean K2H 9G3,29,R. Dixon Management Inc,Amlan Gupta;Betty Lynn Schwab;Grant Phillips;Robert Osborne;Amlan Gupta;Betty Lynn Schwab;Grant Phillips;Robert Osborne,
+493,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 493, c/o Bunning & Farnand 204-110 Bearbrook road OTTAWA K1B5R2,8,,Les Bunning,
+494,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 494, 50 BURNSIDE AVE OTTAWA K1Y 2M2,100,Astro Property Management,Giuseppe Costanzo;Jean Desrochers;Jeff Madden;Terry Seaver;Giuseppe Costanzo;Jean Desrochers;Jeff Madden;Terry Seaver,
+495,,,,,,
+496,,,,,,
+497,,,,,,
+498,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 498, 335 CATHERINE ST. OTTAWA K1R 5T4,220,Capital Integral Property Management,Andrew Shore;Francois Lalonde;Jean-Maurice Filion;Lucie Chartrand;Andrew Shore;Francois Lalonde;Jean-Maurice Filion;Lucie Chartrand,Axia Compliance Department
+499,,,,,,
+500,,,,,,
+501,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 501, 1131 Newmarket Street OTTAWA K1B 4N4,69,PMA Realty Consulting Ltd.,Carl Schriver;Catherine Moser-Maxwell;Glenn MacIntosh;Kristine Feraco;Carl Schriver;Catherine Moser-Maxwell;Glenn MacIntosh;Kristine Feraco, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 501;Christine Power
+502,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 502, 1559 Alta Vista Dr OTTAWA K1Y4T1,26,,Albert Wong;Amy Wong;Yvonne Staszewski,
+503,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 503, 1926 SUMMERFIELDS CRES OTTAWA K1C7B4,95,Deerpark Management Inc.,Jim Ritchie;Kim Headrick;Marc Lavigne;Peter Dunn;Jim Ritchie;Kim Headrick;Marc Lavigne;Peter Dunn,David Duncan
+504,,,,,,
+505,,,,,,
+506,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 506, 335 Catherine St Ottawa K1R 5T4,16,,Francis Bangou;Louis Hotte;Lyle Borden,
+507,,,,,,
+508,,,,,,
+509,,,,,,
+510,,,,,,
+511,,,,,,
+512,,,,,,
+513,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 513, 335 CATHERINE ST. OTTAWA K1R 5T4,82,,,
+514,,,,,,
+515,,,,,,
+516,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 516, 335 Catherine St Ottawa K1R 5T4,19,Axia Property Management,,Axia Compliance Department
+517,,,,,,
+518,,,,,,
+519,,,,,,
+520,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 520, 499 SUNNYSIDE AVE OTTAWA K1S0S8,30,Deerpark Management Inc.,Donna Correy;Lorena Duncan;Sharon Read,Marilyn Thibault;Trish Doran
+521,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 521, c/o Axia Property Management Inc.  Ottawa K1R 5T4,11,,,
+522,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 522, 1200 Prince of Wales Drive Ottawa K2C 3Y4,104,Apollo Property Management,Annette Bradfield;Deanna White;Dwayne MacKinnon;Patricia Glinka,Debbie Wilson;Deborah MacEwen
+523,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 523, 5489 Canotek Rd Gloucester K1J 9G7,123,Complete Condo Management,Dino Testa;Ernest Labelle;Gustave Goldmann;Joe Hanafin;Dino Testa;Ernest Labelle;Gustave Goldmann;Joe Hanafin,Michelle Compton
+524,,,,,,
+525,,,,,,
+526,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 526, 335 Catherine St. OTTAWA K1R 5T4,27,,,
+527,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 527, 335 Catherine St OTTAWA K1R 5T4,131,Condominium Management Group,,
+528,,,,,,
+529,,,,,,
+530,,,,,,
+531,,,,,,
+532,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 532, 5O Henry Goulburn Way Stittsville K2S 1N7,30,,Cheryl Hobin;Hans Hesse;Sheng Lan,
+533,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 533, 1480 Riverside Dr Ottawa K1G 5H2,193,Condominium Management Group,Barry Mair;Claude Lalonde;Diane Houle-Rutherford;Louise Garby;Barry Mair;Claude Lalonde;Diane Houle-Rutherford;Louise Garby,CMG Compliance Department
+534,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 534, 335 CATHERINE ST. OTTAWA K1R 5T4,39,,,
+535,,,,,,
+536,,,,,,
+537,,,,,,
+538,,,,,,
+539,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 539, OCCC 539 / C/O Ron Labelle & Associates Inc OTTAWA K1H 1E1,25,,,
+540,,,,,,
+541,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 541, 335 Catherine St. OTTAWA K1R 5T4,24,Condominium Management Group,James Bruce;Norman McLeod;Rita Bhatia,CMG Compliance Department
+542,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 542, 1131 Newmarket Street OTTAWA K1B 4N4,60,PMA Realty Consulting Ltd.,,
+543,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 543, 4338 Innes Road OTTAWA K4A 3W3,64,Strata Management Inc.,Debra Ross;Nelly Haytchouk;Patrick Fournier;Robert Potvin;Debra Ross;Nelly Haytchouk;Patrick Fournier;Robert Potvin,Christine Jade
+544,,,,,,
+545,,,,,,
+546,,,,,,
+547,,,,,,
+548,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 548, 1775 Courtwood Crescent OTTAWA K2C 3J2,46,AMG Property Management Inc.,Bob Hartigan;Hilda Wylie;Lynn Ringer;Marv Hinton;Bob Hartigan;Hilda Wylie;Lynn Ringer;Marv Hinton,Mike Sargent
+549,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 549, 33 CHARLES ST OTTAWA K1M1R3,3,,Patricia Morris;Sylvie Lauzon,
+550,,,,,,
+551,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 551, 335 Catherine St. OTTAWA K1R 5T4,45,,,CMG Compliance Department
+552,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 552, c/o Axia Property Management Ottawa K1R 5T4,11,Axia Property Management Inc.,Lori White;Nik Ive Allion;Stephen Winfrow,Axia Compliance Department
+553,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 553, 62 DONALD ST OTTAWA K1K4L1,70,Charland Management Services,Ann Norgaard;Ben Neil;Peg Herbert;Sharon Anne Cook,Danielle Charland
+554,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 554, 335 Catherine St. OTTAWA K1R 5T4,22,Condominium Management Group,Judy van Stralen;Kristopher van der Veer;Ronald Monaghan,CMG Compliance Department
+555,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 555, Unit 6 - 4338 Innes road OTTAWA K4A 3W3,52,,Chantal Mainville;Cindy Eastwood;Elaine Lefebvre;Pierre Howell;Chantal Mainville;Cindy Eastwood;Elaine Lefebvre;Pierre Howell,Christine Jade
+556,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 556, 415 Gilmour Street Ottawa K2P 2M8,27,,Andrew McNeill;Bill Rooney;Dallas Alderson;Josh Bueckert,
+557,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 557, 10 STONEBRIAR DR OTTAWA K2G5Y1,78,Deerpark Management Inc.,Brian Graham;Du Zheng;E. Roselyn Murphy;Peter Youngman;Brian Graham;Du Zheng;E. Roselyn Murphy;Peter Youngman,David Duncan
+558,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 558, 335 CATHERINE ST. OTTAWA K1R 5T4,74,Condominium Management Group,Carole Ryan;Helene Buteau;Hillary Fay;Kim Campbell;Carole Ryan;Helene Buteau;Hillary Fay;Kim Campbell,CMG Compliance Department
+559,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 559, 4338 Innes Road OTTAWA K4A 3W3,47,Strata Management Inc.,Erik Jobin;John Cummings;Magdi GEORGES;Marcel Goldfinger;Erik Jobin;John Cummings;Magdi GEORGES;Marcel Goldfinger,Christine Jade
+560,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 560, 31 DURHAM PVT OTTAWA K1M2J1,11,,,
+561,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 561, 1200 Prince of Wales Dri ve Ottawa K2C 3Y4,79,,,
+562,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 562, 5832 Bank Street Ottawa K4P 1B9,16,Sentinel Management Inc.,Denis Jolette;Frank Merkley;Robert Dupuis,Cindy Johnston;Cindy Johnston
+563,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 563, 335 Catherine St. OTTAWA K1R 5T4,68,Condominium Management Group,,
+564,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 564, 5832 Bank Street Ottawa K4P 1B9,14,Sentinel Management Inc.,Fredericka Gregory;Gary McLaughlin;Jim Des Rivieres;John Carroll;Fredericka Gregory;Gary McLaughlin;Jim Des Rivieres;John Carroll,Cindy Johnston
+565,,,,,,
+566,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 566, 335 CATHERINE ST. OTTAWA K1R 5T4,40,Condominium Management Group,Eureka Sevor;Ken Wong;Michele Tache;Pamela Thomas,CMG Compliance Department
+567,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 567, 335 Catherine St. OTTAWA K1R 5T4,23,Condominium Management Group,Brenda O'Grady;Jaime Khan;Robert Gauvreau,CMG Compliance Department
+568,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 568, 3564A Innes Rd. OTTAWA K1C 1T1,36,A.H. Fitzsimmons & Co. Ltd.,Luc Benoit;Samantha Nunn,
+569,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 569, 5832 Bank Street Ottawa K4P 1B9,17,Sentinel Management Inc.,Joyce Kingston;Paulette Rondot;Roger Bosse,Cindy Johnston
+570,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 570, 26 BROAD ST BROCKVILLE  K6V 4T8,40,,,
+571,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 571, 335 CATHERINE ST. OTTAWA K1R 5T4,34,Condominium Management Group,Barry Peart;Elizabeth Kirchhoff;Theresa Quann,CMG Compliance Department
+572,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 572, 31 ROBSON CRT OTTAWA K2K2W1,10,MJM Management,Brien MacDonald;Dennis Armstrong;Patrick Wu,Michael Murphy
+573,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 573, 34 ROBSON CRT OTTAWA K2K2W1,10,,,
+574,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 574, 50 68 ROBSON CRT OTTAWA K2K2W1,10,MJM Management,Barbara Sauve;Peter Bailie;Roy Kennedy, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 574
+575,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 575, 110 128 ROBSON CRT OTTAWA K2K2W1,10,Real Property Management Advisors,Gail Oxley;Paul Berlinguette;Susan Dodge, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 575
+576,,,,,,
+577,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 577, 91 109 ROBSON CRT OTTAWA K2K2W1,10,MJM Management,Diana Jones;Ian Jones;John Oldfield, Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 577
+578,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 578, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,26,Apollo Property Management,Maureen Gleeson  ;Wanita Montgomery  ,Scott D'Ascenzo
+579,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 579, 5832 Bank Street Ottawa K4P 1B9,34,Sentinel Management Inc.,Adele Cardinal;Charles Lajoie;David McGowran;Isabelle Seguin;Adele Cardinal;Charles Lajoie;David McGowran;Isabelle Seguin,Cindy Johnston
+580,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 580, 244 CHARLOTTE ST OTTAWA K1N8L3,12,Deerpark Management Inc.,Anthony Giovando;Eugene Oscapella;Marion Barclay,David Duncan;Lysandra Ryan
+581,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 581, 335 CATHERINE ST. OTTAWA K1R 5T4,81,,,
+582,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 582, 108 Robson Crt Kanata K2K 2W1,10,Real Property Management Advisors,Ann Holmes;Joan Every;Pauline Barton,Brenda Drynan
+583,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 583, 179 Wilbrod St OTTAWA K1N6L4,3,,,
+584,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 584, 433 Besserer St Ottawa K1N 6B9,16,,Eric Bourlier;Linda Cardinal;Melanie Corbin,Bill Fitzsimmons
+585,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 585, 335 Catherine St Ottawa K1R 5T4,87,,,
+586,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 586, 5832 Bank Street Ottawa K4P 1B9,46,Sentinel Management Inc.,Caroline Lavoie;Shelley Bailey;Van Mardian,Cindy Johnston;Cindy Johnston
+587,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 587, Management Office OTTAWA K2B5W8,238,Eastern Ontario Property Management Group,Catherine Allen;Constance Hudak;Don McIntyre;John Poole;Catherine Allen;Constance Hudak;Don McIntyre;John Poole,Annette Fleury
+588,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 588, c/o Capital Integral Property Management  Ottawa K1Z 5L5,54,Capital Integral Property Management,,Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 1009;Michael Barnett
+589,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 589, 335 CATHERINE ST. OTTAWA K1R 5T4,28,Condominium Management Group,,CMG Compliance Department
+590,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 590, 335 Catherine St Ottawa K1R 5T4,15,Axia Property Management Inc.,Ian Calvert;Keith Campbell;Rick Hughes,Axia Compliance Department;William Fitzsimmons
+591,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 591, 335 Catherine St. OTTAWA K1R 5T4,48,Condominium Management Group,,
+592,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 592, 335 CATHERINE ST. OTTAWA K1R 5T4,42,Condominium Management Group,Jeanne-Helene Tardivel;Pierre Desjardins;Roger Regimbal,CMG Compliance Department
+593,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 593, 335 Catherine St. OTTAWA K1R 5T4,27,,,
+594,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 594, 2848 Laurier Rockland K4K 1A3,16,Gestion POM Management Inc.,David Foran;Denis Regimbal;Linda Gauthier;Vance Chow;David Foran;Denis Regimbal;Linda Gauthier;Vance Chow,Martine Nolin-Simard
+595,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 595, 335 Catherine St. OTTAWA K1R 5T4,30,,,
+596,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 596, 335 Catherine St Ottawa K1R 5T4,19,,,
+597,,,,,,
+598,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 598, 12 CLARENCE ST OTTAWA K1N5P3,17,,Benoit Deshaies;Paradis Richard,
+599,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 599, 190 Menten Place Nepean K2H 9G3,63,R. Dixon Management Inc,Andrew Litwinczuk;Kate Ireland;Mary MacEachern;Michel Bourdeau;Andrew Litwinczuk;Kate Ireland;Mary MacEachern;Michel Bourdeau,
+600,,,,,,
+601,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 601, c/o Astro Property Management Ottawa K1Y 2M2,25,Astro Property Management,Brian Lawless;Jean Wu;Robin Hamilton Fyfe;Vahik Manookian;Brian Lawless;Jean Wu;Robin Hamilton Fyfe;Vahik Manookian,
+602,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 602, 297 Dupuis St Vanier K1L 7H8,15,,,
+603,,,,,,
+604,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 604, 5662 MAHOGANY HARBOUR LANE OTTAWA K4M1K9,4,,,
+605,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 605, c/o Condominium Management Group Ottawa K1R 5T4,28,,Charlene Cummings;MUHAMMAD RAJA;Toni Darouze,CMG Compliance Department
+606,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 606, 270 Brittany Drive OTTAWA K1K 4M3,34,Marek Property Management Corp.,Brent Weinheimer;Colin Simmonds;Dina Elatawi;Pamela Hewitt;Brent Weinheimer;Colin Simmonds;Dina Elatawi;Pamela Hewitt,Marek Swiecicki
+607,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 607, 335 CATHERINE ST. OTTAWA K1R 5T4,10,Condominium Management Group,Barbara Rizzi;Ian Davidson,CMG Compliance Department
+608,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 608, 4490 Harper Avenue Ottawa K1J 1E1,16,,Johanne Jean-Baptiste;Lou-Anne Begin;Victor Desjardins,
+609,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 609, 83 Hinton Avenue N Ottawa K1Y0Z7,6,Citywide Properties,Bilkis Laher;Faizel Laher;Firoz Miyanji,Chady Eldali
+610,,,,,,
+611,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 611, 130 ROBSON CRT OTTAWA K2K2W1,8,W.F. Martin Property Management,Alan Wu;Monique DuCharme;Peter Fransham,
+612,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 612, 13 Kanata K2K 3A1,16,,,
+613,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 613, 270 Brittany Drive OTTAWA K1K 4M3,11,Marek Property Management Corp.,Nancy McNeil;Pierre Deschamps;William Voller,Marek Swsiecicki
+614,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 614, 141 LAURIER AVENUE WEST OTTAWA K1P 5J3,0,Carleton Investment Property Management Ltd.,Efharis Kostala;J. David Augustine;Philip Augustine,Douglas Riche
+615,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 615, 335 CATHERINE ST. OTTAWA K1R 5T4,12,Condominium Management Group,Paul Vani,CMG Compliance Department
+616,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 616, 335 CATHERINE ST. OTTAWA K1R 5T4,12,Condominium Management Group,George Assaf;Jonathan Martin,CMG Compliance Department
+617,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 617, 11 Huntings End Ave Kanata K2M1L6,28,,Edward Lun;Vera Lun,
+618,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 618, 335 CATHERINE ST. OTTAWA K1R 5T4,9,,,
+619,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 619, 2D  70 ROBSON CRT OTTAWA K2K2W1,8,,,
+620,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 620, 5663 MAHOGANY HARBOUR LANE OTTAWA K4M1K9,4,Deerpark Management Inc.,Denis Lalonde Retah Jennings;Howard and Donna Mittleholt;Lezlie Locke;Mary Hamilton,David Duncan
+621,,,,,,
+622,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 622, 455 Laurier Ave West OTTAWA K1R6X7,5,Val Roca Management Inc,Diane Côté;Josee Vaillancourt;Morley Hanson,
+623,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 623, 335 CATHERINE ST. OTTAWA K1R 5T4,40,Condominium Management Group,Andrew Corber;Anne-Marie Hayden;Kris Klein,CMG Compliance Department
+624,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 624, 335 CATHERINE ST. OTTAWA K1R 5T4,12,,,
+625,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 625, 150 ROBSON CRT OTTAWA K2K2W1,7,W.F. Martin Property Management,Barry Laffin;Lee McCabe;Susan Swiggum,
+626,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 626, 141 ROBSON CRT Apt 1D OTTAWA K2K2W1,8,,,
+627,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 627, 335 CATHERINE ST. OTTAWA K1R 5T4,75,,Angela Leclerc;Michel Jacques;Theresa Pigeon;Trudy Stalker,CMG Compliance Department
+628,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 628, 335 CATHERINE ST. OTTAWA K1R 5T4,42,,Carmen Montag;Ione Jayawardena;Julio Da Silva;Maximilien Sikuburabo;Carmen Montag;Ione Jayawardena;Julio Da Silva;Maximilien Sikuburabo,CMG Compliance Department
+629,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 629, 335 CATHERINE ST. OTTAWA K1R 5T4,38,,Bassam Khatib;Daphne Simone;Jeffrey Smith;Mary Lynn Giroux,CMG Compliance Department
+630,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 630, 335 CATHERINE ST. OTTAWA K1R 5T4,48,,Donald Mockett;France Lamarche;Milica Puljic;Muriel Curran;Donald Mockett;France Lamarche;Milica Puljic;Muriel Curran,CMG Compliance Department
+631,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 631, 335 CATHERINE ST. OTTAWA K1R 5T4,42,,,
+632,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 632, 236 Metcalfe St Ottawa K2P 1R3,62,The Properties Group Management Ltd.,Brian Lahey;Jules Sigler;Lejla Latifovic;Susan Lahey,
+633,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 633, 111-121 Robson Court Kanata K2K 2W1,8,Real Property Management Advisors,Arnold Schaefer;Dave Hunter;Kay Parent;Wayne Lancaster,Brenda Drynan
+634,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 634, 95 Beech St Ottawa K1S 3J7,30,Capital Integral Property Management,GLENDA LUTES;Riek van den Berg;Tracy Turnball,Barbara Ravanelli
+635,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 635, 71 ROBSON CRT OTTAWA K2K2W1,10,Real Property Management Advisors,Marilyn Bailey;Pierre Forget;Shirley Bernier,Brenda Drynan
+636,,,,,,
+637,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 637, 335 Catherine St Ottawa K1R 5T4,75,Axia Property Management Inc.,Laura Gnesko;Rob Meredith;Scott Parsons;Shannon Kamp;Laura Gnesko;Rob Meredith;Scott Parsons;Shannon Kamp,Axia Compliance Department
+638,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 638, 51 ROBSON CRT OTTAWA K2K2W1,10,,,
+639,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 639, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,32,Apollo Property Management Limited,Karen Matthews;Natalya Nikonenko  ;Nicole Pigeon  ,Shebel Farah
+640,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 640, 5832 Bank Street Ottawa K4P 1B9,16,,,
+641,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO. 641, 335 Catherine St Ottawa K1R 5T4,40,Axia Property Management,Daname Gogue;Hunter McGill;Mary Jane Jones;Pierre Gosselin;Daname Gogue;Hunter McGill;Mary Jane Jones;Pierre Gosselin,Axia Compliance Department
+642,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 642, 4463 Harper Ave Ottawa K1J 1C9,26,Gestion POM Management Inc.,Brian Micallef;Gilles Ruel;Michel Cote;Saurabh Ratti,Martine Nolin-Simard
+643,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 643, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,39,Apollo Property Management,Brian Bedwell   ;Guy Boyd;Margaret Pearcy   ,Scott D'Ascenzo
+644,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 644, 335 Catherine St Ottawa K1R 5T4,15,Axia Property Management Inc.,Cedric Nowell;Robert Gould;Robin Sears,Axia Compliance Department
+645,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 645, 52 Pentland Crescent Kanata K2K1V5,21,,Chris Teron;Diana Cianciusi;Steve Kaminski,
+646,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 646, 11 Church Street Toronto M5E 1W1,46,,Corinne Pruzanski;Scott Cryer,
+647,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 647, 11 Church Street Toronto M5E 1W1,82,,Corinne Pruzanski;Scott Cryer,
+648,,,,,,
+649,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 649, 335 Catherine St. OTTAWA K1R 5T4,56,Condominium Management Group,Joan Hunter;Melanie Crossman;Michel Schafer;Sharon Walker;Joan Hunter;Melanie Crossman;Michel Schafer;Sharon Walker,CMG Compliance Department
+650,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 650," 2339 Ogilvie Road, Box 46104 OTTAWA K1J 8M6",47,,,
+651,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 651, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,24,Apollo Property Management,Brent Kilbertus;Cheryl Collins,Shebel Farah
+652,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 652, 335 CATHERINE ST. OTTAWA K1R 5T4,82,Condominium Management Group,Dan Orban;Lynne Black;Michael Milne,CMG Compliance Department
+653,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 653, 335 CATHERINE ST. OTTAWA K1R 5T4,32,Condominium Management Group,Francois Dulude;Sean O'Connor;Tingting Liu,CMG Compliance Department
+654,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 654, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,29,Apollo Property Management,Don Angelico  ;Francois Lapointe;Roger  Smiley    ,Scott D'Ascenzo
+655,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 655, 5832 Bank Street Ottawa K4P 1B9,29,Sentinel Management Inc.,Anyk Glussich;Elaine St. Amour;Ernie Boyko,Cindy Johnston;Cindy Johnston
+656,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 656, OCSCC No. 656 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,92,Premiere Property Management Associates,Guy Proulx;Melanie Amyotte;Robert Traversy;Simone Duvette;Guy Proulx;Melanie Amyotte;Robert Traversy;Simone Duvette,
+657,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 657, 1131 Newmarket St Ottawa K1B 4N4,58,PMA Realty Consulting Ltd.,Carolyn Holmes;Chris Belleville;Lukas Ratkowski,Monica Murad
+658,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 658, 5832 Bank Street Ottawa K4P 1B9,25,,,
+659,OTTAWA-CARLETON  STANDARD CONDOMINIUM CORPORATION NO. 659, 335 Catherine St. OTTAWA K1R 5T4,25,Condominium Management Group,Debbie Backstrom;Jody Maloney;Rasia Renato,CMG Compliance Department
+660,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 660, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,143,Apollo Property Management,Gabe Farkas  ;Lauren Sabourin;Margaret-Ann Llanos  ;Patrick Girard;Gabe Farkas  ;Lauren Sabourin;Margaret-Ann Llanos  ;Patrick Girard,Scott Hill
+661,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 661, 2129 Carp Road  OTTAWA K0A 1L0,47,20/20 Property Management Ltd.,Allan Warden;Gilbert Anctil;Rene Rochette;Robert Thomas;Allan Warden;Gilbert Anctil;Rene Rochette;Robert Thomas,
+662,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 662, 1200 Prince of Wales Drive Ottawa K2C 3Y4,201,Apollo Property Management,Frank Tanner   ;Gary McCoy  ,Scott D'Ascenzo
+663,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 663, OCCECC No. 663  c/o Premiere Property Management Assoc. Ottawa K1B 4W7,42,Premiere Property Management Associates,Lolita Lee;Rany Te;Rich Peillard,
+664,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 664, 335 CATHERINE ST. OTTAWA K1R 5T4,30,Condominium Management Group,Carly Johnson;Christine Hanson;Jamine Ackert;Nausikaa Muresan;Carly Johnson;Christine Hanson;Jamine Ackert;Nausikaa Muresan,CMG Compliance Department
+665,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 665, 30 Edenvale Dr Kanata K2K 3L4,12,,Diane Gauvin;Magaret Tabalba;Richard Johnston,
+666,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 666, 335 Catherine St. OTTAWA K1R 5T4,106,Condominium Management Group,Norm Sisson;Steve Andrews;Yvona Tous,CMG Compliance Department
+667,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 667, 3590 RIVERGATE WAY OTTAWA K1V1V6,140,,,
+668,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 668, 335 Catherine St. OTTAWA K1R 5T4,119,Condominium Management Group,Francois Proulx;Kenneth Golanowski;Michel Comte,CMG Compliance Department
+669,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 669, 335 Catherine St Ottawa K1R 5T4,179,,,
+670,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 670, c/o Premiere Property Management Associates OTTAWA K1B 4W7,18,Premiere Property Management Associates,Brad Evans;Joanne Landon;Joanne McDonald;Sanjay Singh;Brad Evans;Joanne Landon;Joanne McDonald;Sanjay Singh,Randy Wilson
+671,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 671, 260 Besserer St Ottawa K1N 1J3,50,,,
+672,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 672, c/o Sentinel Management Greely K4P 1B9,48,Sentinel Management,Colleen Gemmell;Dominic Beausoleil;Karyn Newell,Noah Johnston
+673,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 673, 11 Church Street Toronto M5E 1W1,66,,Corinne Pruzanski;Scott Cryer,
+674,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 674, 11 Church Street Toronto M5E 1W1,77,,Corinne Pruzanski;Scott Cryer,
+675,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 675, 1131 Newmarket Street OTTAWA K1B 4N4,88,PMA Realty Consulting Ltd.,Daniel Bibeau;Esther Cleroux;Nadine Cyr;Sylvie Bouvrette;Daniel Bibeau;Esther Cleroux;Nadine Cyr;Sylvie Bouvrette,Christine Power;Christine Power
+676,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 676, 335 Catherine St. OTTAWA K1R 5T4,97,Condominium Management Group,Janice Miller;Jayant Gupta;Louis Veilleux,CMG Compliance Department
+677,OTTAWA-CARLETON COMMON ELEMENTS CONDOMINIUM CORPORATION NO 677, 110 Gatespark Private Kanata K2T1K9,49,,Alex Vervuurt;Elizabeth Rainer;John Grefford,
+678,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 678, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,121,,,
+679,,,,,,
+680,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 680, 1 Waterford Way Nepean K2E 7V4,12,,Donald Sutherland ;IGOR OLESZKIEWICZ ;Paula Batson;Terry Phair ,
+681,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 681, c/o Real Property Management Advisors Ottawa K1J 9M3,32,Real Property Management Advisors,Maurice Viau;Nick Bruzzone;Oliver Metson;Rod Landis;Maurice Viau;Nick Bruzzone;Oliver Metson;Rod Landis,Brenda Drynan
+682,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 682, OCSCC No. 682 c/o Premiere Property Management Assoc. OTTAWA K1B4W7,12,,,
+683,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 683, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,44,Apollo Property Management, Gilese Turner;Andy Archer;Chris Keyes  ;Margaret Stewart  ; Gilese Turner;Andy Archer;Chris Keyes  ;Margaret Stewart  ,Deborah MacEwen
+684,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 684, 5832 Bank Street Ottawa K4P 1B9,40,Sentinel Management Inc.,Amanda Wahab;Cara Salci;Christine McGregor;Jane Denny ;Amanda Wahab;Cara Salci;Christine McGregor;Jane Denny , Contact for OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 684;Cindy Johnston
+685,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 685, 335 Catherine St Ottawa K1R 5T4,32,Condominium Management Group,Christie Sambell;Elaine Warren;Mathieu Gadient;Patricia Zaat;Christie Sambell;Elaine Warren;Mathieu Gadient;Patricia Zaat,
+686,,,,,,
+687,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 687, c/o CMG Condominium Management Group  Ottawa K1R 5T4,153,CMG Condominium Management Group ,Carole Dence;Desmond Clair;Gerald Pulvermacher;John Tavel;Carole Dence;Desmond Clair;Gerald Pulvermacher;John Tavel,CMG Compliance Department
+688,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 688, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,45,Apollo Property Management,Denise Costello  ;Karen Seabrooke  ;Michael Martineau ;Monica Leonhardt;Denise Costello  ;Karen Seabrooke  ;Michael Martineau ;Monica Leonhardt,Joel Karisa
+689,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 689, 105 ST ANDREW ST OTTAWA K1N5G1,3,,Cheryl McKinnon;Elizabeth Adams;Voula Delis,
+690,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 690, 600 - 2500 PALLADIUM DRIVE OTTAWA K2V1E2,11,,,
+691,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 691, 335 Catherine St. OTTAWA K1R 5T4,68,,Catherine McDonell;Christopher Lee;Constance Hudak,
+692,OTTAWA-CARLETON  STANDARD CONDOMINIUM CORPORATION NO 692, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,56,,Alain Boudreault;Colin Langill   ;Krista Leonard;Linus Chavez   ;Alain Boudreault;Colin Langill   ;Krista Leonard;Linus Chavez   ,
+693,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 693, c/o The Regional Group OTTAWA K2C 0P9,57,,Diane Kirkpatrick;Pat OBrien;Tony Boettger;Vivien Kaye,Nadia Freeman
+694,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 694, c/o Val Roca Management Inc OTTAWA K1L6V7,69,Val Roca Management Inc,Henry Vander Ploeg;Lorraine Lafrance;Margaret Dacey;Paul Pedersen;Henry Vander Ploeg;Lorraine Lafrance;Margaret Dacey;Paul Pedersen,
+695,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 695, 335 Catherine St Ottawa K1R 5T4,80,Axia Property Management Inc.,Helene Biddiscombe;Iva Vasileski;Jade Kemp;Linda Ward;Helene Biddiscombe;Iva Vasileski;Jade Kemp;Linda Ward,
+696,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 696, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,82,Apollo Property Management,Andrew Moffat  ;Frank Marchand;Judith Dowler   ;Laura Drahovzal   ;Andrew Moffat  ;Frank Marchand;Judith Dowler   ;Laura Drahovzal   ,Vincent Sauve
+697,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 697, 335 Catherine St. OTTAWA K1R 5T4,80,,,
+698,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 698, 335 Catherine St. OTTAWA K1R 5T4,96,Condominium Management Group,Catherine Morin;Dyna O'Connell;Greg MacMillan;Karen Larock;Catherine Morin;Dyna O'Connell;Greg MacMillan;Karen Larock,CMG Compliance Department
+699,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 699, 335 CATHERINE ST. OTTAWA K1R 5T4,130,,Brett Stott;Gregory Mountenay;Maria Pirsic;Norman Schweitzer,CMG Compliance Department
+700,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 700, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,129,,,
+701,OTTAWA-CARLETON COMMON ELEMENTS CONDOMINIUM CORPORATION NO. 701, 335 Catherine St. OTTAWA K1R 5T4,33,Condominium Management Group,Carol Lynn Devereaux;Kirby Evans;Marina Martyusheva,CMG Compliance Department
+702,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 702, 335 Catherine St Ottawa K1R 5T4,120,,Hunsdeep Rangar;Ken Douglas;Sandra Atkins,
+703,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 703, 335 Catherine St Ottawa K1R 5T4,18,Condominium Management Group,Paloma Raggo;Sinisa Catic;Sylvie Francoeur,
+704,,,,,,
+705,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 705, 335 CATHERINE ST. OTTAWA K1R 5T4,33,Condominium Management Group,Eric Agyemang;Kelvin Chan;Sarah El-Fashny;Signi Schneider,CMG Compliance Department
+706,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 706, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,50,Apollo Property Management,Anthony Maxwell;Arianne Kirkey   ;Beverlee McIntosh;Katalin Veghely ,Deborah MacEwen
+707,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 707, 335 Catherine St. OTTAWA K1R 5T4,36,,,
+708,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 708," 1187 Bank Street, Suite 200 OTTAWA K1S3X7",32,Campanale Management,David Sullivan;Pamela Joanis ;Rene Lessard,JENNA CAMPANALE
+709,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 709, c/o Capital Integral Property Management Ottawa K1Z 5L5,52,Capital Integral Property Management,Darren Elder;Nicole Gorham;Rob Gardiner,Barbara Ravanelli
+710,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 710, OCSCC No. 710  c/o Premiere Property Management Assoc. OTTAWA K1B4W7,36,Premiere Property Management Associates,,
+711,OTTAWA-CARLETON STANDARDNCONDOMINIUM CORPORATION NO 711, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,82,Apollo Property Management,Andreas Wielgosz;Dorota Geissel ;May Morpaw;Peter  Lilius    ;Andreas Wielgosz;Dorota Geissel ;May Morpaw;Peter  Lilius    ,Vincent Sauve
+712,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 712, 11 Church Street Toronto M5E 1W1,47,,Corinne Pruzanski;Scott Cryer,
+713,OTTAWA-CARLETON LEASEHOLD CONDOMINIUM CORPORATION NO 713, c/o Val Roca Management Inc OTTAWA K1R7X6,70,Val Roca Management Inc,Cornelia Duck;Gail Thomson;Judith Perry;Peter Hlavats;Cornelia Duck;Gail Thomson;Judith Perry;Peter Hlavats,
+714,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 714, 4829 Milton rd. Vars K0A 3H0,9,,James Locke,
+715,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 715, 5832 Bank Street Ottawa K4P 1B9,10,Sentinel Management Inc.,Andrea Spraggs;Sebastien Therrien;Stan Skuza,Cindy Johnston
+716,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 716, 3177 WILBROD ST OTTAWA K1N6L4,3,,Edward Gorn;Ernest Gilman,
+717,,,,,,
+718,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 718, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,141,,,
+719,,,,,,
+720,,,,,,
+721,,,,,,
+722,OTTAWA-CARLETON COMMON ELEMENTS CONDOMINIUM CORPORATION NO 722, 335 CATHERINE ST. OTTAWA K1R 5T4,96,Condominium Management Group,Ira Bridger;Patrick Ahearn;Rob O'Reilly,CMG Compliance Department
+723,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 723, 5658 MAHOGANY HARBOUR LANE OTTAWA K4M1K9,4,,Arthur Hunter;Gail Cornfield;Peter Rutherford;Sheila King,
+724,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 724, 5659 Mahogany Harbour Lane Manotick K4M1K9,4,,Dyann Bernard;Frances MacBride;Jean Sauve;John MacBride;Dyann Bernard;Frances MacBride;Jean Sauve;John MacBride,John MacBride
+725,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 725, c/o Capital Integral Property Management Ottawa K1Z 5L5,122,Capital Integral Property Management,Doug Wigney;Margaret Dunlop;Ross Allan;Tranna Homenick  ;Doug Wigney;Margaret Dunlop;Ross Allan;Tranna Homenick  ,Michael Barnett
+726,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 726, 335 Catherine St Ottawa K1R 5T4,18,Condominium Management Group,Darren Bell;Genevieve Bisson,
+727,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 727," 335 Catherine Street, Ottawa, suite 100 Ottawa K1R 5T4",60,Condominium Management Group,Margo Eadie;Stephen Lau ;Suzanne Kyrytow,CMG Compliance Department
+728,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 728, 162 DRUMMOND ST OTTAWA K1S1K4,7,,,
+729,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 729, 11 Church Street Toronto M5E 1W1,60,,Corinne Pruzanski;Scott Cryer,
+730,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 730, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,128,Apollo Property Management,Jacob Zimny;James Sweeney;William Power;Yvonne Hough,Lynne Dean
+731,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 731, 2049 Meadowbrook Road Ottawa K1B 4W7,20,,,
+732,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 732, 5832 Bank Street Ottawa K4P 1B9,36,Sentinel Management,Della Mailloux;Naveen Bhalla;Pete Dukelow,Noah Johnston
+733,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 733, 335 CATHERINE ST. OTTAWA K1R 5T4,18,Condominium Management Group,Andrew Reid;Henry Andrews;Ian Bird,CMG Compliance Department
+734,,,,,,
+735,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 735, 179 George Street Ottawa K1N 1J8,201,Capital Integral Property Management,Brian McCauley;Mario Gasperetti;Robert Potter,Kayla McKale
+736,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 736, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,54,Apollo Property Management,Andre Lapine   ;Debby Duford ;Dirk Haukenfrers ,Deborah MacEwen
+737,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 737, 2129 Carp Road OTTAWA K0A 1L0,11,20/20 Property Management Ltd.,Mike Connolly;Robert Meagher,Denis Demers
+738,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 738," 335 Catherine Street, Ottawa, Ottawa  K1R 5T",64,Condominium Management Group,Denis Plamondon;Diane Rheaume;JENNIFER PEARCE,CMG Compliance Department;Stefan Novak
+739,,,,,,
+740,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 740, 236 Metcalfe St Ottawa K2P 1R3,24,The Properties Group Management Ltd.,Brian Lahey;Elizabeth Nicholds;Hingman Leung;Jaigi Mathai;Brian Lahey;Elizabeth Nicholds;Hingman Leung;Jaigi Mathai,
+741,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 741, 11 Church Street Toronto M5E 1W1,53,,,
+742,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 742, 335 Catherine St Ottawa K1R 5T4,12,,,
+743,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 743, 335 Catherine St. OTTAWA K1R 5T4,48,Condominium Management Group,Caroline Binette;Colleen MacKenzie;Jayme Tierney,CMG Compliance Department
+744,,,,,,
+745,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 745, 335 CATHERINE ST. OTTAWA K1R 5T4,20,Condominium Management Group,Jason Loucks;Melissa Lyn;Pamela Hall,CMG Compliance Department
+746,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 746, 335 CATHERINE ST. OTTAWA K1R 5T4,84,Condominium Management Group,Michelle Lawrence;Roxanne Bouchard;Sue Gaves,CMG Compliance Department
+747,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 747, 335 Catherine St Ottawa K1R 5T4,56,Condominium Management Group,Andrea Foran;Aysha Rajan;Jason Torchinsky,CMG Compliance Department
+748,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 748, 335 Catherine St Ottawa K1R 5T4,83,Axia Property Management,Bill Van Iterson;Christiane Racine;Gary Partington;Maureen Holmes;Bill Van Iterson;Christiane Racine;Gary Partington;Maureen Holmes,Axia Compliance Department
+749,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 749, 5832 Bank Street  Ottawa K4P 1B9,16,Sentinel Management Inc. ,Brigit Massek;Dan Semrad;Paola St. George,Cindy E. Johnston
+750,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 750, 2129 Carp Road  OTTAWA K0A 1L0,87,20/20 Property Management Ltd.,,Denis Demers
+751,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 751, 335 CATHERINE ST. OTTAWA K1R 5T4,144,Condominium Management Group,Anne Leger;Charles Lepine;Claire Lalonde;Wilfred Beckert,CMG Compliance Department
+752,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 752, 335 CATHERINE ST. OTTAWA K1R 5T4,35,Condominium Management Group,Annemarie Reinecke;Fleur-Ange Lefebvre;Leslie Pratt;Michael Kameka;Annemarie Reinecke;Fleur-Ange Lefebvre;Leslie Pratt;Michael Kameka,CMG Compliance Department
+753,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 753, 335 Catherine St. OTTAWA K1R 5T4,36,Condominium Management Group,Julie Irving;Kim Klotins;Usha Kuchela,CMG Compliance Department
+754,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 754, 2049 Meadowbrook Road Ottawa K1B 4W7,12,Premiere Property Management Association,Bryan Willcott;Jeff Hodgins;Marnie Fossitt,
+755,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 755, 335 Catherine St. OTTAWA K1R 5T4,36,,Catherine Mayoh;Jacques Leduc;Mathieu Alarie,CMG Compliance Department
+756,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 756, 50 BURNSIDE AVE OTTAWA K1Y2M2,32,Astro Property Management,Karl Todd;Michel Taillefer;Nils Sundin;Shawn Riel;Karl Todd;Michel Taillefer;Nils Sundin;Shawn Riel,
+757,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 757, 335 Catherine St Ottawa K1R 5T4,106,Axia Property Management Inc.,Grant Bifolchi;Manon Robert;Serge Labonte,Axia Compliance Department
+758,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 758, 480 Metcalfe OTTAWA K1S 3N6,87,Horizon Retiement Management inc,Margaret Pearcy;Marie-Josée TREMBLAY;Melody Lo;Paul Rutkus,Jean-Francois Dodin
+759,,,,,,
+760,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO. 760, 335 CATHERINE ST. OTTAWA K1R 5T4,112,Condominium Management Group,Bill Boyle;Chantal McEvoy;James Blaskie;Peter Joyce,CMG Compliance Department
+761,OTTAWA-CARLETON CONDOMINIUM CORPORATION NO 761, 335 CATHERINE ST. OTTAWA K1R 5T4,22,Condominium Management Group,Aaron Pol;G. Scot Campbell;Luc Leger,CMG Compliance Department
+762,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 762, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,41,Apollo Property Management,Barb Diener ;Marc Dumais ;Mitchell Beer ;Nina Bursey ;Barb Diener ;Marc Dumais ;Mitchell Beer ;Nina Bursey ,Wade Kirkpatrick
+763,OTTAWA-CARLETON STANDARD CONDOMINIUM CORPORATION NO 763, 1200 Prince of Wales Drive OTTAWA K2C 3Y4,50,,,Scott D'Ascenzo

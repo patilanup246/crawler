@@ -135,47 +135,6 @@ def appendToFile(datarow):
     with open(result_file, 'a', encoding = 'utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
-def crawler():
-    i = 150
-    while True:
-        url = src_url + str(i)
-        i +=  30
-        print(url)
-        sys.stdout.flush()
-        headers= {
-                  'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                  'accept-encoding':'gzip, deflate, sdch, br',
-                  'accept-language':'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
-                  'cache-control':'max-age=0',
-                  'upgrade-insecure-requests':'1',
-                  'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
-        }
-        response = requests.get(url,headers=headers, verify=False)
-        print(response.status_code)
-        print(len(response.content))
-        with open("condo.html","w") as output:
-            output.write(str(response.text))
-        if len(response.content) < 400000:
-            break
-        sys.stdout.flush()
-        #parsing the text
-        soup = BeautifulSoup(response.text, 'html.parser')
-        blocks = soup.select('div[class*="businessName"]')
-        for block in blocks:
-            title=block.get_text()
-            if  title[0].isdigit() == False:
-                continue 
-            link=""
-            href=""
-            if len(block.select('a[class*="lemon--a"]')) > 0:
-                href = block.select('a[class*="lemon--a"]')[0]
-                link = href.attrs["href"]
-            parse("https://www.yelp.com" + link)
-            #print(href)
-            #print(datarow)
-            #appendToFile(datarow)
-            time.sleep(random.randint(1,3))
-        time.sleep(random.randint(5,10))
 if __name__=="__main__":
     argparser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
     argparser.add_argument('action',help= ' parse, crawl')
@@ -191,5 +150,5 @@ if __name__=="__main__":
     if "parse" == action:
         parse(str(82))
     if "crawl" == action:
-        for i in range(80,100):
+        for i in range(300,1001):
             parse(str(i))
