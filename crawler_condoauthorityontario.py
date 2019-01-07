@@ -31,8 +31,8 @@ def parse(code):
     sys.stdout.flush()
     driver = webdriver.Chrome(chrome_options=options)
     driver.get(url)
-    driver.implicitly_wait(IMPLICIT_WAIT)
-    time.sleep(10)
+    #driver.implicitly_wait(IMPLICIT_WAIT)
+    time.sleep(random.randint(10,14))
     driver.find_elements_by_xpath("//div[@id='boardOfDirectorSubgrid']")
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     title = ""
