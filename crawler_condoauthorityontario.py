@@ -150,5 +150,5 @@ if __name__=="__main__":
     if "parse" == action:
         parse(str(82))
     if "crawl" == action:
-        for i in range(300,1001):
+        for i in range(922,1001):
             parse(str(i))
