@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 import requests, csv, sys, re, argparse, random,time
-import time, glob, urllib3, json, os
+import time, glob, urllib3, json, os, urllib
 import urllib.parse
+import urllib.request
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from selenium import webdriver
@@ -22,6 +23,7 @@ first_url = "https://www.thumbtack.com/more-services"
 search_url = "https://www.thumbtack.com{0}?category_pk={1}&force_browse=1&is_zip_code_changed=true&zip_code="
 searchPK_url = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v=0&includeTest=true"
 result_file = "./results/thumbtack.csv"
+image_folder = "./results/images/"
 url_file = "./thumbtack_urls.txt"
 
 test = 5000000
@@ -33,6 +35,16 @@ options.add_argument('--headless')
 
 categories_list = defaultdict(list) 
 categories_url_list = {}
+##################################
+def downloadImage(imgUrl):
+    try:
+        print(imgUrl)
+        urllib.request.urlretrieve(imgUrl, image_folder + imgUrl.split("/")[-1])
+    except Exception as e:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
+##################################
 def getAllCategories():
 	url = first_url
 	#print(url)
@@ -88,6 +100,7 @@ def appendToFile(datarow):
 #######################
 def parse(url):
     print(url)
+    category_pk = url.split("category_pk=")[1].split("&lp")[0]
     driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get(url)
@@ -104,14 +117,20 @@ def parse(url):
             votes = mt1[0].select('span[class*="numberOfReviews"]')[0].get_text()
         intro = ""
         intro = main.select('span[class="b"]')[0].parent.get_text()
+        image_url = ""
+        image_url = main.select('div[style*="background-image"]')[0].attrs["style"].split("(")[1].split(")")[0]
         aside = soup.find("aside")
         cost = ""
         cost = aside.select('div[class*="tp-title-5"]')[0].get_text()
-        print(title)
-        print(rating)
-        print(votes)
-        print(intro)
-        print(cost)
+        datarow = []
+        datarow.append(category_pk)
+        datarow.append(title)
+        datarow.append( image_folder + image_url.split("/")[-1])
+        datarow.append(rating)
+        datarow.append(votes)
+        datarow.append(intro)
+        datarow.append(cost)
+        downloadImage(image_url)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
