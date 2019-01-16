@@ -7,7 +7,6 @@ from collections import defaultdict
 from selenium import webdriver
 #from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -86,60 +85,39 @@ def appendToFile(datarow):
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
 #######################
-def parse(url):
-    print(url)
-    driver = webdriver.Chrome(chrome_options=options)
-    try:
-        driver.get(url)
-        time.sleep(5)
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        main = soup.find("main")
-        mt1 = soup.select('div[class="mt1"]')
-        title = ""
-        rating = ""
-        votes = ""
-        if mt1:
-            title = mt1[0].previous_sibling('div')[0].get_text()
-            rating = mt1[0].select('span[class*="numericRating"]')[0].get_text()
-            votes = mt1[0].select('span[class*="numberOfReviews"]')[0].get_text()
-        intro = ""
-        intro = main.select('span[class="b"]')[0].parent.get_text()
-        aside = soup.find("aside")
-        cost = ""
-        cost = aside.select('div[class*="tp-title-5"]')[0].get_text()
-        print(title)
-        print(rating)
-        print(votes)
-        print(intro)
-        print(cost)
-    except Exception as e:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        print(exc_type, fname, exc_tb.tb_lineno)
-    finally:
-        driver.quit()
-#######################
-def crawl(url, zipcode):
+def parse(url, zipcode):
     url = url + zipcode
     driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get(url)
-        time.sleep(5)
+        time.sleep(2)
         driver.implicitly_wait(0)
         while (driver.find_elements_by_xpath('//button[text()="See More"]')):
             driver.find_elements_by_xpath('//button[text()="See More"]')[0].click()
-            time.sleep(random.randint(1,2))
-        links = driver.find_elements_by_xpath('//button/span[text()="View Profile"]')
         driver.implicitly_wait(IMPLICIT_WAIT)
-        print(len(links))
-        #time.sleep(10)
-        action=ActionChains(driver)
-        for link in links:
-            action.move_to_element(link).perform()
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-        links = soup.select('a[href*="category_pk"]')
-        for link in links:
-            print(link.attrs["href"])
+        #print(soup)
+        experts = soup.select('div[class="ph3 s_ph0"]')
+        for expert in experts:
+            datarow=[]
+            datarow.append("")
+            datarow.append(url)
+            name = expert.select('div[class*="black hover-blue"]')[0].get_text()
+            datarow.append(name)
+            rating = ""
+            if (len(expert.select('span[class*="StarRating-numericRating"]'))>0): 
+                rating= expert.select('span[class*="StarRating-numericRating"]')[0].get_text()
+            datarow.append(rating)
+            review= ""
+            if (len(expert.select('span[class*="StarRating-numberOfReviews"]'))>0): 
+                review= expert.select('span[class*="StarRating-numberOfReviews"]')[0].get_text()
+            datarow.append(review)
+            cost = ""
+            if (len(expert.select('div[data-test="pro-cost-estimate"]'))>0): 
+                temp = expert.select('div[data-test="pro-cost-estimate"]')[0].findAll('div')
+                cost = temp[0].get_text()
+            datarow.append(cost)
+            appendToFile(datarow)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -187,7 +165,7 @@ if __name__=="__main__":
             list1.append(url)
             print(";".join(list1))
     if "parse" == action:
-        parse("https://www.thumbtack.com/ny/astoria/dog-walking/professional-dog-walking-services?service_pk=87666591488476344&category_pk=219264413294461288&lp_request_pk=348511934604894209&zip_code=10002&lp_path=%2Fk%2Fbathroom-remodeling%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=")
+        parse("https://www.thumbtack.com/k/bathroom-remodeling/near-me/?category_pk=219264413294461288&force_browse=1&is_zip_code_changed=true&zip_code=","10002")
  #       getAllCategories()
  #       with open(url_file, 'r') as input_file:
  #           count = 1
@@ -198,5 +176,6 @@ if __name__=="__main__":
  #               if(count==test):
  #                   break
     if "crawl" == action:
-        crawl("https://www.thumbtack.com/k/bathroom-remodeling/near-me/?category_pk=219264413294461288&force_browse=1&is_zip_code_changed=true&zip_code=","10002")
+        if not zipcode is None:
+                crawler(zipcode)
 

@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-src_url = "https://www.condoauthorityontario.ca/en-US/public-registry/results/?searchby=legalname&searchregion=Ottawa-Carleton&lgnumber="
+src_url = "https://www.condoauthorityontario.ca/en-US/public-registry/results/?searchby=legalname&searchregion=Russell&lgnumber="
 #src_url = "https://www.condoauthorityontario.ca/en-US/public-registry/details/?id=2bcda817-1988-e711-8122-480fcff42871&searchby=legalname&searchregion=Ottawa-Carleton&total=1&lgnumber="
 result_file = "./results/condoauthorityontario.csv"
 
@@ -32,7 +32,8 @@ def parse(code):
     driver = webdriver.Chrome(chrome_options=options)
     driver.get(url)
     #driver.implicitly_wait(IMPLICIT_WAIT)
-    time.sleep(random.randint(10,14))
+    time.sleep(20)
+    #time.sleep(random.randint(10,14))
     driver.find_elements_by_xpath("//div[@id='boardOfDirectorSubgrid']")
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     title = ""
@@ -150,5 +151,5 @@ if __name__=="__main__":
     if "parse" == action:
         parse(str(82))
     if "crawl" == action:
-        for i in range(922,1001):
+        for i in range(1,67):
             parse(str(i))
