@@ -25,6 +25,7 @@ searchPK_url = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v
 result_file = "./results/thumbtack.csv"
 image_folder = "./results/images/"
 url_file = "./thumbtack_urls.txt"
+categories_file = "./thumbtack_categories.csv"
 
 test = 5000000
 
@@ -36,14 +37,28 @@ options.add_argument('--headless')
 categories_list = defaultdict(list) 
 categories_url_list = {}
 ##################################
-def downloadImage(imgUrl):
+def downloadImage(imgUrl, fileName):
     try:
         print(imgUrl)
-        urllib.request.urlretrieve(imgUrl, image_folder + imgUrl.split("/")[-1])
+        urllib.request.urlretrieve(imgUrl, image_folder + fileName + ".jpg" )
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         print(exc_type, fname, exc_tb.tb_lineno)
+##################################
+def getCategoriesFromPK(category_pk):
+    result = []
+    with open(categories_file, 'r') as input_file:
+       reader = csv.reader(input_file, quotechar = '"', delimiter = ",",  
+                quoting = csv.QUOTE_ALL, skipinitialspace = True)
+       for line in reader:
+           cat, subcat, pk = line
+           if category_pk == pk:
+               list1 = []
+               list1.append(cat)
+               list1.append(subcat)
+               result.append(list1)
+    return result
 ##################################
 def getAllCategories():
 	url = first_url
@@ -115,6 +130,8 @@ def parse(url):
             title = mt1[0].previous_sibling('div')[0].get_text()
             rating = mt1[0].select('span[class*="numericRating"]')[0].get_text()
             votes = mt1[0].select('span[class*="numberOfReviews"]')[0].get_text()
+            if votes:
+                votes = votes.split("(")[1].split(")")[0]
         intro = ""
         intro = main.select('span[class="b"]')[0].parent.get_text()
         image_url = ""
@@ -122,15 +139,27 @@ def parse(url):
         aside = soup.find("aside")
         cost = ""
         cost = aside.select('div[class*="tp-title-5"]')[0].get_text()
+        social_media = [] 
+        social_media_node = soup.find('p',string='Social media')
+        if social_media_node:
+            next_nodes = social_media_node.find_next('p').findAll('a')
+            for nodes in next_nodes:
+                social_media.append(nodes.attrs["href"])
+
         datarow = []
-        datarow.append(category_pk)
+        #datarow.append(category_pk)
         datarow.append(title)
-        datarow.append( image_folder + image_url.split("/")[-1])
+        datarow.append(image_folder + category_pk + ".jpg")
         datarow.append(rating)
         datarow.append(votes)
-        datarow.append(intro)
+        datarow.append(intro.replace("\n","").replace("  "," "))
+        datarow.append(",".join(social_media))
         datarow.append(cost)
-        downloadImage(image_url)
+        downloadImage(image_url, category_pk)
+        list1 = getCategoriesFromPK(category_pk)
+        for list2 in list1:
+            temp_row = list2 + datarow
+            appendToFile(temp_row)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -158,7 +187,8 @@ def crawl(url, zipcode):
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         links = soup.select('a[href*="category_pk"]')
         for link in links:
-            print(link.attrs["href"])
+            url1 = "https://www.thumbtack.com" + link.attrs["href"]
+            parse(url1)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -187,12 +217,9 @@ if __name__=="__main__":
     if not output is None:
         result_file = output
     if "test" == action:
-        getAllCategories()
-        for keys, values in categories_list.items():
-            print(keys,end=";")
-            for e in values:
-                print(e,end="/")
-            print("\n")
+        list1 = getCategoriesFromPK("219264413294461288")
+        for list2 in list1:
+            print(list2)
     if "generateURL" == action:
         getAllCategories()
         for keys, values in categories_list.items():
