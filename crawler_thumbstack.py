@@ -37,10 +37,16 @@ options.add_argument('--headless')
 categories_list = defaultdict(list) 
 categories_url_list = {}
 ##################################
-def downloadImage(imgUrl, fileName):
+def getFilename(title, category_pk):
+    filename = ""
+    filename = category_pk + "_" + "".join(x for x in title if x.isalnum())
+    filename = filename + ".jpg"
+    return filename
+##################################
+def downloadImage(imgUrl, filename):
     try:
         print(imgUrl)
-        urllib.request.urlretrieve(imgUrl, image_folder + fileName + ".jpg" )
+        urllib.request.urlretrieve(imgUrl, image_folder + filename )
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -149,13 +155,14 @@ def parse(url):
         datarow = []
         #datarow.append(category_pk)
         datarow.append(title)
-        datarow.append(image_folder + category_pk + ".jpg")
+        filename = getFilename(title, category_pk)
+        datarow.append(image_folder + filename)
         datarow.append(rating)
         datarow.append(votes)
         datarow.append(intro.replace("\n","").replace("  "," "))
         datarow.append(",".join(social_media))
         datarow.append(cost)
-        downloadImage(image_url, category_pk)
+        downloadImage(image_url, filename)
         list1 = getCategoriesFromPK(category_pk)
         for list2 in list1:
             temp_row = list2 + datarow
@@ -234,15 +241,12 @@ if __name__=="__main__":
             print(";".join(list1))
     if "parse" == action:
         parse("https://www.thumbtack.com/ny/astoria/dog-walking/professional-dog-walking-services?service_pk=87666591488476344&category_pk=219264413294461288&lp_request_pk=348511934604894209&zip_code=10002&lp_path=%2Fk%2Fbathroom-remodeling%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=")
- #       getAllCategories()
- #       with open(url_file, 'r') as input_file:
- #           count = 1
- #           for line in input_file:
- #               count += 1
- #               url = line.rstrip()
- #               parse(url, "10001")
- #               if(count==test):
- #                   break
     if "crawl" == action:
-        crawl("https://www.thumbtack.com/k/bathroom-remodeling/near-me/?category_pk=219264413294461288&force_browse=1&is_zip_code_changed=true&zip_code=","10002")
+        getAllCategories()
+        with open(url_file, 'r') as input_file:
+            count = 1
+            for line in input_file:
+                count += 1
+                url = line.rstrip()
+                crawl(url, "10002")
 
