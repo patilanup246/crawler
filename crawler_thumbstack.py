@@ -125,7 +125,7 @@ def parse(url):
     driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get(url)
-        time.sleep(5)
+        time.sleep(3)
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         main = soup.find("main")
         mt1 = soup.select('div[class="mt1"]')
@@ -133,18 +133,31 @@ def parse(url):
         rating = ""
         votes = ""
         if mt1:
-            title = mt1[0].previous_sibling('div')[0].get_text()
-            rating = mt1[0].select('span[class*="numericRating"]')[0].get_text()
-            votes = mt1[0].select('span[class*="numberOfReviews"]')[0].get_text()
-            if votes:
-                votes = votes.split("(")[1].split(")")[0]
+            if len(mt1) > 0:
+                title = mt1[0].previous_sibling('div')[0].get_text()
+                rating1 = mt1[0].select('span[class*="numericRating"]')
+                if rating1:
+                    if len(rating1) >0:
+                        rating = rating1[0].get_text()
+                votes1 = mt1[0].select('span[class*="numberOfReviews"]')
+                if votes1:
+                    if len(votes1)>0:
+                        votes = votes1[0].get_text()
+                if votes:
+                    votes = votes.split("(")[1].split(")")[0]
         intro = ""
         intro = main.select('span[class="b"]')[0].parent.get_text()
         image_url = ""
-        image_url = main.select('div[style*="background-image"]')[0].attrs["style"].split("(")[1].split(")")[0]
+        image_url1 = main.select('div[style*="background-image"]')
+        if image_url1:
+            if len(image_url1) > 0:
+                image_url = image_url1[0].attrs["style"].split("(")[1].split(")")[0]
         aside = soup.find("aside")
         cost = ""
-        cost = aside.select('div[class*="tp-title-5"]')[0].get_text()
+        cost1 = aside.select('div[class*="tp-title-5"]')
+        if cost1:
+            if len(cost1) > 0:
+                cost = cost1[0].get_text()
         social_media = [] 
         social_media_node = soup.find('p',string='Social media')
         if social_media_node:
