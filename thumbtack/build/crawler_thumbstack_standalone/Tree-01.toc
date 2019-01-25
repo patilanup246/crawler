@@ -1,0 +1,6 @@
+('d:\\onedrive_murex\\onedrive - '
+ 'murex\\work\\development\\python3\\lib\\site-packages\\requests-2.19.1-py3.7.egg',
+ None,
+ {'*.pyw', '*.pyc', '*.pyd', 'EGG-INFO', '*.cp37-win_amd64.pyd', '*.py'},
+ 'DATA',
+ [])
