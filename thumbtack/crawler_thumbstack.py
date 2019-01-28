@@ -26,7 +26,7 @@ first_url = "https://www.thumbtack.com/more-services"
 search_url = "https://www.thumbtack.com{0}?category_pk={1}&force_browse=1&is_zip_code_changed=true&zip_code="
 searchPK_url = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v=0&includeTest=true"
 result_file = "./results/thumbtack.csv"
-image_folder = "./results/images/"
+image_folder = "./images/"
 url_file = "./thumbtack_urls.txt"
 categories_file = "./thumbtack_categories.csv"
 
@@ -214,8 +214,9 @@ def crawl(url, zipcode):
         driver.implicitly_wait(0)
         see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
         while see_more:
-            driver.find_elements_by_xpath(
-                '//button[text()="See More"]')[0].click()
+            if len(see_more) > 0:
+                driver.find_elements_by_xpath(
+                    '//button[text()="See More"]')[0].click()
             time.sleep(random.randint(1, 2))
         links = driver.find_elements_by_xpath(
             '//button/span[text()="View Profile"]')
@@ -282,7 +283,7 @@ if __name__ == "__main__":
     if action == "parse":
         parse("https://www.thumbtack.com/ny/astoria/dog-walking/professional-dog-walking-services?service_pk=87666591488476344&category_pk=219264413294461288&lp_request_pk=348511934604894209&zip_code=10002&lp_path=%2Fk%2Fbathroom-remodeling%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=")
     if action == "crawl":
-        for line in url_file:
-            count += 1
-            url = line.rstrip()
+        with open(url_file, 'r') as input_file:
+            for line in input_file:
+                url = line.rstrip()
             crawl(url, "10002")
