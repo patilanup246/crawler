@@ -26,7 +26,7 @@ first_url = "https://www.thumbtack.com/more-services"
 search_url = "https://www.thumbtack.com{0}?category_pk={1}&force_browse=1&is_zip_code_changed=true&zip_code="
 searchPK_url = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v=0&includeTest=true"
 result_file = "./results/thumbtack.csv"
-image_folder = "./images/"
+image_folder = "./results/images/"
 url_file = "./thumbtack_urls.txt"
 categories_file = "./thumbtack_categories.csv"
 
@@ -53,7 +53,6 @@ def getFilename(title, category_pk):
 def downloadImage(imgUrl, filename):
     try:
         print(imgUrl)
-        sys.stdout.flush()
         urllib.request.urlretrieve(imgUrl, image_folder + filename)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -140,7 +139,6 @@ def appendToFile(datarow):
 
 def parse(url):
     print(url)
-    sys.stdout.flush()
     category_pk = url.split("category_pk=")[1].split("&lp")[0]
     driver = webdriver.Chrome(chrome_options=options)
     try:
@@ -209,8 +207,6 @@ def parse(url):
 
 def crawl(url, zipcode):
     url = url + zipcode
-    print(url)
-    sys.stdout.flush()
     driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get(url)
@@ -218,13 +214,13 @@ def crawl(url, zipcode):
         driver.implicitly_wait(0)
         see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
         while see_more:
-            if len(see_more) > 0:
-                see_more[0].click()
-                time.sleep(random.randint(1, 2))
+            driver.find_elements_by_xpath(
+                '//button[text()="See More"]')[0].click()
+            time.sleep(random.randint(1, 2))
         links = driver.find_elements_by_xpath(
             '//button/span[text()="View Profile"]')
         driver.implicitly_wait(IMPLICIT_WAIT)
-        #print(len(links))
+        print(len(links))
         # time.sleep(10)
         action = ActionChains(driver)
         for link in links:
@@ -238,7 +234,6 @@ def crawl(url, zipcode):
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         print(exc_type, fname, exc_tb.tb_lineno)
-        print(e)
     finally:
         driver.quit()
 
@@ -287,7 +282,7 @@ if __name__ == "__main__":
     if action == "parse":
         parse("https://www.thumbtack.com/ny/astoria/dog-walking/professional-dog-walking-services?service_pk=87666591488476344&category_pk=219264413294461288&lp_request_pk=348511934604894209&zip_code=10002&lp_path=%2Fk%2Fbathroom-remodeling%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=")
     if action == "crawl":
-        with open(url_file, 'r') as input_file:
-            for line in input_file:
-                url = line.rstrip()
-                crawl(url, "10002")
+        for line in url_file:
+            count += 1
+            url = line.rstrip()
+            crawl(url, "10002")
