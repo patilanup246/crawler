@@ -20,7 +20,7 @@ result_file = "./results/instagram.csv"
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=%s" % WINDOW_SIZE)
 options.add_argument("--start-maximized")
-#options.add_argument('--headless')
+options.add_argument('--headless')
 
 categories_list = defaultdict(list) 
 ######################################
