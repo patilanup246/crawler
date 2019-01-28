@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import requests
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import StaleElementReferenceException
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -186,11 +187,11 @@ def parse(url):
         datarow.append(title)
         filename = getFilename(title, category_pk)
         datarow.append(image_folder + filename)
-        datarow.append(rating)
-        datarow.append(votes)
+        datarow.append(rating.replace("\n", ""))
+        datarow.append(votes.replace("\n", ""))
         datarow.append(intro.replace("\n", "").replace("  ", " "))
-        datarow.append(",".join(social_media))
-        datarow.append(cost)
+        datarow.append(",".join(social_media).replace("\n", ""))
+        datarow.append(cost.replace("\n", ""))
         downloadImage(image_url, filename)
         list1 = getCategoriesFromPK(category_pk)
         for list2 in list1:
@@ -210,14 +211,20 @@ def crawl(url, zipcode):
     driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get(url)
-        time.sleep(5)
+        time.sleep(6)
         driver.implicitly_wait(0)
-        see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
-        while see_more:
-            if len(see_more) > 0:
-                driver.find_elements_by_xpath(
-                    '//button[text()="See More"]')[0].click()
-            time.sleep(random.randint(1, 2))
+        try:
+            see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
+            if see_more:
+                see_more[0].click()
+        except StaleElementReferenceException as e:
+            see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
+            if see_more:
+                see_more[0].click()
+        #while see_more:
+        #    if len(see_more) > 0:
+        #        see_more[0].click()
+        #    time.sleep(random.randint(1, 2))
         links = driver.find_elements_by_xpath(
             '//button/span[text()="View Profile"]')
         driver.implicitly_wait(IMPLICIT_WAIT)
@@ -235,6 +242,7 @@ def crawl(url, zipcode):
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         print(exc_type, fname, exc_tb.tb_lineno)
+        print(e)
     finally:
         driver.quit()
 
