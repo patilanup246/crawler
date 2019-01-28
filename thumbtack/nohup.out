@@ -1,0 +1,100 @@
+usage: crawler_thumbstack.py [-h] [--zipcode [ZIPCODE]] [--file [FILE]]
+                             [--output [OUTPUT]] [--category [CATEGORY]]
+                             action
+crawler_thumbstack.py: error: the following arguments are required: action
+action: crawl
+zipcode: None
+file: None
+output: None
+Traceback (most recent call last):
+  File "crawler_thumbstack.py", line 286, in <module>
+    count += 1
+NameError: name 'count' is not defined
+action: crawl
+zipcode: None
+file: None
+output: None
+Traceback (most recent call last):
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 76, in start
+    stdin=PIPE)
+  File "/usr/lib/python3.6/subprocess.py", line 709, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.6/subprocess.py", line 1344, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'chromedriver': 'chromedriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "crawler_thumbstack.py", line 287, in <module>
+    crawl(url, "10002")
+  File "crawler_thumbstack.py", line 210, in crawl
+    driver = webdriver.Chrome(chrome_options=options)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/selenium/webdriver/chrome/webdriver.py", line 73, in __init__
+    self.service.start()
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+action: crawl
+zipcode: None
+file: None
+output: None
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+<class 'selenium.common.exceptions.WebDriverException'> crawler_thumbstack.py 212
+action: crawl
+zipcode: None
+file: None
+output: None
+https://www.thumbtack.com/k/violin-lessons/near-me/?category_pk=122678092833046858&force_browse=1&is_zip_code_changed=true&zip_code=10002
+<class 'IndexError'> crawler_thumbstack.py 219
+list index out of range
+https://www.thumbtack.com/k/voice-over-lessons/near-me/?category_pk=142219805453607347&force_browse=1&is_zip_code_changed=true&zip_code=10002
+<class 'IndexError'> crawler_thumbstack.py 219
+list index out of range
+https://www.thumbtack.com/k/volleyball-training/near-me/?category_pk=136346619985011009&force_browse=1&is_zip_code_changed=true&zip_code=10002
+2
+https://www.thumbtack.com/ny/bronx/volleyball-training/volleyball-training-services?service_pk=191293974402114633&category_pk=136346619985011009&lp_request_pk=349538696314470423&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=popular
+https://d1vg1gqh4nkuns.cloudfront.net/i/345042414676123652/desktop/standard/400square-legacy
+https://www.thumbtack.com/-Waldwick-NJ/service/3124211?service_pk=297437457088806960&category_pk=136346619985011009&lp_request_pk=349538696314470423&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=
+https://d1vg1gqh4nkuns.cloudfront.net/i/345235389587070993/desktop/standard/400square-legacy
+action: crawl
+zipcode: None
+file: None
+output: None
+https://www.thumbtack.com/k/violin-lessons/near-me/?category_pk=122678092833046858&force_browse=1&is_zip_code_changed=true&zip_code=10002
+<class 'selenium.common.exceptions.StaleElementReferenceException'> crawler_thumbstack.py 218
+Message: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615279 (12b89733300bd268cff3b78fc76cb8f3a7cc44e5),platform=Linux 4.18.0-1005-gcp x86_64)
+
+https://www.thumbtack.com/k/voice-over-lessons/near-me/?category_pk=142219805453607347&force_browse=1&is_zip_code_changed=true&zip_code=10002
+<class 'selenium.common.exceptions.StaleElementReferenceException'> crawler_thumbstack.py 218
+Message: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615279 (12b89733300bd268cff3b78fc76cb8f3a7cc44e5),platform=Linux 4.18.0-1005-gcp x86_64)
+
+https://www.thumbtack.com/k/volleyball-training/near-me/?category_pk=136346619985011009&force_browse=1&is_zip_code_changed=true&zip_code=10002
+2
+https://www.thumbtack.com/ny/bronx/volleyball-training/volleyball-training-services?service_pk=191293974402114633&category_pk=136346619985011009&lp_request_pk=349538831229976598&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=popular
+https://d1vg1gqh4nkuns.cloudfront.net/i/345042414676123652/desktop/standard/400square-legacy
+https://www.thumbtack.com/-Waldwick-NJ/service/3124211?service_pk=297437457088806960&category_pk=136346619985011009&lp_request_pk=349538831229976598&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=
+https://d1vg1gqh4nkuns.cloudfront.net/i/345235389587070993/desktop/standard/400square-legacy
