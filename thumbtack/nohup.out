@@ -98,3 +98,22 @@ https://www.thumbtack.com/ny/bronx/volleyball-training/volleyball-training-servi
 https://d1vg1gqh4nkuns.cloudfront.net/i/345042414676123652/desktop/standard/400square-legacy
 https://www.thumbtack.com/-Waldwick-NJ/service/3124211?service_pk=297437457088806960&category_pk=136346619985011009&lp_request_pk=349538831229976598&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=
 https://d1vg1gqh4nkuns.cloudfront.net/i/345235389587070993/desktop/standard/400square-legacy
+  File "./crawler_thumbstack.py", line 191
+    datarow.append(votes.replace("\n",""))
+          ^
+SyntaxError: invalid syntax
+action: crawl
+zipcode: None
+file: None
+output: None
+<class 'IndexError'> crawler_thumbstack.py 218
+list index out of range
+action: crawl
+zipcode: None
+file: None
+output: None
+2
+https://www.thumbtack.com/ny/bronx/volleyball-training/volleyball-training-services?service_pk=191293974402114633&category_pk=136346619985011009&lp_request_pk=349541769020801042&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=popular
+https://d1vg1gqh4nkuns.cloudfront.net/i/345042414676123652/desktop/standard/400square-legacy
+https://www.thumbtack.com/-Waldwick-NJ/service/3124211?service_pk=297437457088806960&category_pk=136346619985011009&lp_request_pk=349541769020801042&zip_code=10002&lp_path=%2Fk%2Fvolleyball-training%2Fnear-me%2F&is_zip_code_changed=true&click_origin=pro%20list%2Fclick%20pro%20container&urgency_signal=
+https://d1vg1gqh4nkuns.cloudfront.net/i/345235389587070993/desktop/standard/400square-legacy
