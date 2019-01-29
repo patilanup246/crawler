@@ -11,3 +11,8 @@ dist
 
 *.zip
 */*.zip
+
+#all logs files
+*.log
+*/logs/*.log
+logs/*.log
