@@ -294,4 +294,4 @@ if __name__ == "__main__":
         with open(url_file, 'r') as input_file:
             for line in input_file:
                 url = line.rstrip()
-            crawl(url, "10002")
+                crawl(url, "10002")

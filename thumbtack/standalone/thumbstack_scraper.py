@@ -33,6 +33,11 @@ categories_file = "./resources/thumbtack_categories.csv"
 
 test = 5000000
 
+chrome_path = r''
+if os.name == 'nt':
+    chrome_path = r'./resources/win/chromedriver.exe'
+else:
+    chrome_path = r'./resources/linux/chromedriver'
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=%s" % WINDOW_SIZE)
 options.add_argument("--start-maximized")
@@ -78,8 +83,6 @@ def get_categories_from_pk(category_pk):
 
 def get_all_categories():
     url = first_url
-    # print(url)
-    sys.stdout.flush()
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'accept-encoding': 'gzip, deflate, sdch, br',
@@ -139,7 +142,7 @@ def appendToFile(datarow):
 def parse(url):
     print(url)
     category_pk = url.split("category_pk=")[1].split("&lp")[0]
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(chrome_path, chrome_options=options)
     try:
         driver.get(url)
         time.sleep(3)
@@ -206,7 +209,7 @@ def parse(url):
 
 
 def crawl(url):
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(chrome_path, chrome_options=options)
     try:
         driver.get(url)
         time.sleep(3)
@@ -223,7 +226,7 @@ def crawl(url):
         links = driver.find_elements_by_xpath(
             '//button/span[text()="View Profile"]')
         driver.implicitly_wait(IMPLICIT_WAIT)
-        print(len(links))
+        #print(len(links))
         # time.sleep(10)
         action = ActionChains(driver)
         for link in links:
