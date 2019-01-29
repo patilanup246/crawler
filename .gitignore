@@ -1,0 +1,13 @@
+/.crawler_zillow.py.swp
+/thumbtack/images.zip
+
+*/__pycache__
+*/build
+*/dist
+
+__pycache__
+build
+dist
+
+*.zip
+*/*.zip
