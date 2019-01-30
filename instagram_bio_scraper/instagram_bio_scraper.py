@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 import csv
 import json
+import re
 import urllib3
+import lepl.apps.rfc3696
 import requests
 from bs4 import BeautifulSoup
 #from selenium import webdriver
@@ -15,13 +17,42 @@ EXPLICIT_WAIT = 300
 RESULT_FILE = "./results/instagram.csv"
 USERS_LIST = "./resources/followers.lst"
 
-#@options = webdriver.ChromeOptions()
-#'options.add_argument("--window-size=%s" % WINDOW_SIZE)
-#'options.add_argument("--start-maximized")
-#'options.add_argument('--headless')
+# @options = webdriver.ChromeOptions()
+# 'options.add_argument("--window-size=%s" % WINDOW_SIZE)
+# 'options.add_argument("--start-maximized")
+# 'options.add_argument('--headless')
 
 ######################################
 
+EMAIL_VALIDATOR = lepl.apps.rfc3696.Email()
+EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
+
+######################################
+
+def get_email_from_text(str1):
+    #print(str1)
+    email_result = ""
+    list2 = []
+    tempStr = ""
+    count = 0
+    for e in str1:
+        count = count + 1
+        if (re.sub('[ -~]', '', e)) == "":
+            #do something here
+            tempStr += e
+        elif tempStr != "":
+            list2.append(tempStr)
+            tempStr = ""
+        if count == len(str1) and tempStr != "":
+            list2.append(tempStr)
+            tempStr = ""
+    for i in list2:
+        if EMAIL_REGEX.match(i):
+            email_result = e
+            break
+    return email_result
+
+######################################
 
 def parse(url, account):
     # print(url)
@@ -43,26 +74,33 @@ def parse(url, account):
     if script:
         data = json.loads(script.text)
         if data:
-            if 'description' in data:
-                desc = data['description'].replace("\n", "")
-                list2 = desc.split(' ')
-                for item in list2:
-                    if '@' in item:
-                        email = item
             if 'email' in data:
-                email = data['email']
-    datarow = []
-    datarow.append(account)
-    datarow.append(email.replace("\n", ""))
-    datarow.append(url)
-    append_to_file(datarow)
+                if EMAIL_REGEX.match(data['email']):
+                    email = data['email']
+            if email == "":
+                if 'description' in data:
+                    desc = data['description'].replace("\n", "")
+                    list2 = desc.split(' ')
+                    for item in list2:
+                        if '@' in item and EMAIL_REGEX.match(item):
+                            email = item
+    if email != "":
+        if EMAIL_REGEX.match(email):
+            datarow = []
+            datarow.append(account)
+            datarow.append(email.replace("\n", ""))
+            datarow.append(url)
+            append_to_file(datarow)
 ######################################
 
 
 def append_to_file(datarow):
-    with open(RESULT_FILE, 'a', encoding='utf-8') as output:
-        writer = csv.writer(output, delimiter=",", lineterminator="\n")
-        writer.writerow(datarow)
+    try:
+        with open(RESULT_FILE, 'a', encoding='utf-8') as output:
+            writer = csv.writer(output, delimiter=",", lineterminator="\n")
+            writer.writerow(datarow)
+    except:
+        pass
 
 
 ######################################
