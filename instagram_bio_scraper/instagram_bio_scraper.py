@@ -48,7 +48,7 @@ def get_email_from_text(str1):
             tempStr = ""
     for i in list2:
         if EMAIL_REGEX.match(i):
-            email_result = e
+            email_result = i
             break
     return email_result
 
@@ -75,15 +75,14 @@ def parse(url, account):
         data = json.loads(script.text)
         if data:
             if 'email' in data:
-                if EMAIL_REGEX.match(data['email']):
-                    email = data['email']
+                email = get_email_from_text(data['email']) 
             if email == "":
                 if 'description' in data:
                     desc = data['description'].replace("\n", "")
                     list2 = desc.split(' ')
                     for item in list2:
-                        if '@' in item and EMAIL_REGEX.match(item):
-                            email = item
+                        if '@' in item: 
+                            email = get_email_from_text(item) 
     if email != "":
         if EMAIL_REGEX.match(email):
             datarow = []
