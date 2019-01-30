@@ -5,6 +5,7 @@ import random
 import time
 import json
 import os
+import logging
 from collections import defaultdict
 import urllib
 import urllib.parse
@@ -42,8 +43,10 @@ options = webdriver.ChromeOptions()
 options.add_argument("--window-size=%s" % WINDOW_SIZE)
 options.add_argument("--start-maximized")
 options.add_argument('--headless')
+options.add_argument("--disable-extensions")
+options.add_argument("test-type")
 
-#add random user agent
+# add random user agent
 ua = UserAgent()
 user_agent = ua.random
 options.add_argument(f'user-agent={user_agent}')
@@ -51,6 +54,26 @@ options.add_argument(f'user-agent={user_agent}')
 categories_list = defaultdict(list)
 categories_url_list = {}
 ##################################
+class Logger(object):
+    def __init__(self):
+        self.terminal = sys.stdout
+        self.log = open("logfile.log", "a")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)  
+
+    def flush(self):
+        #this flush method is needed for python 3 compatibility.
+        #this handles the flush command by doing nothing.
+        #you might want to specify some extra behavior here.
+        pass    
+
+sys.stdout = Logger()
+sys.stderr = Logger() 
+
+##################################
+
 
 def get_filename(title, category_pk):
     filename = ""
@@ -115,7 +138,6 @@ def get_all_categories():
 def get_pk(category):
     url = searchPK_url.format(urllib.parse.quote_plus(category))
     # print(url)
-    sys.stdout.flush()
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'accept-encoding': 'gzip, deflate, sdch, br',
@@ -132,7 +154,7 @@ def get_pk(category):
 #######################
 
 
-def appendToFile(datarow):
+def append_to_file(datarow):
     with open(result_file, 'a', encoding='utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
@@ -187,7 +209,7 @@ def parse(url):
         # datarow.append(category_pk)
         datarow.append(title)
         filename = get_filename(title, category_pk)
-        datarow.append("=HYPERLINK(" +  image_folder + filename + ")")
+        datarow.append("=HYPERLINK(" +"\"" + image_folder + filename + "\"" + ")")
         datarow.append(rating.replace("\n", ""))
         datarow.append(votes.replace("\n", ""))
         datarow.append(intro.replace("\n", "").replace("  ", " "))
@@ -197,7 +219,7 @@ def parse(url):
         list1 = get_categories_from_pk(category_pk)
         for list2 in list1:
             temp_row = list2 + datarow
-            appendToFile(temp_row)
+            append_to_file(temp_row)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -215,18 +237,20 @@ def crawl(url):
         time.sleep(3)
         driver.implicitly_wait(0)
         try:
-            see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
+            see_more = driver.find_elements_by_xpath(
+                '//button[text()="See More"]')
             while see_more:
                 see_more[0].click()
         except StaleElementReferenceException as e:
-            see_more = driver.find_elements_by_xpath('//button[text()="See More"]')
+            see_more = driver.find_elements_by_xpath(
+                '//button[text()="See More"]')
             while see_more:
                 see_more[0].click()
         time.sleep(random.randint(1, 2))
         links = driver.find_elements_by_xpath(
             '//button/span[text()="View Profile"]')
         driver.implicitly_wait(IMPLICIT_WAIT)
-        #print(len(links))
+        # print(len(links))
         # time.sleep(10)
         action = ActionChains(driver)
         for link in links:
