@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import csv
+import sys
+import logging
 import json
 import re
 import urllib3
@@ -16,6 +18,7 @@ IMPLICIT_WAIT = 300
 EXPLICIT_WAIT = 300
 RESULT_FILE = "./results/instagram.csv"
 USERS_LIST = "./resources/followers.lst"
+LOG_FILE = "./logs/out.log"
 
 # @options = webdriver.ChromeOptions()
 # 'options.add_argument("--window-size=%s" % WINDOW_SIZE)
@@ -26,11 +29,46 @@ USERS_LIST = "./resources/followers.lst"
 
 EMAIL_VALIDATOR = lepl.apps.rfc3696.Email()
 EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
-
 ######################################
 
+
+class StreamToLogger():
+    """
+    Fake file-like stream object that redirects writes to a logger instance.
+    """
+
+    def __init__(self, logger, log_level=logging.INFO):
+        self.logger = logger
+        self.log_level = log_level
+        self.linebuf = ''
+
+    def write(self, buf):
+        for line in buf.rstrip().splitlines():
+            self.logger.log(self.log_level, line.rstrip())
+
+    def flush(self):
+        pass
+
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
+    filename=LOG_FILE,
+    filemode='a'
+)
+
+stdout_logger = logging.getLogger('STDOUT')
+sl = StreamToLogger(stdout_logger, logging.INFO)
+sys.stdout = sl
+
+stderr_logger = logging.getLogger('STDERR')
+sl = StreamToLogger(stderr_logger, logging.ERROR)
+sys.stderr = sl
+######################################
+
+
 def get_email_from_text(str1):
-    #print(str1)
+    # print(str1)
     email_result = ""
     list2 = []
     tempStr = ""
@@ -38,7 +76,7 @@ def get_email_from_text(str1):
     for e in str1:
         count = count + 1
         if (re.sub('[ -~]', '', e)) == "":
-            #do something here
+            # do something here
             tempStr += e
         elif tempStr != "":
             list2.append(tempStr)
@@ -54,8 +92,8 @@ def get_email_from_text(str1):
 
 ######################################
 
+
 def parse(url, account):
-    # print(url)
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'accept-encoding': 'gzip, deflate, sdch, br',
@@ -75,14 +113,16 @@ def parse(url, account):
         data = json.loads(script.text)
         if data:
             if 'email' in data:
-                email = get_email_from_text(data['email']) 
+                email = get_email_from_text(data['email'])
             if email == "":
                 if 'description' in data:
                     desc = data['description'].replace("\n", "")
                     list2 = desc.split(' ')
                     for item in list2:
-                        if '@' in item: 
-                            email = get_email_from_text(item) 
+                        if '@' in item:
+                            email = get_email_from_text(item)
+    print(account, email, url)
+    sys.stdout.flush()
     if email != "":
         if EMAIL_REGEX.match(email):
             datarow = []
