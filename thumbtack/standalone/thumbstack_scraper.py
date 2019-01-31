@@ -24,13 +24,14 @@ WINDOW_SIZE = "1920,1080"
 IMPLICIT_WAIT = 300
 EXPLICIT_WAIT = 300
 
-first_url = "https://www.thumbtack.com/more-services"
-search_url = "https://www.thumbtack.com{0}?category_pk={1}&force_browse=1&is_zip_code_changed=true&zip_code="
-searchPK_url = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v=0&includeTest=true"
-result_file = "./results/thumbtack.csv"
-image_folder = "./results/images/"
-url_file = "./resources/thumbtack_urls.txt"
-categories_file = "./resources/thumbtack_categories.csv"
+FIRST_URL = "https://www.thumbtack.com/more-services"
+SEARCH_URL = "https://www.thumbtack.com{0}?category_pk={1}&force_browse=1&is_zip_code_changed=true&zip_code="
+SEARCH_PK_URL = "https://hercule.thumbtack.com/search?query={}&prefix=1&limit=1&v=0&includeTest=true"
+RESULT_FILE = "./results/thumbtack.csv"
+IMAGE_FOLDER = "./results/images/"
+LOG_FILE = "./logs/out.log"
+URL_FILE = "./resources/thumbtack_urls.txt"
+CATEGORIES_FILE = "./resources/thumbtack_categories.csv"
 
 test = 5000000
 
@@ -57,7 +58,7 @@ categories_url_list = {}
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        self.log = open("logfile.log", "a")
+        self.log = open(LOG_FILE, "a")
 
     def write(self, message):
         self.terminal.write(message)
@@ -84,13 +85,13 @@ def get_filename(title, category_pk):
 
 
 def download_image(imgUrl, filename):
-    urllib.request.urlretrieve(imgUrl, image_folder + filename)
+    urllib.request.urlretrieve(imgUrl, IMAGE_FOLDER + filename)
 ##################################
 
 
 def get_categories_from_pk(category_pk):
     result = []
-    with open(categories_file, 'r') as input_file:
+    with open(CATEGORIES_FILE, 'r') as input_file:
         reader = csv.reader(input_file, quotechar='"', delimiter=",",
                             quoting=csv.QUOTE_ALL, skipinitialspace=True)
         for line in reader:
@@ -105,7 +106,7 @@ def get_categories_from_pk(category_pk):
 
 
 def get_all_categories():
-    url = first_url
+    url = FIRST_URL
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'accept-encoding': 'gzip, deflate, sdch, br',
@@ -136,7 +137,7 @@ def get_all_categories():
 
 
 def get_pk(category):
-    url = searchPK_url.format(urllib.parse.quote_plus(category))
+    url = SEARCH_PK_URL.format(urllib.parse.quote_plus(category))
     # print(url)
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -155,7 +156,7 @@ def get_pk(category):
 
 
 def append_to_file(datarow):
-    with open(result_file, 'a', encoding='utf-8') as output:
+    with open(RESULT_FILE, 'a', encoding='utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
 #######################
@@ -207,9 +208,9 @@ def parse(url):
 
         datarow = []
         # datarow.append(category_pk)
-        datarow.append(title)
+        datarow.append(title.replace("\n", ""))
         filename = get_filename(title, category_pk)
-        datarow.append("=HYPERLINK(" +"\"" + image_folder + filename + "\"" + ")")
+        datarow.append("=HYPERLINK(" +"\"" + IMAGE_FOLDER + filename + "\"" + ")")
         datarow.append(rating.replace("\n", ""))
         datarow.append(votes.replace("\n", ""))
         datarow.append(intro.replace("\n", "").replace("  ", " "))
@@ -271,7 +272,7 @@ def crawl(url):
 
 #######################
 if __name__ == "__main__":
-    with open(url_file, 'r') as input_file:
+    with open(URL_FILE, 'r') as input_file:
         for line in input_file:
             url = line.rstrip()
             crawl(url)
