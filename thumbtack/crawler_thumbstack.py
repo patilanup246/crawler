@@ -184,7 +184,7 @@ def parse(url):
 
         datarow = []
         # datarow.append(category_pk)
-        datarow.append(title)
+        datarow.append(title.replace("\n", ""))
         filename = getFilename(title, category_pk)
         datarow.append(image_folder + filename)
         datarow.append(rating.replace("\n", ""))
@@ -201,6 +201,7 @@ def parse(url):
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         print(exc_type, fname, exc_tb.tb_lineno)
+        print(e)
     finally:
         driver.quit()
 #######################
