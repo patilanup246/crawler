@@ -16,3 +16,7 @@ dist
 *.log
 */logs/*.log
 logs/*.log
+
+*/images
+*/*/images
+*/*/*/images

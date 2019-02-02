@@ -1,3 +1,4 @@
+""" crawler for thumbtack """
 #!/usr/bin/env python
 import csv
 import sys
@@ -5,11 +6,11 @@ import random
 import time
 import json
 import os
-import logging
 from collections import defaultdict
 import urllib
 import urllib.parse
 import urllib.request
+from pathlib import Path
 import urllib3
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -33,13 +34,15 @@ LOG_FILE = "./logs/out.log"
 URL_FILE = "./resources/thumbtack_urls.txt"
 CATEGORIES_FILE = "./resources/thumbtack_categories.csv"
 
-test = 5000000
 
 chrome_path = r''
-if os.name == 'nt':
-    chrome_path = r'./resources/win/chromedriver.exe'
+if sys.platform == 'linux':
+    chrome_path = r'./resources/chromedriver/linux/chromedriver'
+elif sys.platform == 'darwin':
+    chrome_path = r'./resources/chromedriver/mac/chromedriver'
 else:
-    chrome_path = r'./resources/linux/chromedriver'
+    chrome_path = r'./resources/chromedriver/win/chromedriver.exe'
+options = webdriver.ChromeOptions()
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=%s" % WINDOW_SIZE)
 options.add_argument("--start-maximized")
@@ -52,19 +55,24 @@ ua = UserAgent()
 user_agent = ua.random
 options.add_argument(f'user-agent={user_agent}')
 
+
 categories_list = defaultdict(list)
 categories_url_list = {}
 ##################################
-class Logger(object):
+class Logger():
+    """ function """
     def __init__(self):
+        """ function """
         self.terminal = sys.stdout
         self.log = open(LOG_FILE, "a")
 
     def write(self, message):
+        """ function """
         self.terminal.write(message)
         self.log.write(message)  
 
     def flush(self):
+        """ function """
         #this flush method is needed for python 3 compatibility.
         #this handles the flush command by doing nothing.
         #you might want to specify some extra behavior here.
@@ -77,6 +85,7 @@ sys.stderr = Logger()
 
 
 def get_filename(title, category_pk):
+    """ function """
     filename = ""
     filename = category_pk + "_" + "".join(x for x in title if x.isalnum())
     filename = filename + ".jpg"
@@ -85,11 +94,13 @@ def get_filename(title, category_pk):
 
 
 def download_image(imgUrl, filename):
+    """ function """
     urllib.request.urlretrieve(imgUrl, IMAGE_FOLDER + filename)
 ##################################
 
 
 def get_categories_from_pk(category_pk):
+    """ function """
     result = []
     with open(CATEGORIES_FILE, 'r') as input_file:
         reader = csv.reader(input_file, quotechar='"', delimiter=",",
@@ -106,6 +117,7 @@ def get_categories_from_pk(category_pk):
 
 
 def get_all_categories():
+    """ function """
     url = FIRST_URL
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -137,6 +149,7 @@ def get_all_categories():
 
 
 def get_pk(category):
+    """ function """
     url = SEARCH_PK_URL.format(urllib.parse.quote_plus(category))
     # print(url)
     headers = {
@@ -156,6 +169,7 @@ def get_pk(category):
 
 
 def append_to_file(datarow):
+    """ function """
     with open(RESULT_FILE, 'a', encoding='utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
@@ -163,9 +177,10 @@ def append_to_file(datarow):
 
 
 def parse(url):
+    """ function """
     print(url)
     category_pk = url.split("category_pk=")[1].split("&lp")[0]
-    driver = webdriver.Chrome(chrome_path, chrome_options=options)
+    driver = webdriver.Chrome(chrome_path, options=options)
     try:
         driver.get(url)
         time.sleep(3)
@@ -210,7 +225,8 @@ def parse(url):
         # datarow.append(category_pk)
         datarow.append(title.replace("\n", ""))
         filename = get_filename(title, category_pk)
-        datarow.append("=HYPERLINK(" +"\"" + IMAGE_FOLDER + filename + "\"" + ")")
+        image_path = Path(IMAGE_FOLDER + filename).resolve()
+        datarow.append("=HYPERLINK('" + str(image_path)+ "')")
         datarow.append(rating.replace("\n", ""))
         datarow.append(votes.replace("\n", ""))
         datarow.append(intro.replace("\n", "").replace("  ", " "))
@@ -232,7 +248,8 @@ def parse(url):
 
 
 def crawl(url):
-    driver = webdriver.Chrome(chrome_path, chrome_options=options)
+    """ function """
+    driver = webdriver.Chrome(chrome_path, options=options)
     try:
         driver.get(url)
         time.sleep(3)
