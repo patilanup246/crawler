@@ -223,15 +223,15 @@ def parse(url):
 
         datarow = []
         # datarow.append(category_pk)
-        datarow.append(title.replace("\n", "").replace("\r", ""))
+        datarow.append(title.replace("\n", " ").replace("\r", " "))
         filename = get_filename(title, category_pk)
         image_path = Path(IMAGE_FOLDER + filename).resolve()
         datarow.append("=HYPERLINK('" + str(image_path)+ "')")
-        datarow.append(rating.replace("\n", "").replace("\r", ""))
-        datarow.append(votes.replace("\n", "").replace("\r", ""))
-        datarow.append(intro.replace("\n", "").replace("\r", "").replace("  ", " "))
-        datarow.append(",".join(social_media).replace("\n", "").replace("\r", "").replace("  "," "))
-        datarow.append(cost.replace("\n", "").replace("\r", ""))
+        datarow.append(rating.replace("\n", " ").replace("\r", " "))
+        datarow.append(votes.replace("\n", " ").replace("\r", " "))
+        datarow.append(intro.replace("\n", " ").replace("\r", " ").replace("  ", " "))
+        datarow.append(",".join(social_media).replace("\n", " ").replace("\r", " ").replace("  "," "))
+        datarow.append(cost.replace("\n", " ").replace("\r", " "))
         download_image(image_url, filename)
         list1 = get_categories_from_pk(category_pk)
         for list2 in list1:
