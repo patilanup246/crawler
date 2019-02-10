@@ -154,4 +154,4 @@ if __name__ == "__main__":
             user_name = line.replace("\n", "")
             parse(
                 "https://www.instagram.com/{0}/".format(user_name), user_name)
-            time.sleep(random.randint(1, 8))
+            time.sleep(random.randint(1, 2))
