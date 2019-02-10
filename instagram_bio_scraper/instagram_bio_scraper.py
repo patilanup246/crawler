@@ -9,6 +9,7 @@ import lepl.apps.rfc3696
 import requests
 import time
 import random
+import argparse
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 #from selenium import webdriver
@@ -149,6 +150,19 @@ def append_to_file(datarow):
 
 ######################################
 if __name__ == "__main__":
+    argparser = argparse.ArgumentParser(
+        formatter_class=argparse.RawTextHelpFormatter)
+    argparser.add_argument('--input_file', nargs='?', help='--input_file <filename>')
+    argparser.add_argument('--output_file', nargs='?',
+                           help='--output_file <filename>')
+    args = argparser.parse_args()
+    input_file = args.input_file
+    output_file = args.output_file
+    if output_file is not None:
+        RESULT_FILE = output_file
+    if input_file is not None:
+        USERS_LIST = input_file 
+ 
     error_count = 0
     with open(USERS_LIST, 'r') as input_file:
         for line in input_file:
