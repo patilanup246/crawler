@@ -149,9 +149,16 @@ def append_to_file(datarow):
 
 ######################################
 if __name__ == "__main__":
+    error_count = 0
     with open(USERS_LIST, 'r') as input_file:
         for line in input_file:
             user_name = line.replace("\n", "")
-            parse(
-                "https://www.instagram.com/{0}/".format(user_name), user_name)
-            time.sleep(random.randint(1, 2))
+            try:
+                parse(
+                    "https://www.instagram.com/{0}/".format(user_name), user_name)
+                time.sleep(random.randint(1, 2))
+            except:
+                error_count = error_count + 1
+                print("Time to sleep " + str(error_count*300) + " seconds")
+                time.sleep(error_count * 300)
+                continue
