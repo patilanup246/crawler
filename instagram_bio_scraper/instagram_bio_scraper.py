@@ -7,6 +7,9 @@ import re
 import urllib3
 import lepl.apps.rfc3696
 import requests
+import time
+import random
+from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 #from selenium import webdriver
 #from selenium.webdriver.remote.webdriver import WebDriver
@@ -94,13 +97,15 @@ def get_email_from_text(str1):
 
 
 def parse(url, account):
+    ua = UserAgent()
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'accept-encoding': 'gzip, deflate, sdch, br',
         'accept-language': 'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
         'cache-control': 'max-age=0',
         'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+        #'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+        'user-agent':str(ua.random)
     }
     response = requests.get(url, headers=headers, verify=False)
     # print(response.status_code)
@@ -149,3 +154,4 @@ if __name__ == "__main__":
             user_name = line.replace("\n", "")
             parse(
                 "https://www.instagram.com/{0}/".format(user_name), user_name)
+            time.sleep(random.randint(1, 8))
