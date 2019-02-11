@@ -164,15 +164,19 @@ if __name__ == "__main__":
         USERS_LIST = input_file 
  
     error_count = 0
+    record_count = 0
     with open(USERS_LIST, 'r') as input_file:
         for line in input_file:
             user_name = line.replace("\n", "")
             try:
                 parse(
                     "https://www.instagram.com/{0}/".format(user_name), user_name)
+                record_count = record_count + 1
+                print("Reading record counting: " + str(record_count) + "th record")
                 time.sleep(random.randint(1, 2))
             except:
                 error_count = error_count + 1
                 print("Time to sleep " + str(error_count*300) + " seconds")
+                sys.stdout.flush()
                 time.sleep(error_count * 300)
                 continue
