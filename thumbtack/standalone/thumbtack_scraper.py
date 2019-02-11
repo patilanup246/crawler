@@ -171,7 +171,7 @@ def get_pk(category):
 def append_to_file(datarow):
     """ function """
     with open(RESULT_FILE, 'a', encoding='utf-8') as output:
-        writer = csv.writer(output, delimiter=",", lineterminator="\n")
+        writer = csv.writer(output, delimiter=",", lineterminator="\n", quotechar="'")
         writer.writerow(datarow)
 #######################
 
@@ -226,7 +226,7 @@ def parse(url):
         datarow.append(title.replace("\n", " ").replace("\r", " "))
         filename = get_filename(title, category_pk)
         image_path = Path(IMAGE_FOLDER + filename).resolve()
-        datarow.append("=HYPERLINK('" + str(image_path)+ "')")
+        datarow.append("=HYPERLINK(\"" + str(image_path)+ "\")")
         datarow.append(rating.replace("\n", " ").replace("\r", " "))
         datarow.append(votes.replace("\n", " ").replace("\r", " "))
         datarow.append(intro.replace("\n", " ").replace("\r", " ").replace("  ", " "))
