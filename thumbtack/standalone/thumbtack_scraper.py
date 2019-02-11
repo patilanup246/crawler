@@ -171,7 +171,7 @@ def get_pk(category):
 def append_to_file(datarow):
     """ function """
     with open(RESULT_FILE, 'a', encoding='utf-8') as output:
-        writer = csv.writer(output, delimiter=",", lineterminator="\n", quotechar="'")
+        writer = csv.writer(output, delimiter=";", lineterminator="\n", quotechar="'")
         writer.writerow(datarow)
 #######################
 
