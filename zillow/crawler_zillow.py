@@ -8,22 +8,45 @@ import glob
 import random
 import urllib3
 import requests
+import logging
 from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-src_url = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
-output_folder = "./raw/"
-result_file = "./results/output.csv"
+SRC_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
+OUTPUT_FOLDER = "raw"
+RESULT_FILE = "output.csv"
 
+file_seperator = ""
+if sys.platform == 'linux':
+    file_seperator = "/"
+elif sys.platform == 'darwin':
+    file_seperator = "/"
+else:
+    file_seperator = "\\"
+
+########################################
+def setup_custom_logger(name):
+    formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s',
+                                  datefmt='%Y-%m-%d %H:%M:%S')
+    handler = logging.FileHandler('log.txt', mode='w')
+    handler.setFormatter(formatter)
+    screen_handler = logging.StreamHandler(stream=sys.stdout)
+    screen_handler.setFormatter(formatter)
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(handler)
+    logger.addHandler(screen_handler)
+    return logger
+logger = setup_custom_logger('zillow')
 ########################################
 """ download data into local file """
 def download(zipcode):
     i = 0
     while True:
         i += 1
-        url = src_url.format(zipcode) + str(i)
-        print(url)
+        url = SRC_URL.format(zipcode) + str(i)
+        logger.info(url)
         sys.stdout.flush()
         headers = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -34,31 +57,31 @@ def download(zipcode):
             'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
         }
         response = requests.get(url, headers=headers, verify=False)
-        print(response.status_code)
-        print(len(response.content))
+        logger.info(response.status_code)
+        logger.info(len(response.content))
         if len(response.content) < 180000:
             break
         sys.stdout.flush()
         csv_file = str(zipcode) + str("_") + str(i)+".html"
-        data_file = output_folder + csv_file
+        data_file = OUTPUT_FOLDER + file_seperator + csv_file
         with open(data_file, "a", encoding="utf-8") as output:
             output.write(response.text)
         time.sleep(10)
 
 ########################################
-""" parse the data from html file in output_folder"""
+""" parse the data from html file in OUTPUT_FOLDER"""
 def parse():
-    file_list = glob.glob(output_folder+"*.html")
+    file_list = glob.glob(OUTPUT_FOLDER+ file_seperator + "*.html")
     file_list.sort()
-    # print(file_list)
+    # logger.info(file_list)
     header = ["Zip Code", "Page", "Name",
               "Phone", "Rating", "Reviews", "Office"]
-    with open(result_file, 'w', encoding='utf-8') as output:
+    with open(RESULT_FILE, 'w', encoding='utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(header)
         for file1 in file_list:
-            filename1 = file1.split("\\")[-1]
-            print(filename1)
+            filename1 = file1.split(file_seperator)[-1]
+            logger.info(filename1)
             sys.stdout.flush()
             zipcode = filename1.split("_")[0]
             page = filename1.split("_")[1].split(".")[0]
@@ -86,7 +109,7 @@ def parse():
                         pass
                     try:
                         reviews = agent.select(
-                            'a[class*="zsg-link zsg-fineprint"]')[0].get_text()
+                            'a[class*="zsg-link zsg-finelogger.info"]')[0].get_text()
                     except:
                         pass
 
@@ -105,14 +128,14 @@ def parse():
                     datarow.append(rating)
                     datarow.append(reviews)
                     datarow.append(office)
-                    # print(datarow)
+                    # logger.info(datarow)
                     writer.writerow(datarow)
 
 
 ########################################
 """ append data to file"""
 def append_to_file(datarow):
-    with open(result_file, 'a', encoding='utf-8') as output:
+    with open(RESULT_FILE, 'a', encoding='utf-8') as output:
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(datarow)
 
@@ -121,10 +144,11 @@ def append_to_file(datarow):
 """ crawl the zillow website to get data"""
 def crawler(zipcode):
     i = 0
+    break_time = 300
     while True:
         i += 1
-        url = src_url.format(zipcode) + str(i)
-        print(url)
+        url = SRC_URL.format(zipcode) + str(i)
+        logger.info(url)
         sys.stdout.flush()
         headers = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -135,10 +159,19 @@ def crawler(zipcode):
             'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
         }
         response = requests.get(url, headers=headers, verify=False)
-        print(response.status_code)
-        print(len(response.content))
-        if len(response.content) < 180000:
+        logger.info("Response code: " + str(response.status_code))
+        logger.info("Response content size: " + str(len(response.content)))
+        #if it is a wrong url
+        if len(response.content) < 180000 and len(response.content) > 10000:
             break
+        #if it is the captcha check, we take a break
+        while len(response.content) < 10000: 
+            break_time = break_time + int(break_time*0.1)
+            logger.info("We take a break "+ str(break_time) + " seconds")
+            time.sleep(break_time)
+            response = requests.get(url, headers=headers, verify=False)
+            logger.info("Response code: " + str(response.status_code))
+            logger.info("Response content size: " + str(len(response.content)))
         sys.stdout.flush()
         # parsing the text
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -161,7 +194,7 @@ def crawler(zipcode):
                 pass
             try:
                 reviews = agent.select(
-                    'a[class*="zsg-link zsg-fineprint"]')[0].get_text()
+                    'a[class*="zsg-link zsg-finelogger.info"]')[0].get_text()
             except:
                 pass
             try:
@@ -199,13 +232,13 @@ if __name__ == "__main__":
     zipcode = args.zipcode
     zipcode_file = args.zipcode_file
     output = args.output
-    print("action: %s" % (action))
-    print("zipcode:", zipcode)
-    print("zipcode_file:", zipcode_file)
-    print("output:", output)
+    logger.info("action: " +str(action))
+    logger.info("zipcode:" + str(zipcode))
+    logger.info("zipcode_file: " + str(zipcode_file))
+    logger.info("output: " +str(output))
     sys.stdout.flush()
     if not output is None:
-        result_file = output
+        RESULT_FILE = output
     if action == "download":
         if not zipcode is None:
             download(zipcode)
