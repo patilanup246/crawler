@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 from checker import checker
 from colorama import Fore
 from os import system as term
