@@ -13,23 +13,23 @@ from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+FILE_SEPARATOR = ""
+if sys.platform == 'linux':
+    FILE_SEPARATOR = "/"
+elif sys.platform == 'darwin':
+    FILE_SEPARATOR = "/"
+else:
+    FILE_SEPARATOR = "\\"
+
 SRC_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
 OUTPUT_FOLDER = "raw"
-RESULT_FILE = "output.csv"
-
-file_seperator = ""
-if sys.platform == 'linux':
-    file_seperator = "/"
-elif sys.platform == 'darwin':
-    file_seperator = "/"
-else:
-    file_seperator = "\\"
-
+RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
+LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
 ########################################
 def setup_custom_logger(name):
     formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s',
                                   datefmt='%Y-%m-%d %H:%M:%S')
-    handler = logging.FileHandler('log.txt', mode='w')
+    handler = logging.FileHandler(LOG_FILE, mode='w')
     handler.setFormatter(formatter)
     screen_handler = logging.StreamHandler(stream=sys.stdout)
     screen_handler.setFormatter(formatter)
@@ -63,7 +63,7 @@ def download(zipcode):
             break
         sys.stdout.flush()
         csv_file = str(zipcode) + str("_") + str(i)+".html"
-        data_file = OUTPUT_FOLDER + file_seperator + csv_file
+        data_file = OUTPUT_FOLDER + FILE_SEPARATOR + csv_file
         with open(data_file, "a", encoding="utf-8") as output:
             output.write(response.text)
         time.sleep(10)
@@ -71,7 +71,7 @@ def download(zipcode):
 ########################################
 """ parse the data from html file in OUTPUT_FOLDER"""
 def parse():
-    file_list = glob.glob(OUTPUT_FOLDER+ file_seperator + "*.html")
+    file_list = glob.glob(OUTPUT_FOLDER+ FILE_SEPARATOR + "*.html")
     file_list.sort()
     # logger.info(file_list)
     header = ["Zip Code", "Page", "Name",
@@ -80,7 +80,7 @@ def parse():
         writer = csv.writer(output, delimiter=",", lineterminator="\n")
         writer.writerow(header)
         for file1 in file_list:
-            filename1 = file1.split(file_seperator)[-1]
+            filename1 = file1.split(FILE_SEPARATOR)[-1]
             logger.info(filename1)
             sys.stdout.flush()
             zipcode = filename1.split("_")[0]
