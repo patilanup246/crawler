@@ -26,7 +26,7 @@ OUTPUT_FOLDER = "raw"
 RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
 LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
 PROXY_FILE = "proxy.txt"
-BREAK_TIME = 30
+BREAK_TIME = 0
 ########################################
 
 
@@ -48,6 +48,7 @@ logger = setup_custom_logger('zillow')
 ########################################
 """ get proxy from file """
 
+
 def get_proxies():
     proxies = set()
     with open(PROXY_FILE, 'r', encoding='utf-8') as input_file:
@@ -67,42 +68,74 @@ def append_to_file(datarow):
 
 
 ########################################
+""" loop through the proxy and get the data --between 3046 bytes and 1000000 bytes """
+
+
+def request_data(url):
+    response = ""
+    proxies1 = get_proxies()
+    proxy_pool = cycle(proxies1)
+    time_out = BREAK_TIME
+    while True:
+        try:
+            proxy = next(proxy_pool)
+            headers = {
+                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'accept-encoding': 'gzip, deflate, sdch, br',
+                'accept-language': 'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
+                'cache-control': 'max-age=0',
+                'upgrade-insecure-requests': '1',
+                'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+            }
+            response = requests.get(url, headers=headers, proxies={
+                                    "http": proxy, "https": proxy}, verify=False)
+            logger.info("Response code: " + str(response.status_code))
+            logger.info("Response content size: " + str(len(response.content)))
+        except:
+            logger.info("Skipipng proxy. Connection error")
+            continue
+        if response and len(response.content) < 10000:  # capcha check
+            continue
+        else:
+            break
+    return response
+########################################
 """ crawl the zillow website to get data"""
 
 
 def crawler(zipcode):
     i = 0
-    time_out = BREAK_TIME
-    proxies = get_proxies()
-    proxy_pool = cycle(proxies)
     while True:
         i += 1
         url = SRC_URL.format(zipcode) + str(i)
         logger.info(url)
         sys.stdout.flush()
-        headers = {
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'accept-encoding': 'gzip, deflate, sdch, br',
-            'accept-language': 'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
-            'cache-control': 'max-age=0',
-            'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
-        }
-        proxy = next(proxy_pool)
-        response = requests.get(
-            url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
-        logger.info("Response code: " + str(response.status_code))
-        logger.info("Response content size: " + str(len(response.content)))
-    
-        while len(response.content) < 10000:
-            # get a proxy from the poool
-            proxy = next(proxy_pool)
-            response = requests.get(
-                url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
-            logger.info("Response code: " + str(response.status_code))
-            logger.info("Response content size: " + str(len(response.content)))
-            time.sleep(time_out)
+        # headers = {
+        #    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        #    'accept-encoding': 'gzip, deflate, sdch, br',
+        #    'accept-language': 'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
+        #    'cache-control': 'max-age=0',
+        #    'upgrade-insecure-requests': '1',
+        #    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+        # }
+        # proxy = next(proxy_pool)
+        # response = requests.get(
+        #    url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
+        # logger.info("Response code: " + str(response.status_code))
+        # logger.info("Response content size: " + str(len(response.content)))
+
+        # while len(response.content) < 10000:
+        #    # get a proxy from the poool
+        #    proxy = next(proxy_pool)
+        #    response = requests.get(
+        #        url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
+        #    logger.info("Response code: " + str(response.status_code))
+        #    logger.info("Response content size: " + str(len(response.content)))
+        #    time.sleep(time_out)
         # if it is a wrong url
+        # get data from url
+        response = request_data(url)
+        # if it is the wrong url
         if len(response.content) < 180000 and len(response.content) > 10000:
             break
         sys.stdout.flush()
