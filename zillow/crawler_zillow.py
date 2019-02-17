@@ -26,6 +26,7 @@ OUTPUT_FOLDER = "raw"
 RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
 LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
 PROXY_FILE = "proxy.txt"
+BREAK_TIME = 30
 ########################################
 
 
@@ -45,7 +46,7 @@ def setup_custom_logger(name):
 
 logger = setup_custom_logger('zillow')
 ########################################
-
+""" get proxy from file """
 
 def get_proxies():
     proxies = set()
@@ -71,7 +72,7 @@ def append_to_file(datarow):
 
 def crawler(zipcode):
     i = 0
-    break_time = 300
+    time_out = BREAK_TIME
     proxies = get_proxies()
     proxy_pool = cycle(proxies)
     while True:
@@ -87,24 +88,23 @@ def crawler(zipcode):
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
         }
-        # get a proxy from the poool
         proxy = next(proxy_pool)
-        #response = requests.get(url, headers=headers, verify=False)
         response = requests.get(
             url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
         logger.info("Response code: " + str(response.status_code))
         logger.info("Response content size: " + str(len(response.content)))
+    
+        while len(response.content) < 10000:
+            # get a proxy from the poool
+            proxy = next(proxy_pool)
+            response = requests.get(
+                url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
+            logger.info("Response code: " + str(response.status_code))
+            logger.info("Response content size: " + str(len(response.content)))
+            time.sleep(time_out)
         # if it is a wrong url
         if len(response.content) < 180000 and len(response.content) > 10000:
             break
-        # if it is the captcha check, we take a break
-        while len(response.content) < 10000:
-            break_time = break_time + int(break_time*0.1)
-            logger.info("We take a break " + str(break_time) + " seconds")
-            time.sleep(break_time)
-            response = requests.get(url, headers=headers, verify=False)
-            logger.info("Response code: " + str(response.status_code))
-            logger.info("Response content size: " + str(len(response.content)))
         sys.stdout.flush()
         # parsing the text
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -154,37 +154,33 @@ def crawler(zipcode):
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
-    argparser.add_argument('action', help='crawl')
     argparser.add_argument('--zipcode', nargs='?',
                            help='get only 1 single zip code, usage: --zipcode <zipcode>')
     argparser.add_argument('--zipcode_file', nargs='?',
                            help='get list of zip codes from a local file, usage: --zipcode_file <filename>')
-    argparser.add_argument('--output', nargs='?',
-                           help='write output to a local file, by default it is output.csv, usage: --output <filename>')
+    argparser.add_argument('--output_file', nargs='?',
+                           help='write output to a local file, by default it is output.csv, usage: --output_file <filename>')
     argparser.add_argument('--proxy_file', nargs='?',
                            help='the list of proxies: --proxy_file <filename>')
     args = argparser.parse_args()
-    action = args.action
     zipcode = args.zipcode
     zipcode_file = args.zipcode_file
-    output = args.output
+    output_file = args.output_file
     proxy_file = args.proxy_file
-    logger.info("action: " + str(action))
     logger.info("zipcode:" + str(zipcode))
     logger.info("zipcode_file: " + str(zipcode_file))
-    logger.info("output: " + str(output))
+    logger.info("output_file: " + str(output_file))
     logger.info("proxy_file: " + str(proxy_file))
     sys.stdout.flush()
-    if not output is None:
-        RESULT_FILE = output
+    if not output_file is None:
+        RESULT_FILE = output_file
     if not proxy_file is None:
         PROXY_FILE = proxy_file
-    if action == "crawl":
-        if not zipcode is None:
-            crawler(zipcode)
-        if not zipcode_file is None:
-            with open(zipcode_file, 'r') as input_file:
-                for line in input_file:
-                    zipcode = line.rstrip()
-                    if zipcode.isdigit():
-                        crawler(zipcode)
+    if not zipcode is None:
+        crawler(zipcode)
+    if not zipcode_file is None:
+        with open(zipcode_file, 'r') as input_file:
+            for line in input_file:
+                zipcode = line.rstrip()
+                if zipcode.isdigit():
+                    crawler(zipcode)
