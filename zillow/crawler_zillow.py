@@ -91,7 +91,7 @@ def crawler(zipcode):
         proxy = next(proxy_pool)
         #response = requests.get(url, headers=headers, verify=False)
         response = requests.get(
-            url, proxies={"http": proxy, "https": proxy}, headers=headers, verify=False)
+            url, headers=headers, proxies={"http": proxy, "https": proxy}, verify=False)
         logger.info("Response code: " + str(response.status_code))
         logger.info("Response content size: " + str(len(response.content)))
         # if it is a wrong url
