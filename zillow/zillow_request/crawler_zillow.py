@@ -25,7 +25,8 @@ SRC_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
 OUTPUT_FOLDER = "raw"
 RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
 LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
-PROXY_FILE = "proxy.txt"
+PROXY_FILE = "resources" + FILE_SEPARATOR + "proxy.txt"
+PROXY_ENABLED = False
 BREAK_TIME = 0
 ########################################
 
@@ -78,7 +79,7 @@ def request_data(url):
     time_out = BREAK_TIME
     while True:
         try:
-            proxy = next(proxy_pool)
+            
             headers = {
                 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'accept-encoding': 'gzip, deflate, sdch, br',
@@ -87,7 +88,9 @@ def request_data(url):
                 'upgrade-insecure-requests': '1',
                 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
             }
-            response = requests.get(url, headers=headers, proxies={
+            if PROXY_ENABLED:
+                proxy = next(proxy_pool)
+                response = requests.get(url, headers=headers, proxies={
                                     "http": proxy, "https": proxy}, verify=False)
             logger.info("Response code: " + str(response.status_code))
             logger.info("Response content size: " + str(len(response.content)))
@@ -182,6 +185,7 @@ if __name__ == "__main__":
     if not output_file is None:
         RESULT_FILE = output_file
     if not proxy_file is None:
+        PROXY_ENABLED = True
         PROXY_FILE = proxy_file
     if not zipcode is None:
         crawler(zipcode)
