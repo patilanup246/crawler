@@ -1,0 +1,11 @@
+2019-02-14 00:24:09 INFO     action: crawl
+2019-02-14 00:24:09 INFO     zipcode:90002
+2019-02-14 00:24:09 INFO     zipcode_file: None
+2019-02-14 00:24:09 INFO     output: None
+2019-02-14 00:24:09 INFO     https://www.zillow.com/90002/real-estate-agent-reviews/?page=1
+2019-02-14 00:24:09 INFO     Response code: 200
+2019-02-14 00:24:09 INFO     Response content size: 3046
+2019-02-14 00:24:09 INFO     We take a break 330 seconds
+2019-02-14 00:29:39 INFO     Response code: 200
+2019-02-14 00:29:39 INFO     Response content size: 3046
+2019-02-14 00:29:39 INFO     We take a break 363 seconds
