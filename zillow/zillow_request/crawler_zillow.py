@@ -92,6 +92,8 @@ def request_data(url):
                 proxy = next(proxy_pool)
                 response = requests.get(url, headers=headers, proxies={
                                     "http": proxy, "https": proxy}, verify=False)
+            else:
+                response = requests.get(url, headers=headers, verify=False)
             logger.info("Response code: " + str(response.status_code))
             logger.info("Response content size: " + str(len(response.content)))
         except:
