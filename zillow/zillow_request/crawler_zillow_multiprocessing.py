@@ -11,6 +11,7 @@ import logging
 from bs4 import BeautifulSoup
 from itertools import cycle
 from multiprocessing import Pool
+from fake_useragent import UserAgent
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -23,6 +24,7 @@ else:
     FILE_SEPARATOR = "\\"
 
 SRC_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
+PAGE_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/"
 OUTPUT_FOLDER = "raw"
 RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
 LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
@@ -82,6 +84,7 @@ def append_to_file(datarow):
         writer.writerow(datarow)
 
 
+
 ########################################
 """ loop through the proxy and get the data --between 3046 bytes and 1000000 bytes """
 
@@ -93,14 +96,15 @@ def request_data(url):
     time_out = BREAK_TIME
     while True:
         try:
-
+            ua = UserAgent()
+            user_agent = ua.random()
             headers = {
                 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'accept-encoding': 'gzip, deflate, sdch, br',
                 'accept-language': 'en-GB,en;q=0.8,en-US;q=0.6,ml;q=0.4',
                 'cache-control': 'max-age=0',
                 'upgrade-insecure-requests': '1',
-                'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+                'user-agent': str(user_agent)
             }
             if PROXY_ENABLED:
                 proxy = next(proxy_pool)
@@ -119,6 +123,27 @@ def request_data(url):
         else:
             break
     return response
+########################################
+""" check how many paginations this url has and returns all the urls """
+
+
+def get_all_page_urls(url):
+    urls = []
+    total_pages = 0
+    response = request_data(url)
+    # if it is the wrong url
+    if len(response.content) < 180000 and len(response.content) > 10000:
+        return urls
+    # parsing the text
+    soup = BeautifulSoup(response.text, 'html.parser')
+    links = soup.select('a[class="js-pagination"]')
+    if links and len(links) > 0:
+        logger.info("There are total "+str(links[-1].attrs["data-idx"])+"pages")
+        total_pages = int(links[-1].attrs["data-idx"])
+    if total_pages >0:
+        for i in range(1,total_pages):
+            urls.append(SRC_URL+str(i))
+    return urls
 
 
 ########################################
@@ -210,14 +235,16 @@ if __name__ == "__main__":
         PROXY_FILE = proxy_file
     if not zipcode is None:
         crawler(zipcode)
-    if not zipcode_file is None:
-        zipcodes_list = []
-        with open(zipcode_file, 'r') as input_file:
-            for line in input_file:
-                zipcode = line.rstrip()
-                if zipcode.isdigit():
-                    zipcodes_list.add(zipcode)
-        p = Pool(THREAD_COUNT) 
-        p.map(crawler, zipcodes_list)
-        p.terminate()
-        p.join()
+    url = PAGE_URL.format(zipcode) 
+    get_all_page_urls(url)
+    # if not zipcode_file is None:
+        # zipcodes_list = []
+        # with open(zipcode_file, 'r') as input_file:
+            # for line in input_file:
+                # zipcode = line.rstrip()
+                # if zipcode.isdigit():
+                    # zipcodes_list.add(zipcode)
+        # p = Pool(THREAD_COUNT) 
+        # p.map(crawler, zipcodes_list)
+        # p.terminate()
+        # p.join()
