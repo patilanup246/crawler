@@ -54,7 +54,19 @@ def get_proxies():
     proxies = set()
     with open(PROXY_FILE, 'r', encoding='utf-8') as input_file:
         for line in input_file:
-            proxies.add(line.rstrip())
+            temp = line.rstrip().split(':')
+            if temp and len(temp) > 0:
+                # if it is normal proxy, no username and password
+                if len(temp) == 2:
+                    proxies.add(line.rstrip())
+                # if it is proxy with password, in format ip:port:username:password
+                elif len(temp) == 4:
+                    ip = temp[0]
+                    port = temp[1]
+                    username = temp[2]
+                    password = temp[3]
+                    proxy = username + ":" + password + "@" + ip + ":" + port
+                    proxies.add(proxy)
     return proxies
 
 
@@ -79,7 +91,7 @@ def request_data(url):
     time_out = BREAK_TIME
     while True:
         try:
-            
+
             headers = {
                 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'accept-encoding': 'gzip, deflate, sdch, br',
@@ -90,9 +102,10 @@ def request_data(url):
             }
             if PROXY_ENABLED:
                 proxy = next(proxy_pool)
+                logger.info("Using proxy: " + proxy)
                 response = requests.get(url, headers=headers, proxies={
-                                    "http": proxy, "https": proxy}, verify=False)
-            else: 
+                    "http": proxy, "https": proxy}, verify=False)
+            else:
                 response = requests.get(url, headers=headers, verify=False)
             logger.info("Response code: " + str(response.status_code))
             logger.info("Response content size: " + str(len(response.content)))
@@ -104,6 +117,8 @@ def request_data(url):
         else:
             break
     return response
+
+
 ########################################
 """ crawl the zillow website to get data"""
 
@@ -161,6 +176,8 @@ def crawler(zipcode):
             datarow.append(office)
             append_to_file(datarow)
             time.sleep(random.randint(1, 2))
+
+
 ###########################################
 """ main function """
 if __name__ == "__main__":
