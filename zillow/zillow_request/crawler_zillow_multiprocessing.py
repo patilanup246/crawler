@@ -10,6 +10,7 @@ import requests
 import logging
 from bs4 import BeautifulSoup
 from itertools import cycle
+from multiprocessing import Pool
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -28,6 +29,7 @@ LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
 PROXY_FILE = "resources" + FILE_SEPARATOR + "proxy.txt"
 PROXY_ENABLED = False
 BREAK_TIME = 0
+THREAD_COUNT = 10
 ########################################
 
 
@@ -209,8 +211,13 @@ if __name__ == "__main__":
     if not zipcode is None:
         crawler(zipcode)
     if not zipcode_file is None:
+        zipcodes_list = []
         with open(zipcode_file, 'r') as input_file:
             for line in input_file:
                 zipcode = line.rstrip()
                 if zipcode.isdigit():
-                    crawler(zipcode)
+                    zipcodes_list.add(zipcode)
+        p = Pool(THREAD_COUNT) 
+        p.map(crawler, zipcodes_list)
+        p.terminate()
+        p.join()
