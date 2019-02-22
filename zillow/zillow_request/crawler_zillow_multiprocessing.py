@@ -233,8 +233,8 @@ if __name__ == "__main__":
     if not proxy_file is None:
         PROXY_ENABLED = True
         PROXY_FILE = proxy_file
-    if not zipcode is None:
-        crawler(zipcode)
+    # if not zipcode is None:
+        # crawler(zipcode)
     url = PAGE_URL.format(zipcode) 
     get_all_page_urls(url)
     # if not zipcode_file is None:
