@@ -251,7 +251,7 @@ class InsCrawler(Logging):
             caption = ""
             response = requests.get(url, verify=False)
             soup = BeautifulSoup(response.text, 'html.parser')
-            print(response.text)
+            #print(response.text)
             json_text = soup.select('script[type="application/ld+json"]')
             try:
                 if json_text and len(json_text) > 0:
