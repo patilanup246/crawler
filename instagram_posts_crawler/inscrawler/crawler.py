@@ -243,20 +243,13 @@ class InsCrawler(Logging):
         pbar = tqdm(total=num)
 
         def request_data( url):
-            response = ""
-            title = ""
-            date = ""
             response = requests.get(url, verify=False)
             soup = BeautifulSoup(response.text, 'html.parser')
-            title_elems = soup.select('title')
-            if title_elems:
-                text1 = title_elems[0].get_text().replace("\n","").replace("\r\n","")
-                pos1 = text1.index('Instagram: ')
-                title = text1[pos1+11:]
-            date_elems = soup.select('time')
-            if date_elems:
-                date = date_elems[0].attrs["datetime"]
-            return date, title
+            json_data = soup.select('script[type="application/ld+json"]')[0].get_text()
+            json_list = json.loads(json_data)
+            date = json_list["uploadDate"]
+            caption = json_list["caption"]
+            return date, caption 
         def start_fetching(pre_post_num, wait_time):
             ele_posts = browser.find('.v1Nh3 a')
             for ele in ele_posts:
