@@ -240,7 +240,7 @@ class InsCrawler(Logging):
         key_set = set()
         posts = []
         pre_post_num = 0
-        wait_time = 5
+        wait_time = 3
 
         pbar = tqdm(total=num)
 
