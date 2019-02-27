@@ -17,6 +17,7 @@ import glob
 import urllib3
 import requests
 import re
+import html
 from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -254,9 +255,11 @@ class InsCrawler(Logging):
             soup = BeautifulSoup(response.text, 'html.parser')
             json_data = soup.select('script[type="application/ld+json"]')[0].get_text()
             json_list = json.loads(json_data)
-            date = json_list["uploadDate"]
-            caption = json_list["caption"]
-            return date, clean_data(caption)
+            date = json_list["uploadDate"][0:10]
+            caption = clean_data(json_list["caption"])
+            caption = html.unescape(caption)
+
+            return date, caption
         def start_fetching(pre_post_num, wait_time):
             ele_posts = browser.find('.v1Nh3 a')
             for ele in ele_posts:
