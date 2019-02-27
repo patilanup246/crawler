@@ -253,22 +253,31 @@ class InsCrawler(Logging):
             soup = BeautifulSoup(response.text, 'html.parser')
             print(response.text)
             json_text = soup.select('script[type="application/ld+json"]')
-            if json_text and len(json_text) > 0:
-                json_data = json_text[0].get_text()
-                json_list = json.loads(json_data)
-                date = json_list["uploadDate"][0:10]
-                caption = clean_data(json_list["caption"])
-                caption = html.unescape(caption)
-            if date == "":
-                datetime = soup.find('time')
-                if datetime:
-                    date = datetime.attrs["datetime"][0:10]
-            if caption == "":
-                title = soup.find('span[title="Edited"]')
-                if title:
-                    caption = title.get_text().replace("\r\n","").replace("\n","")
-                    caption = clean_data(caption)
+            try:
+                if json_text and len(json_text) > 0:
+                    json_data = json_text[0].get_text()
+                    json_list = json.loads(json_data)
+                    date = json_list["uploadDate"][0:10]
+                    caption = clean_data(json_list["caption"])
                     caption = html.unescape(caption)
+            except:
+                pass
+            try:
+                if date == "":
+                    datetime = soup.find('time')
+                    if datetime:
+                        date = datetime.attrs["datetime"][0:10]
+            except:
+                pass
+            try:
+                if caption == "":
+                    title = soup.find('span[title="Edited"]')
+                    if title:
+                        caption = title.get_text().replace("\r\n","").replace("\n","")
+                        caption = clean_data(caption)
+                        caption = html.unescape(caption)
+            except:
+                pass
             return date, caption
         def start_fetching(pre_post_num, wait_time):
             ele_posts = browser.find('.v1Nh3 a')
@@ -279,7 +288,10 @@ class InsCrawler(Logging):
                     content = ele_img.get_attribute('alt')
                     img_url = ele_img.get_attribute('src')
                     key_set.add(key)
-                    date, content = request_data(key)
+                    try:
+                        date, content = request_data(key)
+                    except:
+                        pass
                     posts.append({
                         'date': date,
                         'content': content,
