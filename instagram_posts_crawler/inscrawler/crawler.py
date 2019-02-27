@@ -147,6 +147,14 @@ class InsCrawler(Logging):
 
     def _get_posts_full(self, num):
         @retry()
+        def clean_data(str1):
+            result = ""
+            str1 = str1.replace("\r\n","").replace("\n","")
+            for e in str1:
+                if (re.sub('[ -~]', '', e)) == "":
+                    result += e 
+            result = html.unescape(result)
+            return result
         def check_next_post(cur_key):
             ele_a_datetime = browser.find_one('.eo2As .c-Yi7')
             next_key = ele_a_datetime.get_attribute('href')
@@ -171,11 +179,11 @@ class InsCrawler(Logging):
             # Fetching datetime and url as key
             ele_a_datetime = browser.find_one('.eo2As .c-Yi7')
             cur_key = ele_a_datetime.get_attribute('href')
-            dict_post['key'] = cur_key
+            #dict_post['key'] = cur_key
 
             ele_datetime = browser.find_one('._1o9PC', ele_a_datetime)
             datetime = ele_datetime.get_attribute('datetime')
-            dict_post['datetime'] = datetime
+            dict_post['datetime'] = datetime[0:10]
 
             # Fetching all img
             content = None
@@ -183,39 +191,27 @@ class InsCrawler(Logging):
             while True:
                 ele_imgs = browser.find('._97aPb img', waittime=10)
                 for ele_img in ele_imgs:
-                    if content is None:
-                        content = ele_img.get_attribute('alt')
+                    #if content is None:
+                    #    content = ele_img.get_attribute('alt')
                     img_urls.add(ele_img.get_attribute('src'))
 
                 next_photo_btn = browser.find_one('._6CZji .coreSpriteRightChevron')
                 if next_photo_btn:
                     next_photo_btn.click()
-                    sleep(0.2)
+                    sleep(1)
                 else:
                     break
 
-            dict_post['content'] = content
-            dict_post['img_urls'] = list(img_urls)
+            #dict_post['content'] = content
+            #dict_post['img_urls'] = list(img_urls)
 
             # Fetching title
-            ele_title = browser.find_one('head > title')
             ele_comment = browser.find('.eo2As .gElp9')[0]
             title = browser.find_one('span', ele_comment).text
-            #title = ele_title.text 
-            dict_post['content'] = title
-            # Fetching comments
-            #ele_comments = browser.find('.eo2As .gElp9')[1:]
-            #comments = []
-            #for els_comment in ele_comments:
-            #    author = browser.find_one('.FPmhX', els_comment).text
-            #    comment = browser.find_one('span', els_comment).text
-            #    comments.append({
-            #        'author': author,
-            #        'comment': comment,
-            #    })
-
-            #if comments:
-            #    dict_post['comments'] = comments
+            title = clean_data(title)
+            dict_post['title'] = title
+            dict_post['post_url'] = cur_key
+            dict_post['img_urls'] = list(img_urls)
 
             self.log(json.dumps(dict_post, ensure_ascii=False))
             dict_posts[browser.current_url] = dict_post
@@ -251,14 +247,28 @@ class InsCrawler(Logging):
                     result += e 
             return result
         def request_data( url):
+            date = ""
+            caption = ""
             response = requests.get(url, verify=False)
             soup = BeautifulSoup(response.text, 'html.parser')
-            json_data = soup.select('script[type="application/ld+json"]')[0].get_text()
-            json_list = json.loads(json_data)
-            date = json_list["uploadDate"][0:10]
-            caption = clean_data(json_list["caption"])
-            caption = html.unescape(caption)
-
+            print(response.text)
+            json_text = soup.select('script[type="application/ld+json"]')
+            if json_text and len(json_text) > 0:
+                json_data = json_text[0].get_text()
+                json_list = json.loads(json_data)
+                date = json_list["uploadDate"][0:10]
+                caption = clean_data(json_list["caption"])
+                caption = html.unescape(caption)
+            if date == "":
+                datetime = soup.find('time')
+                if datetime:
+                    date = datetime.attrs["datetime"][0:10]
+            if caption == "":
+                title = soup.find('span[title="Edited"]')
+                if title:
+                    caption = title.get_text().replace("\r\n","").replace("\n","")
+                    caption = clean_data(caption)
+                    caption = html.unescape(caption)
             return date, caption
         def start_fetching(pre_post_num, wait_time):
             ele_posts = browser.find('.v1Nh3 a')
@@ -276,6 +286,7 @@ class InsCrawler(Logging):
                         'post_url': key,
                         'img_url': img_url
                     })
+                break
             if pre_post_num == len(posts):
                 pbar.set_description('Wait for %s sec' % (wait_time))
                 sleep(wait_time)
