@@ -238,19 +238,25 @@ class InsCrawler(Logging):
         key_set = set()
         posts = []
         pre_post_num = 0
-        wait_time = 1
+        wait_time = 5
 
         pbar = tqdm(total=num)
 
         def request_data( url):
             response = ""
             title = ""
+            date = ""
             response = requests.get(url, verify=False)
             soup = BeautifulSoup(response.text, 'html.parser')
             title_elems = soup.select('title')
             if title_elems:
-                title = title_elems[0].get_text()
-            return title.replace("\n","").replace("\r\n","")
+                text1 = title_elems[0].get_text().replace("\n","").replace("\r\n","")
+                pos1 = text1.index('Instagram: ')
+                title = text1[pos1+11:]
+            date_elems = soup.select('time')
+            if date_elems:
+                date = date_elems[0].attrs["datetime"]
+            return date, title
         def start_fetching(pre_post_num, wait_time):
             ele_posts = browser.find('.v1Nh3 a')
             for ele in ele_posts:
@@ -260,10 +266,11 @@ class InsCrawler(Logging):
                     content = ele_img.get_attribute('alt')
                     img_url = ele_img.get_attribute('src')
                     key_set.add(key)
-                    content = request_data(key)
+                    date, content = request_data(key)
                     posts.append({
-                        'key': key,
+                        'date': date,
                         'content': content,
+                        'post_url': key,
                         'img_url': img_url
                     })
             if pre_post_num == len(posts):
