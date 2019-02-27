@@ -231,12 +231,12 @@ class InsCrawler(Logging):
             To get posts, we have to click on the load more
             button and make the browser call post api.
         '''
-        TIMEOUT = 600
+        TIMEOUT = 6000
         browser = self.browser
         key_set = set()
         posts = []
         pre_post_num = 0
-        wait_time = 3
+        wait_time = 2
 
         pbar = tqdm(total=num)
 
