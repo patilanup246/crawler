@@ -24,13 +24,12 @@ elif sys.platform == 'darwin':
 else:
     FILE_SEPARATOR = "\\"
 
-SRC_URL = "https://www.zillow.com/{0}/real-estate-agent-reviews/?page="
 OUTPUT_FOLDER = "raw"
 RESULT_FILE = "results" + FILE_SEPARATOR + "output.csv"
 LOG_FILE = "logs" + FILE_SEPARATOR + "out.log"
 PROXY_FILE = "resources" + FILE_SEPARATOR + "proxy.txt"
 PROXY_ENABLED = False
-BREAK_TIME = 0
+THREAD_COUNT = 10
 ########################################
 
 
@@ -97,7 +96,6 @@ def request_data(url):
     if PROXY_ENABLED:
         proxies1 = get_proxies()
         proxy_pool = cycle(proxies1)
-    time_out = BREAK_TIME
     while True:
         try:
 
