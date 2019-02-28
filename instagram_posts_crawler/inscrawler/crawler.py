@@ -194,13 +194,14 @@ class InsCrawler(Logging):
                     #if content is None:
                     #    content = ele_img.get_attribute('alt')
                     img_urls.add(ele_img.get_attribute('src'))
-
-                next_photo_btn = browser.find_one('._6CZji .coreSpriteRightChevron')
-                if next_photo_btn:
-                    next_photo_btn.click()
-                    sleep(1)
-                else:
-                    break
+                break
+                #next_photo_btn = browser.find_one('._6CZji .coreSpriteRightChevron')
+                
+                #if next_photo_btn:
+                #    next_photo_btn.click()
+                #    sleep(1)
+                #else:
+                #    break
 
             #dict_post['content'] = content
             #dict_post['img_urls'] = list(img_urls)
@@ -304,7 +305,7 @@ class InsCrawler(Logging):
                 sleep(wait_time)
                 pbar.set_description('fetching')
 
-                wait_time *= 2
+                wait_time += 2
                 browser.scroll_up(300)
             else:
                 wait_time = 1
@@ -315,7 +316,8 @@ class InsCrawler(Logging):
             return pre_post_num, wait_time
 
         pbar.set_description('fetching')
-        while len(posts) < num and wait_time < TIMEOUT:
+        while len(posts) < num:
+            # and wait_time < TIMEOUT:
             post_num, wait_time = start_fetching(pre_post_num, wait_time)
             pbar.update(post_num - pre_post_num)
             pre_post_num = post_num
