@@ -143,6 +143,7 @@ def clean_data(str1):
 
 
 def parse(url):
+    post_url = url
     url = url + "?__a=1"
     logger.info(url)
     sys.stdout.flush()
@@ -154,13 +155,19 @@ def parse(url):
     img_url = ""
     json_data = json.loads(response.text)["graphql"]["shortcode_media"]
     img_url = json_data["display_resources"][0]["src"]
-    caption = json_data["edge_media_to_caption"]["edges"][0]["node"]["text"]
-    caption = clean_data(caption) 
-    date = convert_unix_time_to_normal(json_data["taken_at_timestamp"])
+    try:
+        caption = json_data["edge_media_to_caption"]["edges"][0]["node"]["text"]
+        caption = clean_data(caption) 
+    except:
+        pass
+    try:
+        date = convert_unix_time_to_normal(json_data["taken_at_timestamp"])
+    except:
+        pass
     datarow = []
     datarow.append(date)
     datarow.append(caption)
-    datarow.append(url)
+    datarow.append(post_url)
     datarow.append(img_url)
     append_to_file(datarow)
     time.sleep(random.randint(1, 2))
