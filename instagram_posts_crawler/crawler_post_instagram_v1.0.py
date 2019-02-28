@@ -12,7 +12,6 @@ import html
 import json
 from bs4 import BeautifulSoup
 from itertools import cycle
-from datetime import datetime
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -49,11 +48,6 @@ def setup_custom_logger(name):
 
 
 logger = setup_custom_logger('zillow')
-########################################
-
-def convert_unix_time_to_normal(timeStr):
-    unix_timestamp = float(timeStr)
-    return datetime.utcfromtimestamp(unix_timestamp).strftime('%Y-%m-%d')
 ########################################
 """ get proxy from file """
 
@@ -142,8 +136,7 @@ def clean_data(str1):
 ########################################
 
 
-def parse(url):
-    url = url + "?__a=1"
+def parse(url, img_url):
     logger.info(url)
     sys.stdout.flush()
     response = request_data(url)
@@ -151,12 +144,50 @@ def parse(url):
     # parsing the text
     date = ""
     caption = ""
-    img_url = ""
-    json_data = json.loads(response.text)["graphql"]["shortcode_media"]
-    img_url = json_data["display_resources"][0]["src"]
-    caption = json_data["edge_media_to_caption"]["edges"][0]["node"]["text"]
-    caption = clean_data(caption) 
-    date = convert_unix_time_to_normal(json_data["taken_at_timestamp"])
+    soup = BeautifulSoup(response.text, 'html.parser')
+    scripts = soup.select('script')
+    if scripts and len(scripts) > 0:
+        json_data = ""
+        for script in scripts:
+            if "@context" in script.get_text():
+                json_data = script.get_text()
+                break
+        print("AAA")
+        if json_data == "":
+            for script in scripts:
+                if "edge_media_to_caption" in script.get_text():
+                    json_data2 = script.get_text()
+                    print(json_data2)
+                    break 
+        
+        if json_data != "":
+            #json_data = clean_data(json_data)
+            try:
+                json_list = json.loads(json_data)
+                date = json_list["uploadDate"][0:10]
+                caption = clean_data(json_list["caption"])
+            except Exception as e:
+                logger.info("Cannot find any json")
+                logger.info(e)
+                #print(response.text)
+                sys.stdout.flush()
+                pass
+    try:
+        if date == "":
+            datetime = soup.find('time')
+            if datetime:
+                date = datetime.attrs["datetime"][0:10]
+    except:
+        logger.info("Cannot find date in the <time>")
+        pass
+    try:
+        if caption == "":
+            comments = soup.select('.gElp9')
+            if comments and len(comments) > 0:
+                caption = clean_data(comments[0].get_text())
+    except:
+        logger.info("Cannot find caption in the comments")
+        pass
     datarow = []
     datarow.append(date)
     datarow.append(caption)
@@ -197,4 +228,5 @@ if __name__ == "__main__":
             next(input_file)
             for line in input_file:
                 post_url = line.rstrip().split(",")[0]
-                parse(post_url)
+                img_url = line.rstrip().split(",")[1]
+                parse(post_url, img_url)
