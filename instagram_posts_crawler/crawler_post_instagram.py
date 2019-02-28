@@ -174,7 +174,7 @@ def parse(url, img_url):
         pass
     try:
         if caption == "":
-            comments = soup.select('.eo2As .gElp9')
+            comments = soup.select('.gElp9')
             if comments and len(comments) > 0:
                 caption = clean_data(comments[0].get_text())
     except:
