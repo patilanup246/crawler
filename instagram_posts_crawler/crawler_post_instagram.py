@@ -210,6 +210,8 @@ if __name__ == "__main__":
     sys.stdout.flush()
     if not output_file is None:
         RESULT_FILE = output_file
+    elif not url_file is None:
+        RESULT_FILE =  url_file + "_parsed.csv"
     if not proxy_file is None:
         PROXY_ENABLED = True
         PROXY_FILE = proxy_file
