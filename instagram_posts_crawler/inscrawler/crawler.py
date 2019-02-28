@@ -235,7 +235,7 @@ class InsCrawler(Logging):
             To get posts, we have to click on the load more
             button and make the browser call post api.
         '''
-        TIMEOUT = 6000
+        TIMEOUT = 300
         browser = self.browser
         key_set = set()
         posts = []
@@ -311,7 +311,7 @@ class InsCrawler(Logging):
                 sleep(wait_time)
                 # pbar.set_description('fetching')
 
-                wait_time += 2
+                wait_time *= 2
                 browser.scroll_up(300)
             else:
                 wait_time = 1
@@ -323,8 +323,7 @@ class InsCrawler(Logging):
 
         #pbar.set_description('fetching')
         print("Targeting to fetch num = "+str(num))
-        while len(posts) < num:
-            # and wait_time < TIMEOUT:
+        while len(posts) < num and wait_time < TIMEOUT:
             post_num, wait_time = start_fetching(pre_post_num, wait_time)
             print("Fetching post_num = "+str(post_num))
             print("Fetching pre_post_num = "+str(pre_post_num))
