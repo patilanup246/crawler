@@ -11,3 +11,4 @@
 ./crawler_post_instagram.py --url_file fiaformulae.csv
 ./crawler_post_instagram.py --url_file mahindraracing.csv
 ./crawler_post_instagram.py --url_file nioformualae.csv
+./crawler_post_instagram.py --url_file venturi_fe.csv
