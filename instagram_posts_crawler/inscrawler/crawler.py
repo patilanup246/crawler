@@ -18,18 +18,21 @@ import urllib3
 import requests
 import re
 import html
+import sys
 from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 class Logging(object):
     PREFIX = 'instagram-crawler'
 
     def __init__(self):
         try:
-            timestamp  = int(time.time())
+            timestamp = int(time.time())
             self.cleanup(timestamp)
-            self.logger = open('/tmp/%s-%s.log' % (Logging.PREFIX, timestamp), 'w')
+            self.logger = open('/tmp/%s-%s.log' %
+                               (Logging.PREFIX, timestamp), 'w')
             self.log_disable = False
         except:
             self.log_disable = True
@@ -179,7 +182,7 @@ class InsCrawler(Logging):
             # Fetching datetime and url as key
             ele_a_datetime = browser.find_one('.eo2As .c-Yi7')
             cur_key = ele_a_datetime.get_attribute('href')
-            #dict_post['key'] = cur_key
+            # dict_post['key'] = cur_key
 
             ele_datetime = browser.find_one('._1o9PC', ele_a_datetime)
             datetime = ele_datetime.get_attribute('datetime')
@@ -191,20 +194,20 @@ class InsCrawler(Logging):
             while True:
                 ele_imgs = browser.find('._97aPb img', waittime=10)
                 for ele_img in ele_imgs:
-                    #if content is None:
+                    # if content is None:
                     #    content = ele_img.get_attribute('alt')
                     img_urls.add(ele_img.get_attribute('src'))
                 break
-                #next_photo_btn = browser.find_one('._6CZji .coreSpriteRightChevron')
+                # next_photo_btn = browser.find_one('._6CZji .coreSpriteRightChevron')
                 
-                #if next_photo_btn:
+                # if next_photo_btn:
                 #    next_photo_btn.click()
                 #    sleep(1)
-                #else:
+                # else:
                 #    break
 
-            #dict_post['content'] = content
-            #dict_post['img_urls'] = list(img_urls)
+            # dict_post['content'] = content
+            # dict_post['img_urls'] = list(img_urls)
 
             # Fetching title
             ele_comment = browser.find('.eo2As .gElp9')[0]
@@ -239,7 +242,7 @@ class InsCrawler(Logging):
         pre_post_num = 0
         wait_time = 1
 
-        pbar = tqdm(total=num)
+        # pbar = tqdm(total=num)
 
         def clean_data(str1):
             result = ""
@@ -252,7 +255,7 @@ class InsCrawler(Logging):
             caption = ""
             response = requests.get(url, verify=False)
             soup = BeautifulSoup(response.text, 'html.parser')
-            #print(response.text)
+            # print(response.text)
             json_text = soup.select('script[type="application/ld+json"]')
             try:
                 if json_text and len(json_text) > 0:
@@ -289,21 +292,24 @@ class InsCrawler(Logging):
                     content = ele_img.get_attribute('alt')
                     img_url = ele_img.get_attribute('src')
                     key_set.add(key)
-                    #try:
-                    #    date, content = request_data(key)
-                    #except:
-                    #    pass
+                    try:
+                        date, content = request_data(key)
+                    except:
+                        pass
                     posts.append({
-                        #'date': date,
-                        #'content': content,
+                        'date': date,
+                        'content': content,
                         'post_url': key,
                         'img_url': img_url
                     })
-                break
+                #break
             if pre_post_num == len(posts):
-                pbar.set_description('Wait for %s sec' % (wait_time))
+                # pbar.set_description('Wait for %s sec' % (wait_time))
+                print("It seems that we cannot scroll down anymore.")
+                print('Wait for %s sec' % (wait_time))
+                sys.stdout.flush()
                 sleep(wait_time)
-                pbar.set_description('fetching')
+                # pbar.set_description('fetching')
 
                 wait_time += 2
                 browser.scroll_up(300)
@@ -315,17 +321,24 @@ class InsCrawler(Logging):
 
             return pre_post_num, wait_time
 
-        pbar.set_description('fetching')
+        #pbar.set_description('fetching')
+        print("Targeting to fetch num = "+str(num))
         while len(posts) < num:
             # and wait_time < TIMEOUT:
             post_num, wait_time = start_fetching(pre_post_num, wait_time)
-            pbar.update(post_num - pre_post_num)
+            print("Fetching post_num = "+str(post_num))
+            print("Fetching pre_post_num = "+str(pre_post_num))
+            print("Fetching len(posts)= "+str(len(posts)))
+            sys.stdout.flush()
+            # pbar.update(post_num - pre_post_num)
             pre_post_num = post_num
 
             loading = browser.find_one('.W1Bne')
+            if loading:
+                print("Found loading signal " + loading.text)
             if (not loading and wait_time > TIMEOUT/2):
                 break
 
-        pbar.close()
+        # pbar.close()
         print('Done. Fetched %s posts.' % (min(len(posts), num)))
         return posts[:num]
