@@ -152,6 +152,14 @@ def parse(url, img_url):
             if "@context" in script.get_text():
                 json_data = script.get_text()
                 break
+        print("AAA")
+        if json_data == "":
+            for script in scripts:
+                if "edge_media_to_caption" in script.get_text():
+                    json_data2 = script.get_text()
+                    print(json_data2)
+                    break 
+        
         if json_data != "":
             #json_data = clean_data(json_data)
             try:
