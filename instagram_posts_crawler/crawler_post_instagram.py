@@ -136,7 +136,7 @@ def clean_data(str1):
 ########################################
 
 
-def parse(url):
+def parse(url, img_url):
     logger.info(url)
     sys.stdout.flush()
     response = request_data(url)
@@ -144,8 +144,6 @@ def parse(url):
     # parsing the text
     date = ""
     caption = ""
-    post_url = ""
-    image_url = ""
     soup = BeautifulSoup(response.text, 'html.parser')
     scripts = soup.select('script')
     if scripts and len(scripts) > 0:
@@ -155,7 +153,7 @@ def parse(url):
                 json_data = script.get_text()
                 break
         if json_data != "":
-            json_data = clean_data(json_data)
+            #json_data = clean_data(json_data)
             try:
                 json_list = json.loads(json_data)
                 date = json_list["uploadDate"][0:10]
@@ -182,18 +180,11 @@ def parse(url):
     except:
         logger.info("Cannot find caption in the comments")
         pass
-    try:
-        imgs = soup.select('.KL4Bh img')
-        if imgs and len(imgs) > 0:
-            image_url = imgs[0].attrs["src"]
-    except:
-        logger.info("Cannot find image url")
-        pass
     datarow = []
     datarow.append(date)
     datarow.append(caption)
     datarow.append(url)
-    datarow.append(image_url)
+    datarow.append(img_url)
     append_to_file(datarow)
     time.sleep(random.randint(1, 2))
 
@@ -226,5 +217,6 @@ if __name__ == "__main__":
         with open(url_file, 'r') as input_file:
             next(input_file)
             for line in input_file:
-                url = line.rstrip().split(",")[0]
-                parse(url)
+                post_url = line.rstrip().split(",")[0]
+                img_url = line.rstrip().split(",")[1]
+                parse(post_url, img_url)
