@@ -236,7 +236,7 @@ class InsCrawler(Logging):
         key_set = set()
         posts = []
         pre_post_num = 0
-        wait_time = 2
+        wait_time = 1
 
         pbar = tqdm(total=num)
 
@@ -288,13 +288,13 @@ class InsCrawler(Logging):
                     content = ele_img.get_attribute('alt')
                     img_url = ele_img.get_attribute('src')
                     key_set.add(key)
-                    try:
-                        date, content = request_data(key)
-                    except:
-                        pass
+                    #try:
+                    #    date, content = request_data(key)
+                    #except:
+                    #    pass
                     posts.append({
-                        'date': date,
-                        'content': content,
+                        #'date': date,
+                        #'content': content,
                         'post_url': key,
                         'img_url': img_url
                     })
