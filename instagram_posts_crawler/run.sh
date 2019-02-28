@@ -1,0 +1,10 @@
+./crawler posts -u bmwmotorsport -o ./bmwmotorsport.csv
+./crawler posts -u dstecheetah -o ./dstecheetah.csv
+./crawler posts -u fiaformulae -o ./fiaformulae.csv 
+./crawler posts -u geoxdragon -o ./geoxdragon.csv 
+./crawler posts -u hwaag_official -o ./hwaag_official.csv 
+./crawler posts -u jaguarracing -o ./jaguarracing.csv 
+./crawler posts -u mahindraracing -o ./mahindraracing.csv 
+./crawler posts -u nioformulae -o ./nioformulae.csv 
+./crawler posts -u nissanedams -o ./nissanedams.csv 
+./crawler posts -u venturi_fe -o ./venturi_fe.csv 
