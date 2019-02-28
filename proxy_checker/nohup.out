@@ -1,0 +1,995 @@
+Traceback (most recent call last):
+  File "./check.py", line 13, in <module>
+    if checker.check(item):
+  File "/home/nguyendd/Python3/Projects/crawler/proxy_checker/checker.py", line 11, in check
+    requests.get(url,proxies={'http':'http://'+liner},timeout=(3.05,27))
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/adapters.py", line 412, in send
+    conn = self.get_connection(request.url, proxies)
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/adapters.py", line 304, in get_connection
+    proxy = prepend_scheme_if_needed(proxy, 'http')
+  File "/home/nguyendd/Python3/lib/python3.6/site-packages/requests/utils.py", line 895, in prepend_scheme_if_needed
+    scheme, netloc, path, params, query, fragment = urlparse(url, new_scheme)
+  File "/usr/lib/python3.6/urllib/parse.py", line 368, in urlparse
+    splitresult = urlsplit(url, scheme, allow_fragments)
+  File "/usr/lib/python3.6/urllib/parse.py", line 418, in urlsplit
+    raise ValueError("Invalid IPv6 URL")
+ValueError: Invalid IPv6 URL
+[31mError HTTPConnectionPool(host='46.63.104.139', port=8080): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84470>, 'Connection to 46.63.104.139 timed out. (connect timeout=3.05)'))
+[31mBad proxy 46.63.104.139:8080
+
+[31mError HTTPConnectionPool(host='103.52.220.5', port=49068): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 103.52.220.5:49068
+
+[32mGood proxy 83.142.189.26:36325
+
+[32mGood proxy 95.104.115.182:33782
+
+[32mGood proxy 151.106.10.50:1080
+
+[32mGood proxy 73.55.76.54:8080
+
+[32mGood proxy 185.190.103.159:34206
+
+[31mError HTTPConnectionPool(host='79.121.102.251', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5e80>, 'Connection to 79.121.102.251 timed out. (connect timeout=3.05)'))
+[31mBad proxy 79.121.102.251:8080
+
+[32mGood proxy 38.134.10.106:53281
+
+[32mGood proxy 46.219.115.69:30419
+
+[31mError HTTPConnectionPool(host='52.79.128.193', port=80): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 52.79.128.193:80
+
+[31mError HTTPConnectionPool(host='181.189.235.134', port=34841): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cccc0>, 'Connection to 181.189.235.134 timed out. (connect timeout=3.05)'))
+[31mBad proxy 181.189.235.134:34841
+
+[32mGood proxy 178.62.193.19:8080
+
+[32mGood proxy 138.68.161.60:8080
+
+[31mError HTTPConnectionPool(host='176.235.186.242', port=37043): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84c88>, 'Connection to 176.235.186.242 timed out. (connect timeout=3.05)'))
+[31mBad proxy 176.235.186.242:37043
+
+[32mGood proxy 85.109.142.189:35062
+
+[32mGood proxy 139.59.99.119:8080
+
+[31mError HTTPConnectionPool(host='176.100.24.100', port=36652): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6a90>, 'Connection to 176.100.24.100 timed out. (connect timeout=3.05)'))
+[31mBad proxy 176.100.24.100:36652
+
+[31mError HTTPConnectionPool(host='46.237.206.55', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e61d0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 46.237.206.55:3128
+
+[32mGood proxy 116.90.229.186:59273
+
+[31mError! Connection Timeout! HTTPConnectionPool(host='190.96.214.123', port=36767): Read timed out. (read timeout=27)
+[31mBad proxy 190.96.214.123:36767
+
+[31mError HTTPConnectionPool(host='188.213.31.170', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cca20>, 'Connection to 188.213.31.170 timed out. (connect timeout=3.05)'))
+[31mBad proxy 188.213.31.170:80
+
+[32mGood proxy 198.199.120.102:3128
+
+[31mError HTTPConnectionPool(host='95.65.1.200', port=58768): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 95.65.1.200:58768
+
+[32mGood proxy 138.197.157.44:8080
+
+[32mGood proxy 114.23.213.45:80
+
+[31mError HTTPConnectionPool(host='181.112.57.54', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e67b8>, 'Connection to 181.112.57.54 timed out. (connect timeout=3.05)'))
+[31mBad proxy 181.112.57.54:53281
+
+[32mGood proxy 151.106.10.61:1080
+
+[31mError HTTPConnectionPool(host='38.21.38.6', port=32453): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 38.21.38.6:32453
+
+[32mGood proxy 217.182.120.164:1080
+
+[32mGood proxy 13.229.147.240:80
+
+[32mGood proxy 139.99.99.15:8888
+
+[31mError! Connection Timeout! HTTPConnectionPool(host='213.216.100.168', port=40136): Read timed out. (read timeout=27)
+[31mBad proxy 213.216.100.168:40136
+
+[31mError HTTPConnectionPool(host='80.249.92.221', port=59101): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cc198>, 'Connection to 80.249.92.221 timed out. (connect timeout=3.05)'))
+[31mBad proxy 80.249.92.221:59101
+
+[32mGood proxy 138.197.157.60:3128
+
+[32mGood proxy 162.155.179.211:58065
+
+[31mError HTTPConnectionPool(host='95.67.114.222', port=60748): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cc0f0>, 'Connection to 95.67.114.222 timed out. (connect timeout=3.05)'))
+[31mBad proxy 95.67.114.222:60748
+
+[32mGood proxy 181.115.168.45:43555
+
+[32mGood proxy 177.86.159.92:57836
+
+[32mGood proxy 198.1.122.29:80
+
+[32mGood proxy 162.243.108.141:8080
+
+[32mGood proxy 154.68.43.182:32755
+
+[32mGood proxy 139.59.59.63:8080
+
+[32mGood proxy 38.107.89.203:48508
+
+[32mGood proxy 13.229.8.227:80
+
+[32mGood proxy 104.155.103.87:80
+
+[32mGood proxy 189.1.16.162:23500
+
+[32mGood proxy 176.9.75.42:3128
+
+[32mGood proxy 88.198.24.108:3128
+
+[32mGood proxy 159.138.22.112:80
+
+[32mGood proxy 134.119.222.233:1080
+
+[32mGood proxy 91.219.252.186:39670
+
+[31mError HTTPConnectionPool(host='89.111.104.109', port=41258): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6518>, 'Connection to 89.111.104.109 timed out. (connect timeout=3.05)'))
+[31mBad proxy 89.111.104.109:41258
+
+[31mError HTTPConnectionPool(host='217.182.120.166', port=1080): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f4780>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 217.182.120.166:1080
+
+[32mGood proxy 77.81.228.21:80
+
+[31mError HTTPConnectionPool(host='87.251.228.114', port=31793): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 87.251.228.114:31793
+
+[31mError HTTPConnectionPool(host='94.153.129.130', port=55128): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cc6d8>, 'Connection to 94.153.129.130 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.153.129.130:55128
+
+[31mError HTTPConnectionPool(host='51.38.162.2', port=32231): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d54e0>, 'Connection to 51.38.162.2 timed out. (connect timeout=3.05)'))
+[31mBad proxy 51.38.162.2:32231
+
+[31mError HTTPConnectionPool(host='94.240.17.56', port=36127): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4908>, 'Connection to 94.240.17.56 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.240.17.56:36127
+
+[32mGood proxy 208.75.19.156:33478
+
+[32mGood proxy 80.81.46.95:49697
+
+[32mGood proxy 159.138.21.170:80
+
+[32mGood proxy 111.223.75.178:8080
+
+[31mError HTTPConnectionPool(host='66.64.62.154', port=56061): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 66.64.62.154:56061
+
+[32mGood proxy 13.229.223.59:80
+
+[32mGood proxy 50.252.42.253:31820
+
+[32mGood proxy 31.46.236.4:61724
+
+[31mError HTTPConnectionPool(host='95.47.116.133', port=45522): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5ac8>, 'Connection to 95.47.116.133 timed out. (connect timeout=3.05)'))
+[31mBad proxy 95.47.116.133:45522
+
+[31mError HTTPConnectionPool(host='185.156.121.184', port=41258): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e68d0>, 'Connection to 185.156.121.184 timed out. (connect timeout=3.05)'))
+[31mBad proxy 185.156.121.184:41258
+
+[32mGood proxy 35.229.97.65:80
+
+[31mError HTTPConnectionPool(host='18.225.10.207', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6668>, 'Connection to 18.225.10.207 timed out. (connect timeout=3.05)'))
+[31mBad proxy 18.225.10.207:80
+
+[32mGood proxy 104.248.61.211:80
+
+[32mGood proxy 67.160.143.126:35149
+
+[31mError HTTPConnectionPool(host='12.17.238.2', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 12.17.238.2:8080
+
+[32mGood proxy 50.250.56.129:46456
+
+[31mError HTTPConnectionPool(host='50.250.144.57', port=36003): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6550>, 'Connection to 50.250.144.57 timed out. (connect timeout=3.05)'))
+[31mBad proxy 50.250.144.57:36003
+
+[31mError HTTPConnectionPool(host='74.213.63.78', port=45858): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 74.213.63.78:45858
+
+[32mGood proxy 67.60.137.219:35979
+
+[31mError HTTPConnectionPool(host='204.9.61.168', port=60966): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5e10>, 'Connection to 204.9.61.168 timed out. (connect timeout=3.05)'))
+[31mBad proxy 204.9.61.168:60966
+
+[32mGood proxy 96.233.133.179:37936
+
+[32mGood proxy 94.240.46.195:23500
+
+[32mGood proxy 208.180.237.55:31012
+
+[32mGood proxy 185.79.243.161:41195
+
+[32mGood proxy 185.12.20.233:57370
+
+[32mGood proxy 185.16.34.251:34781
+
+[32mGood proxy 83.15.88.42:30801
+
+[31mError HTTPConnectionPool(host='178.217.216.184', port=49086): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4f28>, 'Connection to 178.217.216.184 timed out. (connect timeout=3.05)'))
+[31mBad proxy 178.217.216.184:49086
+
+[31mError HTTPConnectionPool(host='91.201.122.130', port=41258): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911fd080>, 'Connection to 91.201.122.130 timed out. (connect timeout=3.05)'))
+[31mBad proxy 91.201.122.130:41258
+
+[31mError HTTPConnectionPool(host='89.22.210.191', port=41258): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 89.22.210.191:41258
+
+[31mError HTTPConnectionPool(host='95.160.17.142', port=40472): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4ba8>, 'Connection to 95.160.17.142 timed out. (connect timeout=3.05)'))
+[31mBad proxy 95.160.17.142:40472
+
+[31mError! Connection Timeout! HTTPConnectionPool(host='88.199.87.74', port=36247): Read timed out. (read timeout=27)
+[31mBad proxy 88.199.87.74:36247
+
+[31mError HTTPConnectionPool(host='78.159.79.72', port=45597): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d59e8>, 'Connection to 78.159.79.72 timed out. (connect timeout=3.05)'))
+[31mBad proxy 78.159.79.72:45597
+
+[31mError HTTPConnectionPool(host='91.240.133.66', port=8080): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6e10>, 'Connection to 91.240.133.66 timed out. (connect timeout=3.05)'))
+[31mBad proxy 91.240.133.66:8080
+
+[31mError HTTPConnectionPool(host='94.154.31.136', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911cc0b8>, 'Connection to 94.154.31.136 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.154.31.136:53281
+
+[31mError HTTPConnectionPool(host='212.160.180.110', port=46975): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6278>, 'Connection to 212.160.180.110 timed out. (connect timeout=3.05)'))
+[31mBad proxy 212.160.180.110:46975
+
+[32mGood proxy 156.67.84.68:53281
+
+[31mError HTTPConnectionPool(host='185.135.226.192', port=23500): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d50b8>, 'Connection to 185.135.226.192 timed out. (connect timeout=3.05)'))
+[31mBad proxy 185.135.226.192:23500
+
+[32mGood proxy 81.15.197.82:31280
+
+[32mGood proxy 5.189.133.231:80
+
+[31mError HTTPConnectionPool(host='176.221.112.82', port=52094): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5cc0>, 'Connection to 176.221.112.82 timed out. (connect timeout=3.05)'))
+[31mBad proxy 176.221.112.82:52094
+
+[32mGood proxy 176.221.104.2:35215
+
+[32mGood proxy 89.39.108.202:47283
+
+[31mError HTTPConnectionPool(host='193.43.228.254', port=53744): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5438>, 'Connection to 193.43.228.254 timed out. (connect timeout=3.05)'))
+[31mBad proxy 193.43.228.254:53744
+
+[32mGood proxy 83.12.92.166:42708
+
+[31mError HTTPConnectionPool(host='185.79.243.137', port=48488): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911fd2e8>, 'Connection to 185.79.243.137 timed out. (connect timeout=3.05)'))
+[31mBad proxy 185.79.243.137:48488
+
+[31mError HTTPConnectionPool(host='78.8.188.136', port=32040): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911fda58>, 'Connection to 78.8.188.136 timed out. (connect timeout=3.05)'))
+[31mBad proxy 78.8.188.136:32040
+
+[31mError HTTPConnectionPool(host='201.244.107.202', port=59206): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 201.244.107.202:59206
+
+[31mError HTTPConnectionPool(host='156.67.113.198', port=39496): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f45c0>, 'Connection to 156.67.113.198 timed out. (connect timeout=3.05)'))
+[31mBad proxy 156.67.113.198:39496
+
+[31mError HTTPConnectionPool(host='89.186.1.215', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84cf8>, 'Connection to 89.186.1.215 timed out. (connect timeout=3.05)'))
+[31mBad proxy 89.186.1.215:53281
+
+[31mError HTTPConnectionPool(host='195.116.41.150', port=39862): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5c88>, 'Connection to 195.116.41.150 timed out. (connect timeout=3.05)'))
+[31mBad proxy 195.116.41.150:39862
+
+[32mGood proxy 85.9.131.145:3128
+
+[31mError HTTPConnectionPool(host='80.82.34.2', port=61929): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d56d8>, 'Connection to 80.82.34.2 timed out. (connect timeout=3.05)'))
+[31mBad proxy 80.82.34.2:61929
+
+[32mGood proxy 47.89.249.166:80
+
+[32mGood proxy 109.173.95.177:80
+
+[32mGood proxy 109.60.154.31:50929
+
+[31mError HTTPConnectionPool(host='194.67.37.90', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 194.67.37.90:3128
+
+[31mError HTTPConnectionPool(host='178.22.45.110', port=50765): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d52e8>, 'Connection to 178.22.45.110 timed out. (connect timeout=3.05)'))
+[31mBad proxy 178.22.45.110:50765
+
+[32mGood proxy 95.31.130.96:33962
+
+[32mGood proxy 93.186.98.56:47647
+
+[31mError! Connection Timeout! HTTPConnectionPool(host='91.202.27.179', port=55356): Read timed out. (read timeout=27)
+[31mBad proxy 91.202.27.179:55356
+
+[31mError HTTPConnectionPool(host='195.9.165.229', port=52776): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911cceb8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 195.9.165.229:52776
+
+[32mGood proxy 5.141.244.97:41025
+
+[32mGood proxy 213.108.138.30:39090
+
+[31mError HTTPConnectionPool(host='217.67.185.70', port=60755): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f1b70>, 'Connection to 217.67.185.70 timed out. (connect timeout=3.05)'))
+[31mBad proxy 217.67.185.70:60755
+
+[32mGood proxy 94.180.245.1:53634
+
+[32mGood proxy 95.31.5.29:54651
+
+[31mError HTTPConnectionPool(host='94.247.208.47', port=51887): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f15c0>, 'Connection to 94.247.208.47 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.247.208.47:51887
+
+[31mError HTTPConnectionPool(host='95.215.97.203', port=33631): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5ba8>, 'Connection to 95.215.97.203 timed out. (connect timeout=3.05)'))
+[31mBad proxy 95.215.97.203:33631
+
+[31mError HTTPConnectionPool(host='176.117.216.122', port=61361): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4dd8>, 'Connection to 176.117.216.122 timed out. (connect timeout=3.05)'))
+[31mBad proxy 176.117.216.122:61361
+
+[32mGood proxy 195.98.78.180:50018
+
+[32mGood proxy 91.185.57.26:53053
+
+[32mGood proxy 93.88.216.51:56897
+
+[32mGood proxy 95.156.125.190:41870
+
+[32mGood proxy 94.199.2.133:8080
+
+[32mGood proxy 87.103.234.116:3128
+
+[32mGood proxy 95.181.134.168:53281
+
+[32mGood proxy 213.221.57.214:53281
+
+[32mGood proxy 94.228.250.187:60718
+
+[32mGood proxy 90.188.35.48:8080
+
+[31mError HTTPConnectionPool(host='94.247.241.70', port=53640): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6d68>, 'Connection to 94.247.241.70 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.247.241.70:53640
+
+[32mGood proxy 95.154.72.12:32641
+
+[32mGood proxy 178.57.101.235:31309
+
+[31mError HTTPConnectionPool(host='80.251.48.215', port=45157): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 80.251.48.215:45157
+
+[31mError HTTPConnectionPool(host='37.232.143.56', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 37.232.143.56:53281
+
+[31mError HTTPConnectionPool(host='94.230.119.144', port=43305): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f40f0>, 'Connection to 94.230.119.144 timed out. (connect timeout=3.05)'))
+[31mBad proxy 94.230.119.144:43305
+
+[32mGood proxy 79.104.25.218:8080
+
+[32mGood proxy 94.180.106.94:32767
+
+[32mGood proxy 95.79.55.196:53281
+
+[31mError HTTPConnectionPool(host='92.252.243.232', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5550>, 'Connection to 92.252.243.232 timed out. (connect timeout=3.05)'))
+[31mBad proxy 92.252.243.232:53281
+
+[31mError HTTPConnectionPool(host='88.200.225.32', port=38583): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5240>, 'Connection to 88.200.225.32 timed out. (connect timeout=3.05)'))
+[31mBad proxy 88.200.225.32:38583
+
+[32mGood proxy 89.189.176.17:40990
+
+[32mGood proxy 89.105.153.245:8888
+
+[31mError HTTPConnectionPool(host='95.181.45.234', port=55878): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 95.181.45.234:55878
+
+[32mGood proxy 94.180.105.38:50021
+
+[32mGood proxy 95.31.213.3:56970
+
+[32mGood proxy 81.163.59.215:41258
+
+[31mError HTTPConnectionPool(host='80.240.100.6', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f1710>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 80.240.100.6:8080
+
+[31mError HTTPConnectionPool(host='85.114.25.202', port=8080): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d56d8>, 'Connection to 85.114.25.202 timed out. (connect timeout=3.05)'))
+[31mBad proxy 85.114.25.202:8080
+
+[31mError HTTPConnectionPool(host='190.106.97.86', port=30846): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4f28>, 'Connection to 190.106.97.86 timed out. (connect timeout=3.05)'))
+[31mBad proxy 190.106.97.86:30846
+
+[31mError HTTPConnectionPool(host='103.240.161.108', port=6666): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4eb8>, 'Connection to 103.240.161.108 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.240.161.108:6666
+
+[32mGood proxy 96.9.80.62:48819
+
+[32mGood proxy 41.213.192.20:80
+
+[31mError HTTPConnectionPool(host='62.213.87.171', port=8080): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84ba8>, 'Connection to 62.213.87.171 timed out. (connect timeout=3.05)'))
+[31mBad proxy 62.213.87.171:8080
+
+[31mError HTTPConnectionPool(host='182.160.119.252', port=36642): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6390>, 'Connection to 182.160.119.252 timed out. (connect timeout=3.05)'))
+[31mBad proxy 182.160.119.252:36642
+
+[32mGood proxy 93.123.152.224:53734
+
+[31mError HTTPConnectionPool(host='86.101.159.189', port=32919): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4908>, 'Connection to 86.101.159.189 timed out. (connect timeout=3.05)'))
+[31mBad proxy 86.101.159.189:32919
+
+[31mError HTTPConnectionPool(host='77.34.183.245', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f49e8>, 'Connection to 77.34.183.245 timed out. (connect timeout=3.05)'))
+[31mBad proxy 77.34.183.245:8080
+
+[31mError HTTPConnectionPool(host='109.94.176.15', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5d68>, 'Connection to 109.94.176.15 timed out. (connect timeout=3.05)'))
+[31mBad proxy 109.94.176.15:53281
+
+[32mGood proxy 37.191.43.5:59001
+
+[31mError HTTPConnectionPool(host='118.172.201.32', port=37168): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5470>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 118.172.201.32:37168
+
+[31mError HTTPConnectionPool(host='154.119.59.41', port=40562): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5710>, 'Connection to 154.119.59.41 timed out. (connect timeout=3.05)'))
+[31mBad proxy 154.119.59.41:40562
+
+[31mError HTTPConnectionPool(host='181.196.254.202', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6e80>, 'Connection to 181.196.254.202 timed out. (connect timeout=3.05)'))
+[31mBad proxy 181.196.254.202:53281
+
+[31mError HTTPConnectionPool(host='85.193.225.237', port=45789): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 85.193.225.237:45789
+
+[31mError HTTPConnectionPool(host='103.109.57.226', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5748>, 'Connection to 103.109.57.226 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.109.57.226:53281
+
+[32mGood proxy 37.59.80.69:8082
+
+[31mError HTTPConnectionPool(host='185.18.64.106', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 185.18.64.106:53281
+
+[31mError HTTPConnectionPool(host='95.78.114.109', port=32661): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f49e8>, 'Connection to 95.78.114.109 timed out. (connect timeout=3.05)'))
+[31mBad proxy 95.78.114.109:32661
+
+[32mGood proxy 170.81.32.110:38450
+
+[32mGood proxy 81.254.79.251:80
+
+[31mError HTTPConnectionPool(host='176.102.213.252', port=60467): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e67b8>, 'Connection to 176.102.213.252 timed out. (connect timeout=3.05)'))
+[31mBad proxy 176.102.213.252:60467
+
+[31mError HTTPConnectionPool(host='43.242.242.176', port=43203): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d4630>, 'Connection to 43.242.242.176 timed out. (connect timeout=3.05)'))
+[31mBad proxy 43.242.242.176:43203
+
+[32mGood proxy 106.0.51.50:17385
+
+[31mError HTTPConnectionPool(host='113.53.29.92', port=47297): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84e80>, 'Connection to 113.53.29.92 timed out. (connect timeout=3.05)'))
+[31mBad proxy 113.53.29.92:47297
+
+[31mError HTTPConnectionPool(host='188.191.31.135', port=41258): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f45f8>, 'Connection to 188.191.31.135 timed out. (connect timeout=3.05)'))
+[31mBad proxy 188.191.31.135:41258
+
+[31mError HTTPConnectionPool(host='43.250.252.190', port=33145): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4be0>, 'Connection to 43.250.252.190 timed out. (connect timeout=3.05)'))
+[31mBad proxy 43.250.252.190:33145
+
+[31mError HTTPConnectionPool(host='91.197.105.32', port=45228): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e62e8>, 'Connection to 91.197.105.32 timed out. (connect timeout=3.05)'))
+[31mBad proxy 91.197.105.32:45228
+
+[32mGood proxy 212.24.147.62:40960
+
+[31mError HTTPConnectionPool(host='103.252.163.191', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5be0>, 'Connection to 103.252.163.191 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.252.163.191:80
+
+[31mError HTTPConnectionPool(host='101.255.56.201', port=36501): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5860>, 'Connection to 101.255.56.201 timed out. (connect timeout=3.05)'))
+[31mBad proxy 101.255.56.201:36501
+
+[31mError HTTPConnectionPool(host='217.195.87.58', port=41258): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6518>, 'Connection to 217.195.87.58 timed out. (connect timeout=3.05)'))
+[31mBad proxy 217.195.87.58:41258
+
+[32mGood proxy 188.68.55.98:80
+
+[31mError HTTPConnectionPool(host='181.112.153.58', port=43040): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 181.112.153.58:43040
+
+[32mGood proxy 118.174.196.217:50461
+
+[31mError HTTPConnectionPool(host='118.174.220.164', port=61858): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 118.174.220.164:61858
+
+[32mGood proxy 173.249.42.63:80
+
+[32mGood proxy 46.118.33.132:36610
+
+[31mError HTTPConnectionPool(host='123.200.31.226', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84a90>, 'Connection to 123.200.31.226 timed out. (connect timeout=3.05)'))
+[31mBad proxy 123.200.31.226:53281
+
+[31mError HTTPConnectionPool(host='46.55.82.193', port=49398): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6550>, 'Connection to 46.55.82.193 timed out. (connect timeout=3.05)'))
+[31mBad proxy 46.55.82.193:49398
+
+[32mGood proxy 186.46.92.94:53281
+
+[31mError HTTPConnectionPool(host='175.100.16.20', port=37725): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84470>, 'Connection to 175.100.16.20 timed out. (connect timeout=3.05)'))
+[31mBad proxy 175.100.16.20:37725
+
+[31mError HTTPConnectionPool(host='190.146.60.76', port=59576): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f46a0>, 'Connection to 190.146.60.76 timed out. (connect timeout=3.05)'))
+[31mBad proxy 190.146.60.76:59576
+
+[32mGood proxy 5.175.104.28:53281
+
+[32mGood proxy 188.64.129.242:31736
+
+[31mError HTTPConnectionPool(host='109.160.91.187', port=23500): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5e80>, 'Connection to 109.160.91.187 timed out. (connect timeout=3.05)'))
+[31mBad proxy 109.160.91.187:23500
+
+[31mError HTTPConnectionPool(host='118.174.234.109', port=38751): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5780>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 118.174.234.109:38751
+
+[31mError HTTPConnectionPool(host='212.22.80.224', port=34822): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5080>, 'Connection to 212.22.80.224 timed out. (connect timeout=3.05)'))
+[31mBad proxy 212.22.80.224:34822
+
+[31mError HTTPConnectionPool(host='103.75.239.129', port=41195): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5048>, 'Connection to 103.75.239.129 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.75.239.129:41195
+
+[32mGood proxy 187.60.166.90:35756
+
+[31mError HTTPConnectionPool(host='180.178.98.149', port=35871): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 180.178.98.149:35871
+
+[31mError HTTPConnectionPool(host='1.10.187.228', port=39265): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f49b0>, 'Connection to 1.10.187.228 timed out. (connect timeout=3.05)'))
+[31mBad proxy 1.10.187.228:39265
+
+[32mGood proxy 95.133.186.234:39573
+
+[31mError HTTPConnectionPool(host='175.176.160.179', port=39302): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4320>, 'Connection to 175.176.160.179 timed out. (connect timeout=3.05)'))
+[31mBad proxy 175.176.160.179:39302
+
+[32mGood proxy 124.41.240.34:23500
+
+[31mError HTTPConnectionPool(host='177.73.4.234', port=23500): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c845f8>, 'Connection to 177.73.4.234 timed out. (connect timeout=3.05)'))
+[31mBad proxy 177.73.4.234:23500
+
+[32mGood proxy 103.87.25.30:32609
+
+[32mGood proxy 212.7.230.7:51405
+
+[31mError HTTPConnectionPool(host='116.204.155.16', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e65c0>, 'Connection to 116.204.155.16 timed out. (connect timeout=3.05)'))
+[31mBad proxy 116.204.155.16:8080
+
+[32mGood proxy 163.53.198.58:49870
+
+[31mError HTTPConnectionPool(host='123.255.202.82', port=32523): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e64e0>, 'Connection to 123.255.202.82 timed out. (connect timeout=3.05)'))
+[31mBad proxy 123.255.202.82:32523
+
+[32mGood proxy 27.109.117.226:43366
+
+[32mGood proxy 1.20.99.125:36993
+
+[32mGood proxy 36.37.112.210:42883
+
+[31mError HTTPConnectionPool(host='106.10.46.103', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84c18>, 'Connection to 106.10.46.103 timed out. (connect timeout=3.05)'))
+[31mBad proxy 106.10.46.103:80
+
+[32mGood proxy 41.223.154.170:23500
+
+[31mError HTTPConnectionPool(host='190.7.137.27', port=34502): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84390>, 'Connection to 190.7.137.27 timed out. (connect timeout=3.05)'))
+[31mBad proxy 190.7.137.27:34502
+
+[32mGood proxy 109.110.55.230:21776
+
+[31mError HTTPConnectionPool(host='159.255.167.89', port=55231): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4278>, 'Connection to 159.255.167.89 timed out. (connect timeout=3.05)'))
+[31mBad proxy 159.255.167.89:55231
+
+[31mError HTTPConnectionPool(host='103.80.236.108', port=53281): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5f28>, 'Connection to 103.80.236.108 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.80.236.108:53281
+
+[32mGood proxy 85.193.216.85:38220
+
+[32mGood proxy 181.112.62.154:30111
+
+[31mError HTTPConnectionPool(host='201.158.60.153', port=50025): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5ba8>: Failed to establish a new connection: [Errno 113] No route to host',)))
+[31mBad proxy 201.158.60.153:50025
+
+[31mError HTTPConnectionPool(host='134.19.147.72', port=44812): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4fd0>, 'Connection to 134.19.147.72 timed out. (connect timeout=3.05)'))
+[31mBad proxy 134.19.147.72:44812
+
+[32mGood proxy 36.67.8.27:53281
+
+[31mError HTTPConnectionPool(host='90.154.125.173', port=33078): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4630>, 'Connection to 90.154.125.173 timed out. (connect timeout=3.05)'))
+[31mBad proxy 90.154.125.173:33078
+
+[31mError HTTPConnectionPool(host='185.74.37.189', port=41258): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84da0>, 'Connection to 185.74.37.189 timed out. (connect timeout=3.05)'))
+[31mBad proxy 185.74.37.189:41258
+
+[31mError HTTPConnectionPool(host='180.254.20.98', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c707f0>, 'Connection to 180.254.20.98 timed out. (connect timeout=3.05)'))
+[31mBad proxy 180.254.20.98:8080
+
+[31mError HTTPConnectionPool(host='78.228.165.215', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6710>, 'Connection to 78.228.165.215 timed out. (connect timeout=3.05)'))
+[31mBad proxy 78.228.165.215:80
+
+[32mGood proxy 188.234.248.201:3128
+
+[32mGood proxy 109.70.189.75:39073
+
+[32mGood proxy 212.238.132.31:80
+
+[32mGood proxy 125.26.99.212:52992
+
+[31mError HTTPConnectionPool(host='182.52.51.41', port=58319): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f4080>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 182.52.51.41:58319
+
+[32mGood proxy 213.108.221.201:32800
+
+[31mError HTTPConnectionPool(host='197.255.152.43', port=31457): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f4c18>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 197.255.152.43:31457
+
+[31mError HTTPConnectionPool(host='182.52.51.13', port=34097): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 182.52.51.13:34097
+
+[32mGood proxy 91.126.205.179:8888
+
+[31mError HTTPConnectionPool(host='77.222.131.11', port=50972): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5320>, 'Connection to 77.222.131.11 timed out. (connect timeout=3.05)'))
+[31mBad proxy 77.222.131.11:50972
+
+[31mError HTTPConnectionPool(host='45.235.87.65', port=60763): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e6e80>, 'Connection to 45.235.87.65 timed out. (connect timeout=3.05)'))
+[31mBad proxy 45.235.87.65:60763
+
+[31mError HTTPConnectionPool(host='128.40.76.198', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d63c8>, 'Connection to 128.40.76.198 timed out. (connect timeout=3.05)'))
+[31mBad proxy 128.40.76.198:80
+
+[31mError HTTPConnectionPool(host='213.135.163.5', port=80): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f4ba8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 213.135.163.5:80
+
+[31mError HTTPConnectionPool(host='173.214.169.77', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f4240>, 'Connection to 173.214.169.77 timed out. (connect timeout=3.05)'))
+[31mBad proxy 173.214.169.77:3128
+
+[31mError HTTPConnectionPool(host='190.145.90.46', port=33864): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84390>, 'Connection to 190.145.90.46 timed out. (connect timeout=3.05)'))
+[31mBad proxy 190.145.90.46:33864
+
+[32mGood proxy 176.215.1.42:3128
+
+[31mError HTTPConnectionPool(host='196.44.67.172', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84630>, 'Connection to 196.44.67.172 timed out. (connect timeout=3.05)'))
+[31mBad proxy 196.44.67.172:53281
+
+[31mError HTTPConnectionPool(host='41.162.117.34', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5208>, 'Connection to 41.162.117.34 timed out. (connect timeout=3.05)'))
+[31mBad proxy 41.162.117.34:8080
+
+[32mGood proxy 196.43.235.230:53281
+
+[32mGood proxy 125.26.7.227:50674
+
+[32mGood proxy 212.237.124.15:42093
+
+[32mGood proxy 41.160.85.34:30789
+
+[32mGood proxy 1.20.97.237:52325
+
+[32mGood proxy 62.169.200.74:53281
+
+[32mGood proxy 46.101.208.13:80
+
+[31mError HTTPConnectionPool(host='118.174.233.18', port=61605): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 118.174.233.18:61605
+
+[32mGood proxy 94.190.125.48:38703
+
+[32mGood proxy 212.112.97.27:3128
+
+[31mError HTTPConnectionPool(host='213.177.1.42', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5e48>, 'Connection to 213.177.1.42 timed out. (connect timeout=3.05)'))
+[31mBad proxy 213.177.1.42:3128
+
+[32mGood proxy 201.73.144.148:3128
+
+[32mGood proxy 51.38.205.28:3128
+
+[32mGood proxy 75.109.158.167:8888
+
+[32mGood proxy 207.182.135.123:8118
+
+[31mError HTTPConnectionPool(host='185.32.144.14', port=80): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84cc0>, 'Connection to 185.32.144.14 timed out. (connect timeout=3.05)'))
+[31mBad proxy 185.32.144.14:80
+
+[32mGood proxy 94.177.240.22:8080
+
+[32mGood proxy 66.97.34.175:3128
+
+[32mGood proxy 88.81.72.240:8888
+
+[32mGood proxy 91.221.109.138:3128
+
+[32mGood proxy 46.229.139.100:3128
+
+[32mGood proxy 91.221.109.136:3128
+
+[32mGood proxy 84.201.254.47:3128
+
+[32mGood proxy 217.113.122.142:3128
+
+[32mGood proxy 93.171.164.251:8080
+
+[32mGood proxy 200.24.240.187:60736
+
+[32mGood proxy 41.222.11.228:59791
+
+[32mGood proxy 62.103.215.125:48659
+
+[32mGood proxy 122.154.72.186:61425
+
+[31mError HTTPConnectionPool(host='37.113.26.45', port=53281): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84d68>, 'Connection to 37.113.26.45 timed out. (connect timeout=3.05)'))
+[31mBad proxy 37.113.26.45:53281
+
+[32mGood proxy 202.49.183.168:36349
+
+[32mGood proxy 202.79.34.178:39114
+
+[31mError HTTPConnectionPool(host='5.58.5.224', port=47418): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 5.58.5.224:47418
+
+[32mGood proxy 101.51.141.49:47838
+
+[32mGood proxy 5.58.49.28:56805
+
+[31mError HTTPConnectionPool(host='103.194.88.89', port=33240): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f45f8>, 'Connection to 103.194.88.89 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.194.88.89:33240
+
+[31mError HTTPConnectionPool(host='104.248.153.43', port=8080): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911e66d8>, 'Connection to 104.248.153.43 timed out. (connect timeout=3.05)'))
+[31mBad proxy 104.248.153.43:8080
+
+[32mGood proxy 182.52.87.107:61812
+
+[32mGood proxy 93.170.117.152:46748
+
+[31mError HTTPConnectionPool(host='36.67.142.59', port=50173): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911f42b0>, 'Connection to 36.67.142.59 timed out. (connect timeout=3.05)'))
+[31mBad proxy 36.67.142.59:50173
+
+[32mGood proxy 41.50.80.236:50553
+
+[31mError HTTPConnectionPool(host='186.250.119.155', port=47023): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911f4a90>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 186.250.119.155:47023
+
+[32mGood proxy 176.212.114.139:39581
+
+[32mGood proxy 176.215.237.190:55271
+
+[32mGood proxy 118.175.93.158:36519
+
+[31mError HTTPConnectionPool(host='91.203.114.67', port=52884): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c842b0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 91.203.114.67:52884
+
+[32mGood proxy 178.77.234.62:59122
+
+[31mError HTTPConnectionPool(host='93.109.241.246', port=31869): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5160>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 93.109.241.246:31869
+
+[32mGood proxy 194.150.143.7:59788
+
+[31mError HTTPConnectionPool(host='181.188.148.154', port=34180): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[31mBad proxy 181.188.148.154:34180
+
+[32mGood proxy 93.170.15.214:50841
+
+[32mGood proxy 188.17.152.172:40687
+
+[32mGood proxy 190.152.149.114:36069
+
+[32mGood proxy 178.134.248.126:40678
+
+[32mGood proxy 181.48.111.246:49094
+
+[32mGood proxy 178.150.89.13:55223
+
+[32mGood proxy 183.91.66.210:80
+
+[31mError HTTPConnectionPool(host='190.11.15.2', port=59338): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6278>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 190.11.15.2:59338
+
+[31mError HTTPConnectionPool(host='216.163.15.34', port=52055): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d52e8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 216.163.15.34:52055
+
+[31mError HTTPConnectionPool(host='206.189.159.13', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5e48>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 206.189.159.13:3128
+
+[31mError HTTPConnectionPool(host='109.86.199.155', port=43677): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84d30>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 109.86.199.155:43677
+
+[32mGood proxy 187.162.6.65:3128
+
+[31mError HTTPConnectionPool(host='119.82.253.200', port=55350): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c709b0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 119.82.253.200:55350
+
+[31mError HTTPConnectionPool(host='103.115.207.18', port=61692): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84400>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.115.207.18:61692
+
+[31mError HTTPConnectionPool(host='103.86.141.13', port=39346): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e92067f28>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.86.141.13:39346
+
+[32mGood proxy 178.150.84.139:53393
+
+[32mGood proxy 5.17.162.114:52238
+
+[31mError HTTPConnectionPool(host='103.205.68.10', port=55338): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84b38>, 'Connection to 103.205.68.10 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.205.68.10:55338
+
+[32mGood proxy 213.171.45.178:30325
+
+[32mGood proxy 183.182.101.32:54781
+
+[31mError HTTPConnectionPool(host='1.20.102.19', port=55118): Max retries exceeded with url: http://www.google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e911d5438>, 'Connection to 1.20.102.19 timed out. (connect timeout=3.05)'))
+[31mBad proxy 1.20.102.19:55118
+
+[31mError HTTPConnectionPool(host='45.124.13.226', port=33474): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6780>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 45.124.13.226:33474
+
+[31mError HTTPConnectionPool(host='95.82.255.90', port=42649): Max retries exceeded with url: http://www.google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 95.82.255.90:42649
+
+[32mGood proxy 103.91.128.49:59763
+
+[32mGood proxy 124.81.67.113:31642
+
+[32mGood proxy 176.215.254.44:42699
+
+[32mGood proxy 46.201.225.210:57179
+
+[32mGood proxy 185.251.33.194:47709
+
+[31mError HTTPConnectionPool(host='125.26.7.249', port=39366): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6588>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 125.26.7.249:39366
+
+[31mError HTTPConnectionPool(host='36.37.160.253', port=34948): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5f60>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 36.37.160.253:34948
+
+[31mError HTTPConnectionPool(host='125.27.251.24', port=57733): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5e80>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 125.27.251.24:57733
+
+[32mGood proxy 118.175.93.189:52045
+
+[32mGood proxy 130.0.43.110:53281
+
+[31mError HTTPConnectionPool(host='103.250.166.12', port=42620): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c841d0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.250.166.12:42620
+
+[32mGood proxy 89.147.80.9:33211
+
+[31mError HTTPConnectionPool(host='176.192.124.131', port=45525): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84b00>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 176.192.124.131:45525
+
+[31mError HTTPConnectionPool(host='103.209.171.60', port=80): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84c18>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.209.171.60:80
+
+[32mGood proxy 118.173.232.215:33481
+
+[32mGood proxy 91.206.149.217:52228
+
+[31mError HTTPConnectionPool(host='45.70.216.70', port=50896): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84358>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 45.70.216.70:50896
+
+[31mError HTTPConnectionPool(host='1.20.100.204', port=59777): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5550>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 1.20.100.204:59777
+
+[32mGood proxy 1.179.164.233:46525
+
+[31mError HTTPConnectionPool(host='103.87.207.226', port=32951): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5a90>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.87.207.226:32951
+
+[31mError HTTPConnectionPool(host='178.165.103.188', port=60454): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6518>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 178.165.103.188:60454
+
+[31mError HTTPConnectionPool(host='31.202.121.62', port=31269): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6dd8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 31.202.121.62:31269
+
+[31mError HTTPConnectionPool(host='124.41.240.66', port=54463): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c709b0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 124.41.240.66:54463
+
+[31mError HTTPConnectionPool(host='45.6.95.10', port=59926): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e6320>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 45.6.95.10:59926
+
+[31mError HTTPConnectionPool(host='175.181.40.199', port=34043): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911e69e8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 175.181.40.199:34043
+
+[31mError HTTPConnectionPool(host='195.9.17.5', port=39061): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5518>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 195.9.17.5:39061
+
+[31mError HTTPConnectionPool(host='190.184.144.50', port=38099): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d50b8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 190.184.144.50:38099
+
+[31mError HTTPConnectionPool(host='186.46.136.70', port=51084): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84cc0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 186.46.136.70:51084
+
+[31mError HTTPConnectionPool(host='190.152.37.106', port=53001): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84630>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 190.152.37.106:53001
+
+[31mError HTTPConnectionPool(host='217.23.176.215', port=39258): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ec278>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 217.23.176.215:39258
+
+[31mError HTTPConnectionPool(host='176.192.51.222', port=52912): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84278>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 176.192.51.222:52912
+
+[31mError HTTPConnectionPool(host='170.79.9.54', port=46483): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c841d0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 170.79.9.54:46483
+
+[31mError HTTPConnectionPool(host='5.140.233.75', port=59372): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d59b0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 5.140.233.75:59372
+
+[31mError HTTPConnectionPool(host='176.197.146.202', port=45897): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d55c0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 176.197.146.202:45897
+
+[31mError HTTPConnectionPool(host='36.89.183.77', port=48517): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ec048>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 36.89.183.77:48517
+
+[31mError HTTPConnectionPool(host='95.31.22.157', port=38759): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ece80>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 95.31.22.157:38759
+
+[31mError HTTPConnectionPool(host='103.235.199.46', port=50245): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911db6a0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.235.199.46:50245
+
+[31mError HTTPConnectionPool(host='2.63.98.5', port=3128): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+[31mBad proxy 2.63.98.5:3128
+
+[31mError HTTPConnectionPool(host='154.118.52.216', port=57706): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911eceb8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 154.118.52.216:57706
+
+[31mError HTTPConnectionPool(host='103.250.167.233', port=53176): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ec358>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.250.167.233:53176
+
+[31mError HTTPConnectionPool(host='103.111.29.70', port=61764): Max retries exceeded with url: http://google.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7e91c84eb8>, 'Connection to 103.111.29.70 timed out. (connect timeout=3.05)'))
+[31mBad proxy 103.111.29.70:61764
+
+[31mError HTTPConnectionPool(host='190.145.148.34', port=61534): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84400>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 190.145.148.34:61534
+
+[31mError HTTPConnectionPool(host='103.250.157.46', port=35518): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911db588>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.250.157.46:35518
+
+[31mError HTTPConnectionPool(host='186.125.59.8', port=59751): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84f98>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 186.125.59.8:59751
+
+[31mError HTTPConnectionPool(host='118.174.233.8', port=59682): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84358>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 118.174.233.8:59682
+
+[31mError HTTPConnectionPool(host='197.210.128.90', port=59885): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ec278>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 197.210.128.90:59885
+
+[31mError HTTPConnectionPool(host='176.37.119.45', port=51545): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ecc50>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 176.37.119.45:51545
+
+[31mError HTTPConnectionPool(host='46.201.249.7', port=52671): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5c88>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 46.201.249.7:52671
+
+[31mError HTTPConnectionPool(host='103.71.255.10', port=51242): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5d68>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 103.71.255.10:51242
+
+[31mError HTTPConnectionPool(host='188.0.129.134', port=56690): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911fb240>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 188.0.129.134:56690
+
+[31mError HTTPConnectionPool(host='36.66.173.233', port=41448): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5f98>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 36.66.173.233:41448
+
+[31mError HTTPConnectionPool(host='119.82.252.76', port=33857): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e92087d30>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 119.82.252.76:33857
+
+[31mError HTTPConnectionPool(host='36.67.24.61', port=43561): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911ec710>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 36.67.24.61:43561
+
+[31mError HTTPConnectionPool(host='176.213.137.18', port=60506): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911db828>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 176.213.137.18:60506
+
+[31mError HTTPConnectionPool(host='170.81.33.174', port=48597): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84ac8>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 170.81.33.174:48597
+
+[31mError HTTPConnectionPool(host='213.16.55.138', port=39360): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c849b0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 213.16.55.138:39360
+
+[31mError HTTPConnectionPool(host='84.16.45.214', port=54917): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c84470>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 84.16.45.214:54917
+
+[31mError HTTPConnectionPool(host='178.136.194.161', port=58998): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e91c678d0>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 178.136.194.161:58998
+
+[31mError HTTPConnectionPool(host='177.66.119.85', port=55837): Max retries exceeded with url: http://google.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7e911d5b70>: Failed to establish a new connection: [Errno 111] Connection refused',)))
+[31mBad proxy 177.66.119.85:55837
+
